@@ -1,0 +1,24 @@
+timestamp,api_status,model,model_status,latency_ms
+2026-10-21T23:02:28,200,Meta_Llama_3.1_8B_Instruct,200,252
+2026-10-21T23:32:29,200,Qwen_3_30B_A3B_Instruct_2507,200,310
+2026-10-22T00:04:32,200,Meta_Llama_3.1_8B_Instruct,200,262
+2026-10-22T00:09:32,200,Meta_Llama_3.1_8B_Instruct,200,220
+2026-10-22T00:14:33,200,Meta_Llama_3.1_8B_Instruct,200,346
+2026-10-22T00:19:33,200,Meta_Llama_3.1_8B_Instruct,200,289
+2026-10-22T00:24:34,200,Meta_Llama_3.1_8B_Instruct,200,266
+2026-10-22T00:29:34,200,Meta_Llama_3.1_8B_Instruct,200,253
+2026-10-22T00:34:34,200,Meta_Llama_3.1_8B_Instruct,200,209
+2026-10-22T00:39:35,200,Meta_Llama_3.1_8B_Instruct,200,249
+2026-10-22T00:44:35,200,Meta_Llama_3.1_8B_Instruct,200,289
+2026-10-22T00:49:36,200,Meta_Llama_3.1_8B_Instruct,200,306
+2026-10-22T00:54:36,200,Meta_Llama_3.1_8B_Instruct,200,323
+2026-10-22T00:57:38,200,Meta_Llama_3.1_8B_Instruct,200,206
+2026-10-22T01:02:39,200,Meta_Llama_3.1_8B_Instruct,200,267
+2026-10-22T01:04:28,200,Meta_Llama_3.1_8B_Instruct,200,293
+2026-10-22T01:07:58,Meta_Llama_3.1_8B_Instruct,200,308,OK
+2026-10-22T01:13:04,meta-llama-3.1-8b-instruct,OK,102,2,104,280
+2026-10-22T01:13:36,meta-llama-3.1-8b-instruct,It seems,100,2,102,259
+2026-10-22T01:13:56,meta-llama-3.1-8b-instruct,OK,102,2,104,295
+2026-10-22T01:34:59,meta-llama-3.1-8b-instruct,OK,102,2,104,281
+2026-10-22T02:04:59,meta-llama-3.1-8b-instruct,OK,102,2,104,298
+2026-10-22T02:34:59,meta-llama-3.1-8b-instruct,OK,102,2,104,298

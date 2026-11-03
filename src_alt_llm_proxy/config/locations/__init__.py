@@ -1,0 +1,33 @@
+# .path > Relativer Import Sucht das Modul in demselben Package
+from .paths import (
+    PYTHON_TASKS_DIR, 
+    EVAL_DIR, 
+    PYTHON_SAMPLE_SOLUTION, 
+    PYTHON_STUDENT_SOLUTION, 
+    MERMAIDE_PATH, 
+    PYTHON_LLM_LOG,
+
+
+    JAVA_DATA_DIR, 
+    JAVA_TASKS_DIR,
+    JAVA_SAMPLE_SOLUTION, 
+    JAVA_STUDENT_SOLUTION,
+    JAVA_LLM_LOG
+)
+
+__all__ = [
+    "PYTHON_TASKS_DIR", 
+    "EVAL_DIR", 
+    "PYTHON_SAMPLE_SOLUTION",
+    "PYTHON_STUDENT_SOLUTION", 
+    "MERMAIDE_PATH", 
+    "PYTHON_LLM_LOG",
+
+
+    "JAVA_DATA_DIR",
+    "JAVA_TASKS_DIR",
+    "JAVA_SAMPLE_SOLUTION",
+    "JAVA_STUDENT_SOLUTION",
+    "JAVA_LLM_LOG"
+
+]

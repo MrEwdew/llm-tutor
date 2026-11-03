@@ -1,0 +1,244 @@
+
+        <!DOCTYPE html>
+        <html lang="de">
+        <head>
+        <meta charset="UTF-8">
+        <title>AI Message</title>
+
+        <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+        }
+
+        th {
+            background: #f2f2f2;
+        }
+        </style>
+
+        </head>
+        <body>
+            <p>================================ Human Message =================================</p>
+<pre><code>    Es handelt um die aufgabe 4 in der pdf:
+</code></pre>
+<p>Prof. Dr. Stefan Wehr, M.Sc. Hannes Braun
+Übungsblatt 8
+AKI/NES Programmierung 1, Wintersemester 2024/2025
+Deadline: 11.12.2024, 23:00 Uhr
+5.12.2024
+Gehen Sie beim Lösen aller Programmieraufgaben strikt nach unserem Schema vor:
+1. Schreiben Sie zuerst eine Kurzbeschreibung als Kommentar.
+2. Führen Sie dann eine Datenanalyse durch. Schreiben Sie das Ergebnis Ihrer Datenanalyse
+ebenfalls als Kommentar in die Zeile nach der Kurzbeschreibung.
+3. Schreiben Sie dann den Funktionskopf inkl. der Typen für Argumente und Ergebnis hin.
+4. Schreiben Sie dann Tests mittels check.
+5. Setzen Sie die passenden Schablonen in den Rumpf der Funktion ein.
+6. Schreiben Sie erst dann den Funktionsrumpf hin.
+Eine Lösung, in der nicht ersichtlich ist, dass Sie gemäß des Schemas aggiert haben, erhält keine
+Punkte. Insbesondere erhält eine Lösung, bei der nur der Funktionsrumpf da steht, keine Punkte,
+auch wenn die Funktion korrekt ist.
+Dahingegen erhalten Sie Teilpunkte wenn Sie dem Schema folgen, aber an einem gewissen Punkt
+nicht weiterkommen.
+Aufgabe 1 (4+4 Punkte)
+Schreiben Sie eine Funktion, die aus einer Liste von Strings alle leeren Strings entfernt.
+1. Schreiben Sie die Funktion zuerst so, dass die Parameterliste nicht verändert wird. Die-
+se Funktion soll removeEmpties heißen. Sie dürfen dabei keine Operationen verwenden,
+die die Liste verändern. Zu solchen Operationen gehören z.B. remove, insert, append,
+extend, pop, sort und auch die Zuweisung an einem Index mittels l[i] = ... oder auch
+l += ... .
+2. Schreiben Sie die Funktion dann so, dass die Parameterliste verändert wird. Diese Funktion
+soll removeEmptiesMutable heißen.
+1
+Übungsblatt 8 AKI/NES Programmierung 1
+Aufgabe 2 (4+4 Punkte)
+Schreiben Sie eine Funktion, die einer Liste von Objekten eine neues Objekt am Ende hinzu-
+fügt.
+1. Das neue Objekt soll hinzugefügt werden, falls in der Liste das gleiche Objekte (Gleichheit
+bzgl. ==) noch nicht enthalten ist. Die Liste soll dabei nicht verändert werden, sie dürfen
+keine Operation verwenden, die die Liste modifizieren (wie z.B. remove, insert, append,
+extend, pop, sort oder die Zuweisung an einem Index mittels l[i] = ... ). Die Funktion
+soll addIfNotEq heißen.
+2. Das neue Objekt soll hinzugefügt werden, falls in der Liste das identische Objekte (Gleich-
+heit bzgl. is) noch nicht enthalten ist. Die Liste soll dabei verändert werden. Die Funktion
+soll addIfNotIdentical heißen.
+Hinweis: Um zuverlässig Objekte zu erzeugen, die nicht identisch sind, sollten Sie keine Zahlen
+oder Strings als Elemente der Listen für die Tests von Teil (b) verwenden. Aus Effizienzgründen
+verwendet Python nämlich oft dasselbe Zahl- oder String-Objekt wieder. Stattdessen sollten Sie
+einen Record wie z.B.
+@record
+class Point
+x: int
+y: int
+definieren und Objekte dieses Records als Listenelemente verwenden.
+Aufgabe 3 (8 Punkte)
+Programmieren Sie die Funktionalität der Funktion insert nach, ohne dabei natürlich insert
+zu verwenden. Ihre Funktion soll folgenden Funktionskopf haben:
+def myInsert(l: List, i: int, x: Any) -&gt; None:
+Dabei soll sich myInsert(l, i, x) genauso wie l.insert(i, x) verhalten, d.h. das Element
+x wird in Liste l an Index i eingefügt, die Element ab Index i wandern um eins nach hinten.
+Die Liste l wird dabei in-place modifiziert. Als einzige Operationen, die eine Liste verändern,
+dürfen Sie append und die Zuweisung an einem Index mittels l[k] = ... verwenden.
+Schreiben Sie mindestens vier sinnvolle Tests.
+Aufgabe 4 (10 Punkte)
+Schreiben Sie eine Funktion removeSlice. Die Funktion soll folgenden Funktionskopf haben:
+def removeSlice(l: list, start: int, end: int, step: int) -&gt; None
+2
+Übungsblatt 8 AKI/NES Programmierung 1
+Dabei soll ein Aufruf removeSlice(l, start, end, step) die Elemente aus der Liste l ent-
+fernen, die der Slice-Ausdruck l[start:end:step] selektieren würde. Der Einfachheit halber
+können Sie annehmen dass die Indexe start und end sowie step nicht negativ sind.
+Beispiel 1: Wenn myList die Liste ['A', 'B', 'C', 'D', 'E', 'F', 'G'] ist, und wir rufen
+removeSlice(myList, 1, 5, 2) auf, dann sieht myList danach so aus: ['A', 'C', 'E', 'F', G'] .
+Beispiel 2: Wenn myList2 die Liste [1,2,3,1,2,3] ist, und wir rufen removeSlice(myList2, 0, 3, 1)
+auf, dann sieht myList2 danach so aus: [1,2,3].
+Hinweis: Verwenden Sie nicht del l[start:end:step]
+Gesamtpunkte: 34
+Abgabe
+Via Upload im Praktomat bis 11.12.2024, 23:00 Uhr . Speichern Sie jede Programmieren-
+aufgabe in eine eigene Datei. Der Name der Datei muss dabei aufgabe_0N.py sein, wobei N
+die Nummer der Aufgabe ist. Zum Beispiel lautet für Aufgabe 1 der Name der Datei dann
+aufgabe_01.py.
+Verpacken Sie alle Dateien in einem zip-Archiv (Standard-Zip, keine 7zip, rar o.ä.), welches den
+Namen NAME_MATRIKELNUMMER.zip hat. Ersetzen Sie dabei NAME und MATRIKELNUMMER durch
+Ihren Namen und Ihre Matrikelnummer. Es ist wichtig, dass Sie sich an die Namenskonventionen
+halten, die wir Abgaben automatisch überprüfen.
+Wichtig: Die Lösungen für alle Programmieraufgaben müssen ohne Fehler ausführbar sein, sonst
+akzeptiert der Praktomat Ihre Abgabe nicht. Wenn der Praktomat nach dem Upload für eine
+oder mehrere Aufgaben den Status failed anzeigt, wird ihre komplette Abgabe nicht akzpe-
+tiert und Sie erhalten für das komplette Blatt 0 Punkte! Kommentieren Sie fehlerhafte
+Codestellen in einem solche Fall aus, so dass der Praktomat Ihre Abgabe akzeptiert.
+3
+        Hier ist die Lösung des Studenten:
+from wypp import *</p>
+<p>def removeSlice(l: list, start: int, end: int, step: int) -&gt; None:
+    if step &lt;= 0:
+        step = 1 </p>
+<pre><code>for i in range(start, len(l), step): 
+    if i &lt; len(l):  
+        l.pop(i)
+</code></pre>
+<hr />
+<p>Schreiben Sie eine Funktion removeSlice. Die Funktion soll folgenden Funktionskopf haben:
+def removeSlice(l: list, start: int, end: int, step: int) -&gt; None</p>
+<p>Dabei soll ein Aufruf removeSlice(l, start, end, step) die Elemente aus der Liste l entfernen, die der Slice-Ausdruck l[start:end:step] selektieren würde. Der Einfachheit halber können Sie annehmen dass die Indexe start und end sowie step nicht negativ sind.</p>
+<p>Beispiel 1: Wenn myList die Liste ['A', 'B', 'C', 'D', 'E', 'F', 'G'] ist, und wir rufen removeSlice(myList, 1, 5, 2) auf, dann sieht myList danach so aus: ['A', 'C', 'E', 'F', 'G'].</p>
+<p>Beispiel 2: Wenn myList2 die Liste [1,2,3,1,2,3] ist, und wir rufen removeSlice(myList2, 0, 3, 1) auf, dann sieht myList2 danach so aus: [1,2,3].</p>
+<h2>Hinweis: Verwenden Sie nicht del l[start:end:step]</h2>
+<p>```python
+from wypp import *</p>
+<p>def removeSlice(l: list, start: int, end: int, step: int) -&gt; None:
+    if step &lt;= 0:
+        step = 1 </p>
+<pre><code>for i in range(start, len(l), step): 
+    if i &lt; len(l):  
+        l.pop(i)
+</code></pre>
+<p>```</p>
+<p>Dein Code und die Umsetzung zu <code>removeSlice</code> zeigen, dass Du Dich mit der Aufgabe auseinandergesetzt hast, es gibt jedoch mehrere Punkte, die auf nicht Einhaltung bzw. Fehler beim vorgegebenen sechs-Schritte-Plan und bei der eigentlichen Umsetzung hinweisen.</p>
+<p>Hier mein strukturiertes Feedback nach den sechs vorgegebenen Schritten:</p>
+<p><strong>Schritt 1 (Kurzbeschreibung als Kommentar):</strong><br />
+- Fehlt komplett. Es ist keine einzeilige Beschreibung vorhanden, die kurz erklärt, was die Funktion macht.</p>
+<p><strong>Schritt 2 (Datenanalyse als Kommentar):</strong><br />
+- Fehlt komplett. Es gibt keine Beschreibung der Eingabeparameter (Typ, Bedeutung) und der Rückgabe (in dem Fall <code>None</code>), wie es für die Dokumentation der Funktion nötig wäre.</p>
+<p><strong>Schritt 3 (Funktionskopf mit Typen):</strong><br />
+- Der Funktionskopf ist korrekt, inklusive der Typmarkierungen.</p>
+<p><strong>Schritt 4 (Tests mittels <code>check</code>):</strong><br />
+- Kein einziger Test ist vorhanden. Weder die im Aufgabenbeispiel vorgegebenen, noch eigene Tests mittels <code>check</code>.</p>
+<p><strong>Schritt 5 (Schablonen):</strong><br />
+- Du hast diesen Schritt übersprungen, was erlaubt ist.</p>
+<p><strong>Schritt 6 (Implementierung des Funktionsrumpfs):</strong><br />
+- Logische Fehler und Probleme:</p>
+<ol>
+<li>
+<p>Die Anweisung <code>if step &lt;= 0: step = 1</code> widerspricht der Aufgabenstellung, dass <code>step</code> nicht negativ ist. Wenn das schon angenommen wird, muss hier kein Schutz erfolgen. Insgesamt ist das aber eine problematische Annahme, die nicht dokumentiert ist (Schritt 2).</p>
+</li>
+<li>
+<p>Die Schleife <code>for i in range(start, len(l), step)</code> geht nicht bis <code>end</code>, sondern bis <code>len(l)</code>. Dadurch wird der Bereich <code>start:end</code> ignoriert.</p>
+</li>
+<li>
+<p>Das Entfernen von Elementen per <code>l.pop(i)</code> während der iteration über Indizes aus <code>range()</code> führt zu Veränderung der Listenlänge und verschiebt die Indizes. Dies resultiert in falschen, übersprungenen oder Indexfehlern.</p>
+</li>
+<li>
+<p>Es wird nicht darauf geachtet, dass nur die Indizes aus dem Slice <code>l[start:end:step]</code> entfernt werden.</p>
+</li>
+<li>
+<p>Der Hinweis der Aufgabe war, nicht einfach <code>del l[start:end:step]</code> zu verwenden, sondern das Entfernen manuell vorzunehmen. Hier ist aber der Umgang mit sich verändernden Indizes entscheidend.</p>
+</li>
+<li>
+<p>Insgesamt funktioniert die Implementierung nicht korrekt und entspricht nicht den Vorgaben.</p>
+</li>
+</ol>
+<p><strong>Zusammenfassung der fehlenden bzw. fehlerhaften Punkte:</strong><br />
+- Fehlende Beschreibung (Schritt 1 und 2).<br />
+- Keine Tests definiert (Schritt 4).<br />
+- Logisch fehlerhafte Implementierung (Schritt 6): falscher Bereich (<code>range</code> bis <code>len(l)</code> und nicht bis <code>end</code>), iterative Löschung per Pop von vorne, die Indizes verschiebt.<br />
+- Ungenutzter Hinweis der Aufgabenstellung ("nicht <code>del l[start:end:step]</code>"), stattdessen muss eine korrekte Art zum Entfernen der Elemente verwendet werden.</p>
+<p><strong>Empfehlung:</strong><br />
+- Ergänze mindestens eine Kurzbeschreibung und Datenanalyse als Kommentare.<br />
+- Definiere Tests mit <code>check</code>, die Beispiele verwenden.<br />
+- Implementiere die Löschung so, dass die Indizes der zu entfernenden Elemente korrekt ermittelt und die Löschung von hinten nach vorne erfolgt, um die Indexverschiebung beim Löschen zu vermeiden.  </p>
+<hr />
+<p><strong>Fazit:</strong> Die Lösung hält nur teilweise die Vorgaben ein (Funktionskopf) und ist inhaltlich fehlerhaft. Weitere Schritte (1,2,4) fehlen komplett und die Implementierung ist fehlerhaft. Daher kann ich die Lösung nicht als korrekt und vollständig bestätigen.</p>
+<p>Bitte ergänze und korrigiere Deine Lösung gemäß der sechs Schritte und Hinweisungen.</p>
+<p>Unterschiede im Lösungsweg:
+- Student nutzt eine Vorwärts-Iteration und pop(i) direkt, ohne Reverse und ohne Begrenzung auf 'end'.
+- Musterlösung erstellt eine Range von Indizes genau wie der Slice (start, end, step) und entfernt Elemente rückwärts (reversed).
+- Student hat eine if-Bedingung, um sicherzugehen i &lt; len(l), aber es fehlt die Berücksichtigung des 'end'-Index.
+- Musterlösung entfernt Elemente in umgekehrter Reihenfolge, um Indexverschiebungen beim Löschen zu vermeiden.</p>
+<p>Feedback:
+Der Ansatz der Musterlösung ist sinnvoller und sicherer, da das Entfernen von hinten Indexverschiebungen vermeidet. Die Studentlösung entfernt Elemente vorwärts und verändert dadurch die Liste, was zu falschen Ergebnissen oder Indexfehlern führen kann. Außerdem fehlt bei der Studentversion die korrekte Berücksichtigung des Endindex.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Schritt</th>
+<th style="text-align: center;">Wurde eingehalten?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Schritt 1: Schreiben Sie zuerst eine Kurzbeschreibung als Kommentar</td>
+<td style="text-align: center;">❌ Nein</td>
+</tr>
+<tr>
+<td style="text-align: left;">Schritt 2: Führen Sie dann eine Datenanalyse durch. Schreiben Sie das Ergebnis Ihrer Datenanalyse ebenfalls als Kommentar in die Zeile nach der Kurzbeschreibung</td>
+<td style="text-align: center;">❌ Nein</td>
+</tr>
+<tr>
+<td style="text-align: left;">Schritt 3: Schreiben Sie dann den Funktionskopf inkl. der Typen für Argumente und Ergebnis hin</td>
+<td style="text-align: center;">✅ Ja</td>
+</tr>
+<tr>
+<td style="text-align: left;">Schritt 4: Schreiben Sie dann Tests mittels check</td>
+<td style="text-align: center;">❌ Nein</td>
+</tr>
+<tr>
+<td style="text-align: left;">Schritt 5: Setzen Sie die passenden Schablonen in den Rumpf der Funktion ein</td>
+<td style="text-align: center;">✅ Ja</td>
+</tr>
+<tr>
+<td style="text-align: left;">Schritt 6:  Schreiben Sie erst dann richtigen Funktionsrumpf hin</td>
+<td style="text-align: center;">❌ Nein</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fehler im Funktionsrumpf (Schritt 6):</strong><br />
+- Die Schleife iteriert von <code>start</code> bis <code>len(l)</code>, anstatt bis <code>end</code>, wodurch der Bereich <code>start:end</code> nicht korrekt berücksichtigt wird.<br />
+- Das Entfernen von Elementen mittels <code>pop(i)</code> erfolgt vorwärts, was die Liste während der Iteration verändert und damit zu falschen Ergebnissen oder Indexfehlern führt.<br />
+- Eine if-Bedingung versucht <code>i &lt; len(l)</code> zu prüfen, ersetzt aber nicht die fehlende Begrenzung des Bereichs durch <code>end</code>.<br />
+- Die Verwendung von <code>if step &lt;= 0: step = 1</code> widerspricht der Annahme, dass <code>step</code> nicht negativ ist, und ist inkonsistent ohne Dokumentation.  </p>
+<hr />
+<p><strong>Feedback des Muster_Agent:</strong><br />
+Der Ansatz der Musterlösung ist sinnvoller und sicherer, da das Entfernen von hinten Indexverschiebungen vermeidet. Die Studentlösung entfernt Elemente vorwärts und verändert dadurch die Liste, was zu falschen Ergebnissen oder Indexfehlern führen kann. Außerdem fehlt bei der Studentversion die korrekte Berücksichtigung des Endindex.</p>
+        </body>
+        </html>
+        

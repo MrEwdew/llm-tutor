@@ -4,9 +4,10 @@ from langgraph.graph import StateGraph
 from typing import TypedDict, Annotated, Sequence
 from langchain_core.messages import BaseMessage, SystemMessage, HumanMessage
 from operator import add as add_messages
-
-from config.meta_config import API_KEY, MUSTER_SOLUTION, MODELL, GEMINI_KEY
-from config.meta_config import OPENAI_DIRECT, OPENAI_HSO_PROXY, GEMINI_DIRECT
+import json
+#from config.meta_config import API_KEY, MUSTER_SOLUTION, MODELL, GEMINI_KEY
+#from config.meta_config import OPENAI_DIRECT, OPENAI_HSO_PROXY, GEMINI_DIRECT
+from config.meta_config import API_KEY,MUSTER_SOLUTION, MODELL, KICONNECT_BASE_URL, LLM_TEMPERATURE, LLM_TIMEOUT_SECONDS
 from config.locations import MERMAIDE_PATH, PYTHON_SAMPLE_SOLUTION 
 from config.prompts.python import AGGREGATOR_AGENT_SYSTEMMESSAGE, ASSIGNMENT_AGENT_SYSTEMMESSAGE ,MUSTER_AGENT_SYSTEMMESSAGE, RETRIEVER_AGENT_SYSTEMMESSAGE
 
@@ -19,32 +20,45 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 
 LLM_PROXY_URL = "https://llm-proxy.imla.hs-offenburg.de"
 
-def get_llm(modell_name, api: str):
-    if api != '':
-        return ChatOpenAI(
-            model= modell_name, 
-            api_key=api,
-            base_url=LLM_PROXY_URL,
-            )
+def get_llm(modell_name, api: str | None = None):
+    api_key = api or API_KEY
 
-    if OPENAI_DIRECT:
-        return init_chat_model(f"openai:{modell_name}")
+    if not api_key:
+        raise ValueError("API Key fehlt.")
     
-    elif OPENAI_HSO_PROXY:
-        llm = ChatOpenAI(
-            model= modell_name, 
-            api_key=API_KEY,
-            base_url=LLM_PROXY_URL,
-            )
-        return llm
+    # if api != '':
+    #     return ChatOpenAI(
+    #         model= modell_name, 
+    #         api_key=api,
+    #         base_url=LLM_PROXY_URL,
+    #         )
+
+    # if OPENAI_DIRECT:
+    #     return init_chat_model(f"openai:{modell_name}")
     
-    elif GEMINI_DIRECT:
-         # GEMINI
-        gemini = ChatGoogleGenerativeAI(
-            model= modell_name,
-            google_api_key= GEMINI_KEY  
-        )
-        return gemini
+    # elif OPENAI_HSO_PROXY:
+    #     llm = ChatOpenAI(
+    #         model= modell_name, 
+    #         api_key=API_KEY,
+    #         base_url=LLM_PROXY_URL,
+    #         )
+    #     return llm
+    
+    # elif GEMINI_DIRECT:
+    #      # GEMINI
+    #     gemini = ChatGoogleGenerativeAI(
+    #         model= modell_name,
+    #         google_api_key= GEMINI_KEY  
+    #     )
+    #     return gemini
+    return ChatOpenAI(
+        model= modell_name,
+        api_key=api_key,
+        base_url=KICONNECT_BASE_URL,
+        temperature=LLM_TEMPERATURE,
+        timeout=LLM_TIMEOUT_SECONDS,
+        max_retries=2,
+    )
         
 
 
@@ -106,7 +120,69 @@ def aggregator_node(state: AgentState, llm, prompt) -> AgentState:
     return {'aggregator_state': [message]}
     
 
-def build_Agent_Graph(modell_name, api, prompts:dict):
+#neu
+def assign_function_roles(
+    content: str,
+    expected_functions: list[tuple[str, str]],
+    llm,
+    prompt: str,
+) -> dict:
+    expected = set(expected_functions)
+
+    if len(expected) != len(expected_functions):
+        raise ValueError("Doppelte Funktionen im erwarteten Inventar.")
+
+    if not expected:
+        return {"functions": [], "usage": None}
+
+    answer = llm.invoke([
+        SystemMessage(content=prompt),
+        HumanMessage(content=content),
+    ])
+
+    result = json.loads(answer.content)
+
+    if not isinstance(result, dict):
+        raise ValueError("JSON-Objekt erwartet.")
+
+    functions = result.get("functions")
+    if not isinstance(functions, list):
+        raise ValueError("functions muss eine Liste sein.")
+
+    actual = []
+
+    for function in functions:
+        if not isinstance(function, dict):
+            raise ValueError("Funktionszuordnung muss ein Objekt sein.")
+
+        if set(function) != {"file", "name", "role", "status"}:
+            raise ValueError("Unerwartete Felder in Funktionszuordnung.")
+
+        if not all(isinstance(value, str) for value in function.values()):
+            raise ValueError("Alle Zuordnungsfelder muessen Text sein.")
+
+        if not function["role"].strip():
+            raise ValueError("Rollenbeschreibung fehlt.")
+
+        if function["status"] not in {"zugeordnet", "unklar"}:
+            raise ValueError("Unbekannter Zuordnungsstatus.")
+
+        actual.append((function["file"], function["name"]))
+
+    if len(actual) != len(set(actual)):
+        raise ValueError("Doppelte Funktionszuordnung.")
+
+    if set(actual) != expected:
+        raise ValueError("Funktionen fehlen oder wurden erfunden.")
+
+    return {
+        "functions": functions,
+        "usage": answer.usage_metadata,
+    }
+#neu ende
+
+
+def build_Agent_Graph(modell_name, api, prompts: dict, prepared_input=False):
 
     llm = get_llm(modell_name, api)
     graph = StateGraph(AgentState)
@@ -116,15 +192,27 @@ def build_Agent_Graph(modell_name, api, prompts:dict):
     muster_prompt = prompts.get("muster")
     retriever_prompt = prompts.get("retriever")
 
-    graph.add_node("Aufgabenextraktion", partial(assignment_node, llm=llm, prompt=assignment_prompt))
+    #graph.add_node("Aufgabenextraktion", partial(assignment_node, llm=llm, prompt=assignment_prompt))
+    if not prepared_input:
+        graph.add_node(
+            "Aufgabenextraktion",
+            partial(assignment_node, llm=llm, prompt=assignment_prompt),
+        )
     graph.add_node("Abgabenanalyse",  partial(retriever_node, llm=llm, prompt= retriever_prompt))
     graph.add_node("Mustervergleich",     partial(muster_node, llm=llm, prompt= muster_prompt))
     graph.add_node("Aggregation", partial(aggregator_node, llm=llm, prompt=aggregator_prompt))
 
-    graph.set_entry_point("Aufgabenextraktion")
+    # graph.set_entry_point("Aufgabenextraktion")
 
-    graph.add_edge("Aufgabenextraktion", "Abgabenanalyse")
-    graph.add_edge("Aufgabenextraktion", "Mustervergleich")
+    # graph.add_edge("Aufgabenextraktion", "Abgabenanalyse")
+    # graph.add_edge("Aufgabenextraktion", "Mustervergleich")
+    if prepared_input:
+        graph.add_edge("__start__", "Abgabenanalyse")
+        graph.add_edge("__start__", "Mustervergleich")
+    else:
+        graph.set_entry_point("Aufgabenextraktion")
+        graph.add_edge("Aufgabenextraktion", "Abgabenanalyse")
+        graph.add_edge("Aufgabenextraktion", "Mustervergleich")
     graph.add_edge("Mustervergleich", "Aggregation")
     graph.add_edge("Abgabenanalyse", "Aggregation")
 
