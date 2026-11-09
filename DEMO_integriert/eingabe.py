@@ -21,11 +21,12 @@ def load_input(variant):
         / "loesungen_der_schueler_vom_praktomat_runtergeladen"
         / "Uebungsblatt_1_Sayed_Hussaini.zip"
     )
-    reference = (
-        PROJECT_ROOT.parent
-        / "Musterloesungen_und_Vorlesungen"
-        / "Alaref/alaref/alaref/solutions/boot.py"
-    )
+    # reference = (
+    #     PROJECT_ROOT.parent
+    #     / "Musterloesungen_und_Vorlesungen"
+    #     / "Alaref/alaref/alaref/solutions/boot.py"
+    # )
+    reference = PROJECT_ROOT / "Musterloesungen/solutions/boot.py"
     code = (
         PROJECT_ROOT / "DEMO_lokal/abgaben" / variant / "aufgabe_06.py"
     ).read_bytes()
