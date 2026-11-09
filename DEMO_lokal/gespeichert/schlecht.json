@@ -1,0 +1,55 @@
+{
+  "source": "recorded_terminal_output",
+  "recorded_date": "2026-11-03",
+  "variant": "schlecht",
+  "model": "Qwen_3_30B_A3B_Instruct_2507",
+  "model_calls": 2,
+  "usage": {
+    "input_tokens": 3633,
+    "output_tokens": 275,
+    "total_tokens": 3908
+  },
+  "usage_complete": true,
+  "duration_seconds": 2.59,
+  "completed": true,
+  "technical_ok": true,
+  "test_result": {
+    "status": "completed",
+    "tests": [
+      {
+        "args": [
+          4.0,
+          2.0,
+          1.5
+        ],
+        "expected": 5.0,
+        "actual": 10.307764064044152,
+        "passed": false
+      },
+      {
+        "args": [
+          10.0,
+          2.0,
+          0.0
+        ],
+        "expected": 10.0,
+        "actual": 22.360679774997898,
+        "passed": false
+      },
+      {
+        "args": [
+          0.0,
+          2.0,
+          1.5
+        ],
+        "expected": 0.0,
+        "actual": 1.5,
+        "passed": false
+      }
+    ],
+    "embedded_output": "ERROR in File /tmp/abgabe.py, line 19: Expected 2.0, but the result is 8.0\nERROR in File /tmp/abgabe.py, line 30: Expected 3.0, but the result is 3.5\nERROR in File /tmp/abgabe.py, line 31: Expected 0.0, but the result is 2.0\nERROR in File /tmp/abgabe.py, line 32: Expected 5.0, but the result is 10.307764064044152\nERROR in File /tmp/abgabe.py, line 33: Expected 10.0, but the result is 22.360679774997898\nERROR in File /tmp/abgabe.py, line 34: Expected 0.0, but the result is 1.5\n",
+    "note": "Embedded output is separate from the three comparison tests."
+  },
+  "feedback": "Vorkorrektur:\n\nEs wurden 0 von 3 Vergleichstests bestanden.\n\nFehler:\n- `ueberquerungszeit`: Falsche Implementierung. Die Formel lautet t = a / vBoot, nicht a * vBoot. Dies führt zu falschen Zeitwerten (z. B. 4.0 * 2.0 = 8.0 statt 2.0).\n- `abdrift`: Falsche Implementierung. Die Abdrift berechnet sich als b = t * vFluss, nicht t + vFluss. Dies führt zu falschen Abdriftwerten (z. B. 2.0 + 1.5 = 3.5 statt 3.0).\n- `bootstrecke`: Da die Teilfunktionen falsch sind, liefert auch die Gesamtfunktion falsche Ergebnisse. Die Anwendung des Satzes des Pythagoras ist korrekt, aber auf falschen Eingaben basierend.\n\nAusführungsprobleme: Keine. Der Code ist syntaktisch korrekt und führt ohne Fehler aus, liefert aber falsche Ergebnisse.",
+  "error": null
+}

@@ -1,10 +1,7 @@
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_core.messages import  HumanMessage
-from chatbot import build_Agent_Graph
-from config.meta_config import  MODELL
 from config.locations.paths import *
 import importlib
-import markdown
 from pathlib import Path
 
 #neu
@@ -60,6 +57,44 @@ def prepare_python_reference(code: str) -> dict:
     }
 #neu ende
 
+
+#neu
+
+# Bereitet eine Aufgabe mit genau einer Python-Datei für die Korrektur vor.
+def prepare_python_correction_input(data: dict, task_number: int) -> dict:
+    if task_number not in data["tasks"]:
+        raise ValueError(f"Unbekannte Aufgabe: {task_number}")
+
+    files = data["tasks"][task_number]["files"]
+
+    if len(files) != 1:
+        raise ValueError(
+            "Die Python-Testausführung unterstützt bisher genau eine Datei "
+            "pro Aufgabe."
+        )
+
+    filename = next(iter(files))
+    file = files[filename]
+
+    if Path(filename).suffix.lower() != ".py":
+        raise ValueError("Für diese Korrektur wird eine Python-Datei benötigt.")
+
+    if file["code"] is None:
+        raise ValueError(f"Abgabedatei fehlt: {filename}")
+
+    prepared = prepare_evaluation_input(data, task_number)
+
+    return {
+        "task_number": task_number,
+        "filename": filename,
+        "path": file["path"],
+        "content": prepared["human_assignment_state"][0].content,
+        "sample_solution": prepared["sample_solution"],
+        "code": file["code"],
+        "syntax_error": file["syntax_error"],
+    }
+
+#neu ende
 
 #neu
 
@@ -477,6 +512,8 @@ def save_result_to_markdown(result, output_path):
     return absolute_path
 
 def analyze_submission_praktomat(pdf,model_solution,student_solution,assignment,api):
+    from chatbot import build_Agent_Graph
+    from config.meta_config import  MODELL
     # not necessary for muster_solution
     student_code = load_code(student_solution)
     if student_code is None:
@@ -505,7 +542,7 @@ def analyze_submission_praktomat(pdf,model_solution,student_solution,assignment,
 
 # if you want to use it, you must use  print_evaluation_stream instead of print_full_evaluation_stream !
 def output_in_html(content):
-
+    import markdown
     cleaned = content.replace(
         "================================== Ai Message ==================================",
         ""

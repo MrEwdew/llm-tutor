@@ -1,65 +1,13 @@
-import os
-import sys
-from langgraph.graph import StateGraph
-from typing import TypedDict, Annotated, Sequence
-from langchain_core.messages import BaseMessage, SystemMessage, HumanMessage
-from operator import add as add_messages
 import json
-#from config.meta_config import API_KEY, MUSTER_SOLUTION, MODELL, GEMINI_KEY
-#from config.meta_config import OPENAI_DIRECT, OPENAI_HSO_PROXY, GEMINI_DIRECT
-from config.meta_config import API_KEY,MUSTER_SOLUTION, MODELL, KICONNECT_BASE_URL, LLM_TEMPERATURE, LLM_TIMEOUT_SECONDS
-from config.locations import MERMAIDE_PATH, PYTHON_SAMPLE_SOLUTION 
-from config.prompts.python import AGGREGATOR_AGENT_SYSTEMMESSAGE, ASSIGNMENT_AGENT_SYSTEMMESSAGE ,MUSTER_AGENT_SYSTEMMESSAGE, RETRIEVER_AGENT_SYSTEMMESSAGE
-
-from langchain_openai import ChatOpenAI
 from functools import partial
-from langchain.chat_models import init_chat_model
-from langchain_google_genai import ChatGoogleGenerativeAI
+from operator import add as add_messages
+from typing import TypedDict, Annotated, Sequence
 
+from langchain_core.messages import BaseMessage, SystemMessage, HumanMessage
+from langgraph.graph import StateGraph
 
+from llm import get_llm
 
-LLM_PROXY_URL = "https://llm-proxy.imla.hs-offenburg.de"
-
-def get_llm(modell_name, api: str | None = None):
-    api_key = api or API_KEY
-
-    if not api_key:
-        raise ValueError("API Key fehlt.")
-    
-    # if api != '':
-    #     return ChatOpenAI(
-    #         model= modell_name, 
-    #         api_key=api,
-    #         base_url=LLM_PROXY_URL,
-    #         )
-
-    # if OPENAI_DIRECT:
-    #     return init_chat_model(f"openai:{modell_name}")
-    
-    # elif OPENAI_HSO_PROXY:
-    #     llm = ChatOpenAI(
-    #         model= modell_name, 
-    #         api_key=API_KEY,
-    #         base_url=LLM_PROXY_URL,
-    #         )
-    #     return llm
-    
-    # elif GEMINI_DIRECT:
-    #      # GEMINI
-    #     gemini = ChatGoogleGenerativeAI(
-    #         model= modell_name,
-    #         google_api_key= GEMINI_KEY  
-    #     )
-    #     return gemini
-    return ChatOpenAI(
-        model= modell_name,
-        api_key=api_key,
-        base_url=KICONNECT_BASE_URL,
-        temperature=LLM_TEMPERATURE,
-        timeout=LLM_TIMEOUT_SECONDS,
-        max_retries=2,
-    )
-        
 
 
 class AgentState(TypedDict):

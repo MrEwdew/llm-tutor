@@ -5,17 +5,28 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "ipykernel>=6.30.1",
-    "langchain>=0.3.27",
-    "langchain-chroma>=0.2.6",
-    "langchain-community>=0.3.30",
-    "langchain-google-genai>=2.1.12",
-    "langchain-openai>=0.3.35",
-    "langgraph>=0.6.8",
-    "langsmith>=0.4.32",
-    "markdown>=3.9",
-    "pypdf>=6.1.1",
-    "pypdf2>=3.0.1",
-    "tiktoken>=0.11.0",
-    "unstructured>=0.18.15",
+    "deepagents==0.7.32",
+    "ipykernel==6.30.1",
+    "langchain==1.4.8",
+    "langchain-core==1.7.4",
+    "langchain-chroma==0.2.6",
+    "langchain-community==0.3.30",
+    "langchain-google-genai==4.4.2",
+    "langchain-openai==1.7.3",
+    "langgraph==1.2.19",
+    "langsmith==0.14.17",
+    "markdown==3.9",
+    "openai==3.43.0",
+    "pypdf==6.1.1",
+    "pypdf2==3.0.1",
+    "python-dotenv==1.1.1",
+    "requests==2.32.5",
+    "tiktoken==0.11.0",
+    "unstructured==0.18.15",
+    "wypp==2.3.0",
+]
+
+[dependency-groups]
+notebooks = [
+    "transformers==5.20.1",
 ]

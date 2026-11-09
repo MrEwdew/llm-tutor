@@ -1,0 +1,47 @@
+Allgemeine Blattvorgaben:
+Prof. Dr. Stefan Wehr, M.Sc. Hannes Braun
+Übungsblatt 1
+AKI/NES Programmierung 1, Wintersemester 2024/2025
+Deadline: 23.10.2024, 23:00 Uhr
+17.10.2024
+Gehen Sie beim Lösen aller Programmieraufgaben strikt nach unserem Schema vor:
+1. Schreiben Sie zuerst eine Kurzbeschreibung als Kommentar.
+2. Führen Sie dann eine Datenanalyse durch. Schreiben Sie das Ergebnis Ihrer Datenanalyse
+ebenfalls als Kommentar in die Zeile nach der Kurzbeschreibung.
+3. Schreiben Sie dann den Funktionskopf inkl. der Typen für Argumente und Ergebnis hin.
+4. Schreiben Sie dann Tests mittels check.
+5. Setzen Sie die passenden Schablonen in den Rumpf der Funktion ein.
+6. Schreiben Sie erst dann den Funktionsrumpf hin.
+Eine Lösung, in der nicht ersichtlich ist, dass Sie gemäß des Schemas aggiert haben, erhält keine
+Punkte. Insbesondere erhält eine Lösung, bei der nur der Funktionsrumpf da steht, keine Punkte,
+auch wenn die Funktion korrekt ist.
+Dahingegen erhalten Sie Teilpunkte wenn Sie dem Schema folgen, aber an einem gewissen Punkt
+nicht weiterkommen.
+
+
+Aufgabenstellung:
+Aufgabe 6 (12 Punkte)
+Ein Boot überquert einen Fluss. Da der Fluss eine starke Strömung hat, wird das Boot in
+Richtung der Strömung abgetrieben. Die vom Boot zurückgelegte Strecke wird dadurch länger.
+Nachfolgende Grafik veranschaulicht das Szenario:
+Dabei ist a die Breite des Flusses in Meter, vFluss ist die Strömungsgeschwindigkeit des Flusses
+und vBoot ist die Geschwindigkeit des Boots. Geschwindigkeiten sind in Meter pro Sekunde
+angegeben.
+Berechne Sie die Länge der Strecke c, die das Boot tatsächlich zurücklegt, um von einem Ufer zum
+anderen zu kommen. Teilen Sie dazu das Problem in sinnvolle Teilprobleme auf und schreiben
+Sie für jedes Teilproblem eine extra Funktion. Folgende Teilprobleme bieten sich an:
+• Die Zeit zum Überqueren des Flusses ist gegeben durch t = a
+vBoot
+• Aus t lässt sich die Strecke b (siehe Zeichnung) berechnen.
+Gehen Sie bei der Lösung „top-down“ vor, d.h. starten Sie zuerst mit einem Lösungsansatz für
+das Gesamtproblem. Wenn Sie dabei merken, dass Sie eine Lösung für ein Teilproblem brauchen,
+lösen Sie das Teilproblem und machen erst dann mit dem Gesamtproblem weiter.
+Hinweis 1: Zur Berechnung der Strecken c können Sie den Satz des Pythagoras benutzen. Die
+Funktion math.sqrt liefert dabei die Wurzel zweier floats (wiederum ein float).
+Hinweis 2: ein Beispiel, für das Sie die Lösung einfach im Kopf ausrechnen können, ist a = 4,
+vBoot = 2und vFluss = 1, 5.
+3
+Übungsblatt 1 AKI/NES Programmierung 1
+
+
+Zur Abbildung: a und b sind die rechtwinkligen Katheten; vBoot zeigt quer und vFluss laengs zum Fluss.

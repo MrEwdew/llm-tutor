@@ -1,0 +1,55 @@
+{
+  "source": "recorded_terminal_output",
+  "recorded_date": "2026-11-03",
+  "variant": "gut",
+  "model": "Qwen_3_30B_A3B_Instruct_2507",
+  "model_calls": 2,
+  "usage": {
+    "input_tokens": 3392,
+    "output_tokens": 260,
+    "total_tokens": 3652
+  },
+  "usage_complete": true,
+  "duration_seconds": 2.74,
+  "completed": true,
+  "technical_ok": true,
+  "test_result": {
+    "status": "completed",
+    "tests": [
+      {
+        "args": [
+          4.0,
+          2.0,
+          1.5
+        ],
+        "expected": 5.0,
+        "actual": 5.0,
+        "passed": true
+      },
+      {
+        "args": [
+          10.0,
+          2.0,
+          0.0
+        ],
+        "expected": 10.0,
+        "actual": 10.0,
+        "passed": true
+      },
+      {
+        "args": [
+          0.0,
+          2.0,
+          1.5
+        ],
+        "expected": 0.0,
+        "actual": 0.0,
+        "passed": true
+      }
+    ],
+    "embedded_output": "",
+    "note": "Embedded output is separate from the three comparison tests."
+  },
+  "feedback": "Vorkorrektur:\n\nDie Abgabe besteht aus 3 bestandenen Vergleichstests.\nFehler: Keine Ausfuehrungsprobleme.\nAlle Tests (bootstrecke(4.0, 2.0, 1.5), bootstrecke(10.0, 2.0, 0.0), bootstrecke(0.0, 2.0, 1.5)) lieferten die erwarteten Ergebnisse.\nDie Implementierung folgt korrekt dem vorgegebenen Schema: Kurzbeschreibung, Datenanalyse (implizit in Kommentaren), Funktionskopf, Tests, Rumpf.\nDie Funktionen ueberquerungszeit und abdrift sind korrekt und werden in bootstrecke sinnvoll verwendet.\nDer Satz des Pythagoras wird korrekt angewendet.\nDie Tests sind sinnvoll gewählt und decken Randfälle (z. B. a=0, vFluss=0) ab.\nKeine weiteren Fehler identifiziert.",
+  "error": null
+}
