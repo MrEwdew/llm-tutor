@@ -1,0 +1,1 @@
+Die Referenz boot.py gehoert nur zu Aufgabe 6. Separate Beispieltests fehlen; vorhandene Checks stehen im Referenzcode.
