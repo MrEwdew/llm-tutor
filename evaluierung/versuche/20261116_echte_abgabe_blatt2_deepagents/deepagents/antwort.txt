@@ -1,0 +1,25 @@
+### Zuordnung und Ausführung
+- **Aufgabe 1**: `Aufgabe1.py` → `luisasLieblingsZahlen` → Tests: 7 ✅  
+- **Aufgabe 2**: `Aufgabe2.py` → `rueckenNummer` → Tests: 5 ✅  
+- **Aufgabe 3**: `Aufgabe3.py` → `bussgeldbescheid` → Tests: 9 ✅  
+- **Aufgabe 4**: `Aufgabe4.py` → `clamp` → Tests: 8 ✅  
+
+### Belegte Fehler
+- **Aufgabe 2**: Falsche `elif`-Bedingung: `rueckenNummer == (2 or 3 or 4 or 5)` evaluiert zu `2`, da `or` nur den ersten wahren Wert zurückgibt. Korrekt wäre `rueckenNummer in (2, 3, 4, 5)`. Test `check(rueckenNummer(3), "Abwehrspieler")` würde fehlschlagen.
+- **Aufgabe 2**: `elif rueckenNummer <= 99` erfasst auch ungültige Nummern (z. B. 0, 100). Korrekt wäre `elif 12 <= rueckenNummer <= 99`.
+- **Aufgabe 3**: `math.ceil(parkzeitueberschritt/60)` fehlt `import math`. Code ist nicht ausführbar.
+- **Aufgabe 3**: `check(bussgeldbescheid(600), 90)` → 600 min = 10 h → (10–1)·10 = 90 ✅, aber `math` fehlt.
+
+### Formale Befunde
+- **Aufgabe 1**: Kurzbeschreibung fehlt. Keine Datenanalyse. Typangabe korrekt. Tests korrekt. Funktion korrekt.
+- **Aufgabe 2**: Datenbeschreibung und Typdefinition vorhanden. Funktion korrekt, aber logische Fehler in Bedingungen. Tests fehlen für ungültige Eingaben.
+- **Aufgabe 3**: Kurzbeschreibung fehlt. Keine Datenanalyse. Typangabe korrekt. `math` fehlt → Ausführung fehlgeschlagen.
+- **Aufgabe 4**: Kurzbeschreibung, Typen, Tests korrekt. Funktion korrekt.
+
+### Offene Punkte
+- **Aufgabe 1**: Keine Datenanalyse → Teilpunkt verloren.
+- **Aufgabe 3**: `math` fehlt → Ausführung fehlgeschlagen → 0 Punkte.
+- **Aufgabe 2**: Logische Fehler → Teilpunkt verloren.
+
+### Nicht getestete Teile
+- Keine. Alle Aufgaben wurden mit eigenen Tests überprüft.

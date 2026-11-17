@@ -1,0 +1,42 @@
+{
+  "model": "Qwen_3_30B_A3B_Instruct_2507",
+  "harness": "deepagents",
+  "image": "sha256:57ae814b5ca5373586f504a0b7f584505dbfdc819693e304062f5ff58e0df67e",
+  "status": "model_limit",
+  "model_steps_limit": 6,
+  "wall_limit_seconds": 120,
+  "prompt": "Untersuche /work/material/aufgaben.pdf und /work/material/abgabe.zip.\nOrdne die enthaltenen Dateien den Aufgaben zu. Erstelle eigene sinnvolle\nWYPP-checks mit anhand der Aufgabenstellung begruendeten Sollwerten.\nFuehre diese gegen den unveraenderten Abgabecode aus und gib eine kurze,\nbegruendete Korrektur pro Aufgabe. Unterscheide echte Ausfuehrungen von\nblossen Schlussfolgerungen. Keine Ersatzloesungen und keine Reparaturen.\nBewerte fehlende Abgabetests nur, wenn sie im Aufgabenblatt gefordert sind.\nHalte deinen Testcode und die Ergebnisse in /work/arbeit fest.\nDeine Abschlussantwort soll maximal 200 Woerter haben.\n\nUmgebungshinweis: /usr/local/bin/python, pypdf, wypp, pytest und das\nPython-Standardmodul zipfile sind vorhanden. Nutze diese vorhandene Umgebung.\nEs gibt kein pdftotext. Keine Paketinstallation, Websuche oder Delegation.\nArbeite nur unter /work; Originalmaterialien unter /work/material nicht\nveraendern. Keine Zugangsdaten oder Umgebungsvariablen lesen oder ausgeben.\nDu hast maximal sechs Modellschritte; arbeite entsprechend knapp.\n",
+  "material_sha256": {
+    "abgabe.zip": "7be709ce85c855d39d8044d84ed6c9b907ac75c7b4d97caa74b3d31ee2fb2e47",
+    "aufgaben.pdf": "6c5c6a5d9baef1d356abd28bd7647fc59dae313296ef066b76d0c1326eeeba27"
+  },
+  "script_sha256": "bdec5d535bf161ed3f4def274794cb0c02ef33a54798142ea8ccfc2956a1ef83",
+  "src_used": false,
+  "support": "Expliziter Hinweis auf vorhandene Bibliotheken",
+  "permissions": "OpenCode: Subagent und Webtools nativ untersagt; DeepAgents: Auftrag untersagt Delegation, Callback begrenzt alle Modellstarts",
+  "exit_code": 1,
+  "duration_seconds": 4.188,
+  "material_unchanged": true,
+  "observed_model_responses": 5,
+  "reported_usage": {
+    "input_tokens": 16583,
+    "output_tokens": 135,
+    "total_tokens": 16718
+  },
+  "usage_complete": null,
+  "usage_note": "Summe vorhandener Verbrauchsangaben. Fehlgeschlagene Modellanfragen koennen ohne Usage fehlen.",
+  "observed_tools": [
+    "ls",
+    "glob",
+    "glob",
+    "read_file",
+    "execute"
+  ],
+  "workflow_completed": false,
+  "tests_created": false,
+  "submission_executed": false,
+  "pdf_text_extracted": false,
+  "zip_listed": true,
+  "zip_extracted": false,
+  "final_answer": ""
+}

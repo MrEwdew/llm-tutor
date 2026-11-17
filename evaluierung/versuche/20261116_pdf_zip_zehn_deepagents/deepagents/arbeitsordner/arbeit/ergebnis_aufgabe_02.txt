@@ -1,0 +1,1 @@
+ERROR in File /work/arbeit/test_aufgabe_02.py, line 8: Expected False, but the result is True

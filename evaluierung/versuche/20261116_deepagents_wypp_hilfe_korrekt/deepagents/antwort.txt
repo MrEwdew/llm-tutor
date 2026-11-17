@@ -1,0 +1,6 @@
+Alle Tests bestanden. Die Originalfunktionen erfuellen die Anforderungen korrekt:
+
+- `quadrat(x)` berechnet korrekt x² für 0, 3 und -2.
+- `positiv(x)` liefert genau `True` für x > 0, `False` sonst.
+
+Keine Fehler gefunden. Die Implementierungen in `/work/material/aufgabe_01.py` und `/work/material/aufgabe_02.py` sind korrekt. Die Tests wurden erfolgreich ausgefuehrt, ohne Fehlermeldungen. Die Sollwerte wurden aus den Aufgabenanforderungen abgeleitet und die Tests wurden mit `wypp.check` validiert. Keine Aenderungen notwendig.

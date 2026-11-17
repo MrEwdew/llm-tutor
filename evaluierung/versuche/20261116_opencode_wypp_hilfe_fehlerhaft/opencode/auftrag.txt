@@ -1,0 +1,33 @@
+Aufgabe 1: quadrat(x: int) -> int soll x*x zurueckgeben.
+Aufgabe 2: positiv(x: int) -> bool soll genau fuer x > 0 True liefern.
+Tests im Abgabecode und bestimmte Dateinamen sind nicht vorgeschrieben.
+
+Die unveraenderten Abgabedateien liegen unter /work/material/.
+Lies sie und ordne sie den Aufgaben zu. Entwickle selbst eigene WYPP-checks
+mit aus den Anforderungen begruendeten Sollwerten. Speichere die Tests unter
+/work/arbeit und fuehre sie gegen die Originaldateien unter /work/material aus.
+Erklaere gefundene Fehler anhand der tatsaechlichen Testergebnisse.
+Keine Ersatzloesungen, keine kopierten oder reparierten Funktionsdefinitionen.
+Kennzeichne, was wirklich ausgefuehrt wurde. Abschlussantwort maximal 150 Woerter.
+
+/usr/local/bin/python und wypp sind vorhanden. Keine Paketinstallation,
+Websuche oder Delegation. Keine Zugangsdaten oder Umgebungsvariablen lesen.
+Arbeite nur unter /work, Originaldateien nicht veraendern.
+Maximal sechs Modellschritte, keine automatische Wiederholung.
+
+Technische Hilfestellung fuer die Einbindung: Setze an den Anfang deiner
+Testdatei die folgenden Zeilen. Sie laden die unveraenderten Originalfunktionen:
+
+import sys
+sys.path.insert(0, "/work/material")
+from aufgabe_01 import quadrat
+from aufgabe_02 import positiv
+from wypp import check
+
+Entwickle die eigentlichen check-Aufrufe und ihre Sollwerte selbst.
+Fuehre deine Testdatei mit /usr/local/bin/python aus. Werte die tatsaechlichen
+Ausgaben aus; ein beendeter Prozess allein bedeutet nicht, dass alle Checks bestehen.
+
+WYPP-Hilfe: Verwende check(istwert, sollwert), genau zwei Argumente.
+Beschreibungen gehoeren in Kommentare, nicht in ein drittes Argument.
+Waehle Testeingaben und Sollwerte selbst aus den Anforderungen.

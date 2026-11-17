@@ -1,0 +1,8 @@
+{
+  "origin": "Synthetische korrekte Gegenprobe; nur die beiden Operatoren gegenueber dem fehlerhaften Fall geaendert.",
+  "harness_prompt_unchanged": true,
+  "files": {
+    "aufgabe_01.py": "0d75499c75b18bde31b1d43acc4d061ffbc3f47d22a27cc6e6daf26809f5f523",
+    "aufgabe_02.py": "3bd75b1547ba1ab1a066355a75f91dc205d390795130046a534f0da4470e6e91"
+  }
+}

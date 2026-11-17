@@ -7,6 +7,25 @@ import sys
 from pathlib import Path
 
 
+def results_match(actual, expected):
+    if isinstance(expected, bool):
+        return isinstance(actual, bool) and actual == expected
+
+    if isinstance(expected, str):
+        return isinstance(actual, str) and actual == expected
+
+    if isinstance(expected, (int, float)):
+        return (
+            isinstance(actual, (int, float))
+            and not isinstance(actual, bool)
+            and math.isfinite(actual)
+            and math.isfinite(expected)
+            and math.isclose(actual, expected, rel_tol=1e-9, abs_tol=1e-9)
+        )
+
+    raise ValueError("Als Sollwert werden Zahlen, boolesche Werte und Texte unterstützt.")
+
+
 # Ruft die angegebene Funktion auf und prüft ihren Rückgabewert.
 def run_test(module: dict, test: dict) -> dict:
     result = {
@@ -17,19 +36,12 @@ def run_test(module: dict, test: dict) -> dict:
 
     try:
         actual = module[test["function"]](*test["args"])
-        numeric = (
-            isinstance(actual, (int, float))
-            and not isinstance(actual, bool)
-            and math.isfinite(actual)
-        )
+        serializable = isinstance(actual, (bool, str, int, float))
+        if isinstance(actual, float) and not math.isfinite(actual):
+            serializable = False
 
-        result["actual"] = actual if numeric else repr(actual)
-        result["passed"] = numeric and math.isclose(
-            actual,
-            test["expected"],
-            rel_tol=1e-9,
-            abs_tol=1e-9,
-        )
+        result["actual"] = actual if serializable else repr(actual)
+        result["passed"] = results_match(actual, test["expected"])
 
     except Exception as error:
         result["passed"] = False

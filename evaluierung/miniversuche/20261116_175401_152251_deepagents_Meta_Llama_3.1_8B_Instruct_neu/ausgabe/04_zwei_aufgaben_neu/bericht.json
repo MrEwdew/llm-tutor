@@ -1,0 +1,13 @@
+{
+  "case": "04_zwei_aufgaben_neu",
+  "group": "neu",
+  "harness": "deepagents",
+  "model": "Meta_Llama_3.1_8B_Instruct",
+  "prompt": "Aufgabe 1: quadrat(x: int) -> int soll x*x liefern.\nAufgabe 2: positiv(x: int) -> bool soll genau für x > 0 True liefern.\nTests im Abgabecode sind nicht vorgeschrieben.\n\nAbgabe:\nDatei aufgabe_01.py:\ndef quadrat(x: int) -> int:\n    return x + x\n\nDatei aufgabe_02.py:\ndef positiv(x: int) -> bool:\n    return x >= 0\n\nOrdne die Dateien den Aufgaben zu. Erstelle je einen check(...),\nder einen Fehler aufdeckt, und begründe den Sollwert kurz.\nKeine Ersatzlösung. Kennzeichne, ob du die Checks tatsächlich\nausgeführt oder nur vorgeschlagen hast. Maximal 150 Wörter.",
+  "effective_prompt": "Aufgabe 1: quadrat(x: int) -> int soll x*x liefern.\nAufgabe 2: positiv(x: int) -> bool soll genau für x > 0 True liefern.\nTests im Abgabecode sind nicht vorgeschrieben.\n\nAbgabe:\nDatei aufgabe_01.py:\ndef quadrat(x: int) -> int:\n    return x + x\n\nDatei aufgabe_02.py:\ndef positiv(x: int) -> bool:\n    return x >= 0\n\nOrdne die Dateien den Aufgaben zu. Erstelle je einen check(...),\nder einen Fehler aufdeckt, und begründe den Sollwert kurz.\nKeine Ersatzlösung. Kennzeichne, ob du die Checks tatsächlich\nausgeführt oder nur vorgeschlagen hast. Maximal 150 Wörter.\n\nArbeite ausschließlich unter /work. Verändere keine Originalmaterialien.\nNutze für eigene Dateien /work/arbeit. Keine Paketinstallation oder Websuche.\nLies oder zeige keine Zugangsdaten oder Umgebungsvariablen.\nPython ist unter /usr/local/bin/python verfügbar. Java ist nicht vorinstalliert.\n",
+  "attachment": null,
+  "fresh_chat": true,
+  "status": "error",
+  "error": "OpenAIInvalidRequestError: Error code: 400 - This model only supports single tool-calls at once!",
+  "duration_seconds": 1.033
+}

@@ -1,0 +1,13 @@
+{
+  "case": "08_blatt",
+  "group": "blatt",
+  "harness": "deepagents",
+  "model": "Meta_Llama_3.1_8B_Instruct",
+  "prompt": "Untersuche ausschließlich das angehängte Aufgabenblatt.\n\nListe für jede Aufgabe:\n- Nummer und Teilaufgaben\n- geforderte Funktion beziehungsweise Berechnung\n- ausdrücklich genannte Dateinamen\n\nNenne außerdem allgemeine Vorgaben, geforderte Tests sowie\nerlaubte oder verbotene Operationen. Erfinde keine Anforderungen\noder Dateinamen. Löse die Aufgaben nicht.\n\nMaximal 300 Wörter.",
+  "effective_prompt": "Untersuche ausschließlich das angehängte Aufgabenblatt.\n\nListe für jede Aufgabe:\n- Nummer und Teilaufgaben\n- geforderte Funktion beziehungsweise Berechnung\n- ausdrücklich genannte Dateinamen\n\nNenne außerdem allgemeine Vorgaben, geforderte Tests sowie\nerlaubte oder verbotene Operationen. Erfinde keine Anforderungen\noder Dateinamen. Löse die Aufgaben nicht.\n\nMaximal 300 Wörter.\n\nAnhang als Datei: /work/material/blatt-02.pdf\n\nArbeite ausschließlich unter /work. Verändere keine Originalmaterialien.\nNutze für eigene Dateien /work/arbeit. Keine Paketinstallation oder Websuche.\nLies oder zeige keine Zugangsdaten oder Umgebungsvariablen.\nPython ist unter /usr/local/bin/python verfügbar. Java ist nicht vorinstalliert.\n",
+  "attachment": "blatt-02.pdf",
+  "fresh_chat": true,
+  "status": "error",
+  "error": "OpenAIInvalidRequestError: Error code: 400 - This model only supports single tool-calls at once!",
+  "duration_seconds": 0.766
+}

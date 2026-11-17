@@ -1,0 +1,20 @@
+{
+  "case": "01_werkzeuge",
+  "group": "bestehend",
+  "harness": "deepagents",
+  "model": "Qwen_3_30B_A3B_Instruct_2507",
+  "prompt": "Welche Werkzeuge stehen dir in diesem Chat tatsächlich zur Verfügung?\nKannst du ZIP-Dateien entpacken, Python oder Java ausführen und eigene Tests starten?\nAntworte kurz je Fähigkeit: verfügbar, nicht verfügbar oder unbekannt.\nUnterscheide Code schreiben von Code ausführen.",
+  "effective_prompt": "Welche Werkzeuge stehen dir in diesem Chat tatsächlich zur Verfügung?\nKannst du ZIP-Dateien entpacken, Python oder Java ausführen und eigene Tests starten?\nAntworte kurz je Fähigkeit: verfügbar, nicht verfügbar oder unbekannt.\nUnterscheide Code schreiben von Code ausführen.\n\nArbeite ausschließlich unter /work. Verändere keine Originalmaterialien.\nNutze für eigene Dateien /work/arbeit. Keine Paketinstallation oder Websuche.\nLies oder zeige keine Zugangsdaten oder Umgebungsvariablen.\nPython ist unter /usr/local/bin/python verfügbar. Java ist nicht vorinstalliert.\n",
+  "attachment": null,
+  "fresh_chat": true,
+  "status": "completed",
+  "answer": " verfügbar, nicht verfügbar, nicht verfügbar",
+  "model_calls": 1,
+  "usage": {
+    "input_tokens": 3052,
+    "output_tokens": 8,
+    "total_tokens": 3060
+  },
+  "tool_calls": [],
+  "duration_seconds": 0.398
+}

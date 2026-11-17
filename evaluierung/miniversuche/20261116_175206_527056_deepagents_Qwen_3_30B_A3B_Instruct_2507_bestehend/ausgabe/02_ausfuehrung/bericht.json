@@ -1,0 +1,20 @@
+{
+  "case": "02_ausfuehrung",
+  "group": "bestehend",
+  "harness": "deepagents",
+  "model": "Qwen_3_30B_A3B_Instruct_2507",
+  "prompt": "Führe diesen Python-Code tatsächlich aus, falls du ein Ausführungswerkzeug hast:\n\nimport secrets\nprint(secrets.token_hex(8))\n\nFalls das nicht möglich ist, antworte nur: „Nicht ausgeführt.“\nErfinde keine Ausgabe und simuliere keine Ausführung.",
+  "effective_prompt": "Führe diesen Python-Code tatsächlich aus, falls du ein Ausführungswerkzeug hast:\n\nimport secrets\nprint(secrets.token_hex(8))\n\nFalls das nicht möglich ist, antworte nur: „Nicht ausgeführt.“\nErfinde keine Ausgabe und simuliere keine Ausführung.",
+  "attachment": null,
+  "fresh_chat": false,
+  "status": "completed",
+  "answer": "Nicht ausgeführt.",
+  "model_calls": 1,
+  "usage": {
+    "input_tokens": 3132,
+    "output_tokens": 6,
+    "total_tokens": 3138
+  },
+  "tool_calls": [],
+  "duration_seconds": 0.127
+}

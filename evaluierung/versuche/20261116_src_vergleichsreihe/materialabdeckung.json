@@ -1,0 +1,909 @@
+[
+  {
+    "baseline": "20261116_181101_unterstuetzter_kleinstfall",
+    "harness": "deepagents",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "abgabe.zip",
+        "kind": "src_zip",
+        "code_files": 2
+      },
+      {
+        "name": "aufgaben.pdf",
+        "kind": "src_pdf",
+        "characters": 476
+      }
+    ],
+    "comparison_job_ids": [
+      "synthetisch_fehlerhaft_quadrat",
+      "synthetisch_fehlerhaft_positiv",
+      "synthetisch_korrekt_quadrat",
+      "synthetisch_korrekt_positiv"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_181101_unterstuetzter_kleinstfall",
+    "harness": "opencode",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "abgabe.zip",
+        "kind": "src_zip",
+        "code_files": 2
+      },
+      {
+        "name": "aufgaben.pdf",
+        "kind": "src_pdf",
+        "characters": 476
+      }
+    ],
+    "comparison_job_ids": [
+      "synthetisch_fehlerhaft_quadrat",
+      "synthetisch_fehlerhaft_positiv",
+      "synthetisch_korrekt_quadrat",
+      "synthetisch_korrekt_positiv"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_deepagents_eigene_checks",
+    "harness": "deepagents",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "aufgabe_01.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "quadrat",
+            "line": 1,
+            "parameters": "x: int",
+            "return_type": "int"
+          }
+        ]
+      },
+      {
+        "name": "aufgabe_02.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "positiv",
+            "line": 1,
+            "parameters": "x: int",
+            "return_type": "bool"
+          }
+        ]
+      }
+    ],
+    "comparison_job_ids": [
+      "synthetisch_fehlerhaft_quadrat",
+      "synthetisch_fehlerhaft_positiv",
+      "synthetisch_korrekt_quadrat",
+      "synthetisch_korrekt_positiv"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_deepagents_importhinweis",
+    "harness": "deepagents",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "aufgabe_01.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "quadrat",
+            "line": 1,
+            "parameters": "x: int",
+            "return_type": "int"
+          }
+        ]
+      },
+      {
+        "name": "aufgabe_02.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "positiv",
+            "line": 1,
+            "parameters": "x: int",
+            "return_type": "bool"
+          }
+        ]
+      }
+    ],
+    "comparison_job_ids": [
+      "synthetisch_fehlerhaft_quadrat",
+      "synthetisch_fehlerhaft_positiv",
+      "synthetisch_korrekt_quadrat",
+      "synthetisch_korrekt_positiv"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_deepagents_importvorgabe",
+    "harness": "deepagents",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "aufgabe_01.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "quadrat",
+            "line": 1,
+            "parameters": "x: int",
+            "return_type": "int"
+          }
+        ]
+      },
+      {
+        "name": "aufgabe_02.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "positiv",
+            "line": 1,
+            "parameters": "x: int",
+            "return_type": "bool"
+          }
+        ]
+      }
+    ],
+    "comparison_job_ids": [
+      "synthetisch_fehlerhaft_quadrat",
+      "synthetisch_fehlerhaft_positiv",
+      "synthetisch_korrekt_quadrat",
+      "synthetisch_korrekt_positiv"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_deepagents_korrekte_abgabe",
+    "harness": "deepagents",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "aufgabe_01.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "quadrat",
+            "line": 1,
+            "parameters": "x: int",
+            "return_type": "int"
+          }
+        ]
+      },
+      {
+        "name": "aufgabe_02.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "positiv",
+            "line": 1,
+            "parameters": "x: int",
+            "return_type": "bool"
+          }
+        ]
+      }
+    ],
+    "comparison_job_ids": [
+      "synthetisch_fehlerhaft_quadrat",
+      "synthetisch_fehlerhaft_positiv",
+      "synthetisch_korrekt_quadrat",
+      "synthetisch_korrekt_positiv"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_deepagents_wypp_hilfe",
+    "harness": "deepagents",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "aufgabe_01.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "quadrat",
+            "line": 1,
+            "parameters": "x: int",
+            "return_type": "int"
+          }
+        ]
+      },
+      {
+        "name": "aufgabe_02.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "positiv",
+            "line": 1,
+            "parameters": "x: int",
+            "return_type": "bool"
+          }
+        ]
+      }
+    ],
+    "comparison_job_ids": [
+      "synthetisch_fehlerhaft_quadrat",
+      "synthetisch_fehlerhaft_positiv",
+      "synthetisch_korrekt_quadrat",
+      "synthetisch_korrekt_positiv"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_deepagents_wypp_hilfe_korrekt",
+    "harness": "deepagents",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "aufgabe_01.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "quadrat",
+            "line": 1,
+            "parameters": "x: int",
+            "return_type": "int"
+          }
+        ]
+      },
+      {
+        "name": "aufgabe_02.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "positiv",
+            "line": 1,
+            "parameters": "x: int",
+            "return_type": "bool"
+          }
+        ]
+      }
+    ],
+    "comparison_job_ids": [
+      "synthetisch_fehlerhaft_quadrat",
+      "synthetisch_fehlerhaft_positiv",
+      "synthetisch_korrekt_quadrat",
+      "synthetisch_korrekt_positiv"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_echte_abgabe_blatt2_ausfuehrung",
+    "harness": "deepagents",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "abgabe.zip",
+        "kind": "src_zip",
+        "code_files": 4
+      },
+      {
+        "name": "aufgaben.pdf",
+        "kind": "src_pdf",
+        "characters": 4089
+      }
+    ],
+    "comparison_job_ids": [
+      "blatt2_aufgabe1",
+      "blatt2_aufgabe2",
+      "blatt2_aufgabe3",
+      "blatt2_aufgabe4"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_echte_abgabe_blatt2_deepagents",
+    "harness": "deepagents",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "abgabe.zip",
+        "kind": "src_zip",
+        "code_files": 4
+      },
+      {
+        "name": "aufgaben.pdf",
+        "kind": "src_pdf",
+        "characters": 4089
+      }
+    ],
+    "comparison_job_ids": [
+      "blatt2_aufgabe1",
+      "blatt2_aufgabe2",
+      "blatt2_aufgabe3",
+      "blatt2_aufgabe4"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_echte_abgabe_blatt2_direkteingabe",
+    "harness": "deepagents",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "eingabe.txt",
+        "kind": "text",
+        "characters": 8722
+      },
+      {
+        "name": "Aufgabe1.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "luisasLieblingsZahlen",
+            "line": 7,
+            "parameters": "Zahl: float",
+            "return_type": "bool"
+          }
+        ]
+      },
+      {
+        "name": "Aufgabe2.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "rueckenNummer",
+            "line": 19,
+            "parameters": "rueckenNummer: int",
+            "return_type": "str"
+          }
+        ]
+      },
+      {
+        "name": "Aufgabe3.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "bussgeldbescheid",
+            "line": 8,
+            "parameters": "parkzeitueberschritt: int",
+            "return_type": "int"
+          }
+        ]
+      },
+      {
+        "name": "Aufgabe4.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "clamp",
+            "line": 7,
+            "parameters": "x: float, l: float, u: float",
+            "return_type": "float"
+          }
+        ]
+      }
+    ],
+    "comparison_job_ids": [
+      "blatt2_aufgabe1",
+      "blatt2_aufgabe2",
+      "blatt2_aufgabe3",
+      "blatt2_aufgabe4"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_echte_abgabe_blatt2_graphlimit",
+    "harness": "deepagents",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "abgabe.zip",
+        "kind": "src_zip",
+        "code_files": 4
+      },
+      {
+        "name": "aufgaben.pdf",
+        "kind": "src_pdf",
+        "characters": 4089
+      }
+    ],
+    "comparison_job_ids": [
+      "blatt2_aufgabe1",
+      "blatt2_aufgabe2",
+      "blatt2_aufgabe3",
+      "blatt2_aufgabe4"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_echte_abgabe_blatt2_output3000",
+    "harness": "deepagents",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "eingabe.txt",
+        "kind": "text",
+        "characters": 8722
+      },
+      {
+        "name": "Aufgabe1.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "luisasLieblingsZahlen",
+            "line": 7,
+            "parameters": "Zahl: float",
+            "return_type": "bool"
+          }
+        ]
+      },
+      {
+        "name": "Aufgabe2.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "rueckenNummer",
+            "line": 19,
+            "parameters": "rueckenNummer: int",
+            "return_type": "str"
+          }
+        ]
+      },
+      {
+        "name": "Aufgabe3.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "bussgeldbescheid",
+            "line": 8,
+            "parameters": "parkzeitueberschritt: int",
+            "return_type": "int"
+          }
+        ]
+      },
+      {
+        "name": "Aufgabe4.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "clamp",
+            "line": 7,
+            "parameters": "x: float, l: float, u: float",
+            "return_type": "float"
+          }
+        ]
+      }
+    ],
+    "comparison_job_ids": [
+      "blatt2_aufgabe1",
+      "blatt2_aufgabe2",
+      "blatt2_aufgabe3",
+      "blatt2_aufgabe4"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_echte_abgabe_blatt2_text",
+    "harness": "deepagents",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "abgabe.zip",
+        "kind": "src_zip",
+        "code_files": 4
+      },
+      {
+        "name": "aufgaben.txt",
+        "kind": "text",
+        "characters": 4090
+      }
+    ],
+    "comparison_job_ids": [
+      "blatt2_aufgabe1",
+      "blatt2_aufgabe2",
+      "blatt2_aufgabe3",
+      "blatt2_aufgabe4"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_echte_abgabe_blatt2_text_opencode",
+    "harness": "opencode",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "abgabe.zip",
+        "kind": "src_zip",
+        "code_files": 4
+      },
+      {
+        "name": "aufgaben.txt",
+        "kind": "text",
+        "characters": 4090
+      }
+    ],
+    "comparison_job_ids": [
+      "blatt2_aufgabe1",
+      "blatt2_aufgabe2",
+      "blatt2_aufgabe3",
+      "blatt2_aufgabe4"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_echte_abgabe_blatt2_vorbereitet",
+    "harness": "deepagents",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "eingabe.txt",
+        "kind": "text",
+        "characters": 8722
+      },
+      {
+        "name": "Aufgabe1.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "luisasLieblingsZahlen",
+            "line": 7,
+            "parameters": "Zahl: float",
+            "return_type": "bool"
+          }
+        ]
+      },
+      {
+        "name": "Aufgabe2.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "rueckenNummer",
+            "line": 19,
+            "parameters": "rueckenNummer: int",
+            "return_type": "str"
+          }
+        ]
+      },
+      {
+        "name": "Aufgabe3.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "bussgeldbescheid",
+            "line": 8,
+            "parameters": "parkzeitueberschritt: int",
+            "return_type": "int"
+          }
+        ]
+      },
+      {
+        "name": "Aufgabe4.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "clamp",
+            "line": 7,
+            "parameters": "x: float, l: float, u: float",
+            "return_type": "float"
+          }
+        ]
+      }
+    ],
+    "comparison_job_ids": [
+      "blatt2_aufgabe1",
+      "blatt2_aufgabe2",
+      "blatt2_aufgabe3",
+      "blatt2_aufgabe4"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_opencode_acht_schritte",
+    "harness": "opencode",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "abgabe.zip",
+        "kind": "src_zip",
+        "code_files": 2
+      },
+      {
+        "name": "aufgaben.pdf",
+        "kind": "src_pdf",
+        "characters": 476
+      }
+    ],
+    "comparison_job_ids": [
+      "synthetisch_fehlerhaft_quadrat",
+      "synthetisch_fehlerhaft_positiv",
+      "synthetisch_korrekt_quadrat",
+      "synthetisch_korrekt_positiv"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_opencode_checks_anschluss",
+    "harness": "opencode",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "aufgabe_01.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "quadrat",
+            "line": 1,
+            "parameters": "x: int",
+            "return_type": "int"
+          }
+        ]
+      },
+      {
+        "name": "aufgabe_02.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "positiv",
+            "line": 1,
+            "parameters": "x: int",
+            "return_type": "bool"
+          }
+        ]
+      }
+    ],
+    "comparison_job_ids": [
+      "synthetisch_fehlerhaft_quadrat",
+      "synthetisch_fehlerhaft_positiv",
+      "synthetisch_korrekt_quadrat",
+      "synthetisch_korrekt_positiv"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_opencode_eigene_checks",
+    "harness": "opencode",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "aufgabe_01.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "quadrat",
+            "line": 1,
+            "parameters": "x: int",
+            "return_type": "int"
+          }
+        ]
+      },
+      {
+        "name": "aufgabe_02.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "positiv",
+            "line": 1,
+            "parameters": "x: int",
+            "return_type": "bool"
+          }
+        ]
+      }
+    ],
+    "comparison_job_ids": [
+      "synthetisch_fehlerhaft_quadrat",
+      "synthetisch_fehlerhaft_positiv",
+      "synthetisch_korrekt_quadrat",
+      "synthetisch_korrekt_positiv"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_opencode_wypp_hilfe_fehlerhaft",
+    "harness": "opencode",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "aufgabe_01.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "quadrat",
+            "line": 1,
+            "parameters": "x: int",
+            "return_type": "int"
+          }
+        ]
+      },
+      {
+        "name": "aufgabe_02.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "positiv",
+            "line": 1,
+            "parameters": "x: int",
+            "return_type": "bool"
+          }
+        ]
+      }
+    ],
+    "comparison_job_ids": [
+      "synthetisch_fehlerhaft_quadrat",
+      "synthetisch_fehlerhaft_positiv",
+      "synthetisch_korrekt_quadrat",
+      "synthetisch_korrekt_positiv"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_opencode_wypp_hilfe_korrekt",
+    "harness": "opencode",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "aufgabe_01.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "quadrat",
+            "line": 1,
+            "parameters": "x: int",
+            "return_type": "int"
+          }
+        ]
+      },
+      {
+        "name": "aufgabe_02.py",
+        "kind": "src_ast",
+        "functions": [
+          {
+            "name": "positiv",
+            "line": 1,
+            "parameters": "x: int",
+            "return_type": "bool"
+          }
+        ]
+      }
+    ],
+    "comparison_job_ids": [
+      "synthetisch_fehlerhaft_quadrat",
+      "synthetisch_fehlerhaft_positiv",
+      "synthetisch_korrekt_quadrat",
+      "synthetisch_korrekt_positiv"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_pdf_pypdf_probe",
+    "harness": "deepagents",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "aufgaben.pdf",
+        "kind": "src_pdf",
+        "characters": 476
+      }
+    ],
+    "comparison_job_ids": [
+      "synthetisch_fehlerhaft_quadrat",
+      "synthetisch_fehlerhaft_positiv",
+      "synthetisch_korrekt_quadrat",
+      "synthetisch_korrekt_positiv"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_pdf_pypdf_probe",
+    "harness": "opencode",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "aufgaben.pdf",
+        "kind": "src_pdf",
+        "characters": 476
+      }
+    ],
+    "comparison_job_ids": [
+      "synthetisch_fehlerhaft_quadrat",
+      "synthetisch_fehlerhaft_positiv",
+      "synthetisch_korrekt_quadrat",
+      "synthetisch_korrekt_positiv"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_pdf_zip_hilfe_deepagents",
+    "harness": "deepagents",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "abgabe.zip",
+        "kind": "src_zip",
+        "code_files": 2
+      },
+      {
+        "name": "aufgaben.pdf",
+        "kind": "src_pdf",
+        "characters": 476
+      }
+    ],
+    "comparison_job_ids": [
+      "synthetisch_fehlerhaft_quadrat",
+      "synthetisch_fehlerhaft_positiv",
+      "synthetisch_korrekt_quadrat",
+      "synthetisch_korrekt_positiv"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_pdf_zip_hilfe_opencode",
+    "harness": "opencode",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "abgabe.zip",
+        "kind": "src_zip",
+        "code_files": 2
+      },
+      {
+        "name": "aufgaben.pdf",
+        "kind": "src_pdf",
+        "characters": 476
+      }
+    ],
+    "comparison_job_ids": [
+      "synthetisch_fehlerhaft_quadrat",
+      "synthetisch_fehlerhaft_positiv",
+      "synthetisch_korrekt_quadrat",
+      "synthetisch_korrekt_positiv"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_pdf_zip_zehn_deepagents",
+    "harness": "deepagents",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "abgabe.zip",
+        "kind": "src_zip",
+        "code_files": 2
+      },
+      {
+        "name": "aufgaben.pdf",
+        "kind": "src_pdf",
+        "characters": 476
+      }
+    ],
+    "comparison_job_ids": [
+      "synthetisch_fehlerhaft_quadrat",
+      "synthetisch_fehlerhaft_positiv",
+      "synthetisch_korrekt_quadrat",
+      "synthetisch_korrekt_positiv"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  },
+  {
+    "baseline": "20261116_pdf_zip_zehn_opencode",
+    "harness": "opencode",
+    "status": "material_prepared_locally",
+    "files": [
+      {
+        "name": "abgabe.zip",
+        "kind": "src_zip",
+        "code_files": 2
+      },
+      {
+        "name": "aufgaben.pdf",
+        "kind": "src_pdf",
+        "characters": 476
+      }
+    ],
+    "comparison_job_ids": [
+      "synthetisch_fehlerhaft_quadrat",
+      "synthetisch_fehlerhaft_positiv",
+      "synthetisch_korrekt_quadrat",
+      "synthetisch_korrekt_positiv"
+    ],
+    "limits": "Kein Wiederholen freier Toolloops; src bietet nur festen Testwerkzeugablauf."
+  }
+]

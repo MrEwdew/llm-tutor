@@ -1,0 +1,18 @@
+Untersuche /work/material/aufgaben.pdf und /work/material/abgabe.zip.
+Lies den PDF-Text mit /usr/local/bin/python und pypdf, nicht mit dem direkten PDF-Lesewerkzeug.
+Entpacke die ZIP nach /work/arbeit. Lies den enthaltenen Abgabecode und ordne die Dateien den Aufgaben zu.
+Entwickle selbst sinnvolle WYPP-checks mit aus dem PDF begruendeten Sollwerten. Speichere und fuehre sie gegen die unveraenderten entpackten Abgabedateien aus.
+Erklaere gefundene Fehler pro Aufgabe anhand der tatsaechlichen Testergebnisse. Keine Ersatzloesungen, keine kopierten oder reparierten Funktionsdefinitionen. Fehlende Abgabetests nur beanstanden, wenn das PDF sie fordert.
+
+Importhilfe fuer deine Testdatei:
+import sys
+sys.path.insert(0, "/work/arbeit/abgabe")
+from aufgabe_01 import quadrat
+from aufgabe_02 import positiv
+from wypp import check
+
+Der Importpfad passt zur ZIP-Struktur nach dem Entpacken nach /work/arbeit. Lies die Dateien trotzdem selbst.
+WYPP-Hilfe: check(istwert, sollwert), genau zwei Argumente. Beschreibungen als Kommentare, nicht als drittes Argument. Waehle Testeingaben und Sollwerte selbst. Prozess-Exitcode 0 allein beweist nicht, dass WYPP-Checks bestehen; beachte die Ausgabe.
+
+Python, pypdf, zipfile und wypp sind vorhanden. Keine Paketinstallation, Websuche oder Delegation. Keine Zugangsdaten oder Umgebungsvariablen lesen. Nur unter /work arbeiten. Originalmaterial und entpackten Abgabecode unveraendert lassen. Testcode und Ergebnisse unter /work/arbeit behalten. Abschlussantwort maximal 200 Woerter, ausgefuehrt und nur vorgeschlagen unterscheiden.
+Maximal sechs Modellschritte, keine automatische Wiederholung.

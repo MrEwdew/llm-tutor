@@ -1,0 +1,16 @@
+Untersuche /work/material/aufgaben.pdf und /work/material/abgabe.zip.
+Lies den PDF-Text mit /usr/local/bin/python und der installierten Bibliothek
+pypdf. Verwende nicht das direkte PDF-Lesewerkzeug.
+Entpacke die ZIP nach /work/arbeit und lies den enthaltenen Abgabecode.
+Ordne Dateien den Aufgaben zu. Entwickle selbst sinnvolle WYPP-checks mit
+anhand des Aufgabenblatts begruendeten Sollwerten. Speichere und fuehre diese
+gegen den unveraenderten Abgabecode aus. Erklaere die gefundenen Fehler pro
+Aufgabe mit Bezug auf Code und tatsaechliche Testergebnisse.
+Keine Ersatzloesungen und keine Reparaturen. Fehlende Tests in der Abgabe
+nur beanstanden, wenn das Aufgabenblatt sie fordert. Behalte Testcode und
+Ergebnisse unter /work/arbeit. Abschlussantwort maximal 200 Woerter.
+
+Python, pypdf, zipfile, wypp und pytest sind vorhanden. Keine Paketinstallation,
+Websuche oder Delegation. Keine Zugangsdaten oder Umgebungsvariablen lesen.
+Arbeite nur unter /work. Originalmaterialien unveraendert lassen.
+Maximal acht Modellschritte, keine automatische Wiederholung.

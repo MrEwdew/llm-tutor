@@ -1,0 +1,7 @@
+ÄNDERUNGSHISTORIE
+
+2026-11-06T14:53:31+01:00
+  Geänderte, hinzugefügte oder gelöschte Dateien:
+  * ./
+  * 10-zustand.pdf
+  * 10-zustand.py

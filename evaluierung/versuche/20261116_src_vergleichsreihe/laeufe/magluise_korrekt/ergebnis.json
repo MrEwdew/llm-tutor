@@ -1,0 +1,72 @@
+{
+  "feedback": "In den geprüften Fällen wurde kein Funktionsfehler festgestellt.",
+  "usage": {
+    "input_tokens": 2595,
+    "output_tokens": 38,
+    "total_tokens": 2633
+  },
+  "model_calls": 2,
+  "test_result": {
+    "status": "completed",
+    "tests": [
+      {
+        "function": "magLuise",
+        "args": [
+          6
+        ],
+        "expected": true,
+        "actual": true,
+        "passed": true
+      },
+      {
+        "function": "magLuise",
+        "args": [
+          11
+        ],
+        "expected": true,
+        "actual": true,
+        "passed": true
+      },
+      {
+        "function": "magLuise",
+        "args": [
+          13
+        ],
+        "expected": true,
+        "actual": true,
+        "passed": true
+      },
+      {
+        "function": "magLuise",
+        "args": [
+          12
+        ],
+        "expected": false,
+        "actual": false,
+        "passed": true
+      },
+      {
+        "function": "magLuise",
+        "args": [
+          100
+        ],
+        "expected": false,
+        "actual": false,
+        "passed": true
+      },
+      {
+        "function": "magLuise",
+        "args": [
+          101
+        ],
+        "expected": true,
+        "actual": true,
+        "passed": true
+      }
+    ],
+    "embedded_output": "",
+    "test_output": "",
+    "note": "Abgabeausgabe und Vergleichstestergebnisse sind getrennt."
+  },
+  "duration_seconds": 0.8
+}

@@ -1,0 +1,271 @@
+Pruefe eine vollstaendige studentische Abgabe zu einem Aufgabenblatt.
+Die vollstaendige vorbereitete Eingabe folgt direkt in dieser Nachricht. Lies sie vollstaendig; kein Dateiaufruf zum Nachladen dieser Eingabe erforderlich. Sie enthaelt Aufgaben, allgemeine und abschliessende Blattvorgaben, unveraenderten Code, tatsaechliche Archivpfade und statische Python-Funktionsinventare. Die Vorbereitung stammt aus unserem Projektcode; sie enthaelt keine ausgefuehrten Tests. Dateinamensvorschlaege sind unbestaetigt: pruefe die fachliche Zuordnung selbst.
+Die unveraenderten Originaldateien liegen unter /work/material/ gefolgt vom jeweiligen Archivpfad, beispielsweise entspricht Archivpfad abgabe/DATEI.py dem Pfad /work/material/abgabe/DATEI.py. Keine ZIP oder PDF mehr erschliessen. Keine Dateien umbenennen oder reparieren.
+Entwickle eigene Tests mit aus den Aufgaben begruendeten Sollwerten. Erstelle Testdateien unter /work/arbeit und starte sie tatsaechlich gegen die Originaldateien. Funktionsnamen und benoetigte Imports selbst aus dem Inventar bzw. Code bestimmen. Keine Ersatzloesungen, keine kopierten oder reparierten Funktionsdefinitionen. Nur vorhandene check-Aufrufe zu lesen ist keine Ausfuehrung und kein eigener Test.
+WYPP-Hilfe: from wypp import check; check(istwert, sollwert), genau zwei Argumente. Beschreibungen als Kommentare. Exitcode 0 allein beweist nicht, dass Checks bestehen: Ausgabe beachten. Eingebettete Abgabetests von Zusatztests unterscheiden. Fehler des eigenen Testaufbaus nicht als Abgabefehler ausgeben.
+Funktionsnamen und Typen nur als vorgeschrieben behandeln, wenn die Aufgabenstellung sie vorgibt; Hinweise nicht als zwingende Operationsvorgaben erfinden. Kommentare, Datenbeschreibung, Typangaben und Abgabetests anhand Code und Blattvorgaben bewerten. Keine zeitliche Entwicklungsreihenfolge unterstellen. Keine automatische Note.
+Python 3.13, wypp und pytest sind vorhanden. Keine Paketinstallation, Websuche oder Delegation. Keine Zugangsdaten oder Umgebungsvariablen lesen. Nur unter /work arbeiten. Originale nicht veraendern.
+Abschluss maximal 400 Woerter: Zuordnung, je Aufgabe tatsaechlich gestarteter Testbefehl und beobachtete Ausgabe, belegte Fehler, formale Befunde und offene Punkte. Nicht getestete Teile ausdruecklich als Nicht ausgefuehrt kennzeichnen. Keine Ausfuehrung erfinden. Maximal zehn Modellstarts, keine automatische Wiederholung.
+
+
+=== VOLLSTAENDIGE VORBEREITETE EINGABE ===
+Allgemeine Blattvorgaben:
+Prof. Dr. Stefan Wehr, Simon Rösch
+Übungsblatt 2
+AKI Programmierung 1, Wintersemester 2026/2027
+Deadline: 26.10.2026, 23:00 Uhr
+20.10.2026
+Gehen Sie beim Lösen aller Programmieraufgaben strikt nach unserem Schema vor:
+1. Schreiben Sie zuerst eine Kurzbeschreibung als Kommentar.
+2. Führen Sie dann eine Datenanalyse durch. Schreiben Sie das Ergebnis Ihrer Datenanalyse
+ebenfalls als Kommentar in die Zeile nach der Kurzbeschreibung.
+3. Schreiben Sie dann den Funktionskopf inkl. der Typen für Argumente und Ergebnis hin.
+4. Schreiben Sie dann Tests mittels check.
+5. Setzen Sie die passenden Schablonen in den Rumpf der Funktion ein.
+6. Schreiben Sie erst dann den Funktionsrumpf hin.
+Eine Lösung, in der nicht ersichtlich ist, dass Sie gemäß des Schemas aggiert haben, erhält keine
+Punkte. Insbesondere erhält eine Lösung, bei der nur der Funktionsrumpf da steht, keine Punkte,
+auch wenn die Funktion korrekt ist.
+Dahingegen erhalten Sie Teilpunkte wenn Sie dem Schema folgen, aber an einem gewissen Punkt
+nicht weiterkommen.
+
+Aufgaben:
+
+Aufgabe 1 (6 Punkte)
+Georg fragt die kleine Luise nach ihrer Lieblingszahl. Luise sagt: „Also, ich habe vielen Lieb-
+lingszahlen. Ich mag die 6, weil ich 6 Jahre alt. Außerdem mag ich die 11 und die 13. Die 12
+mag ich aber nicht. Dafür mag ich alle Zahlen größer als 100. “
+Georg ist leicht überfordert. Helfen Sie ihm, indem Sie eine Funktion schreiben, welche den
+booleschen Wert für „wahr“ liefert falls die Eingabezahl eine von Luises Lieblingszahlen ist.
+
+Exakt zugeordnete Dateien:
+
+Erwartete Datei: aufgabe_01.py
+Keine exakt passende Datei zugeordnet. Weitere Dateien stehen im Abschnitt unten.
+
+Aufgabe 2 (8 Punkte)
+Beim Fußball lässt die Rückennummer einer Spielerin häufig Rückschlüsse auf ihre Position zu.
+Wir machen dabei folgende Annahmen:
+• Ein Torhüterin hat die Rückennummer 1.
+• Ein Abwehrspielerin hat die Rückennummer 2, 3, 4 oder 5.
+• Ein Mittelfeldspielerin hat die Rückennummer 6, 7, 8 oder 10.
+• Ein Stürmerin hat die Rückennummer 9 oder 11.
+• Ein Ersatzspielerin hat eine Rückennummer zwischen 12 und 99
+1
+Übungsblatt 2 AKI Programmierung 1
+• Alle anderen Rückennummern sind ungültig.
+Schreiben Sie zunächst eine Datenbeschreibung für Positionen und dann eine passende Typde-
+finition. Schreiben Sie dann eine Funktion, die für eine Rückennummer die passende Position
+bestimmt. Dabei dürfen Sie eine ungültige Eingabe ignorieren.
+
+Exakt zugeordnete Dateien:
+
+Erwartete Datei: aufgabe_02.py
+Keine exakt passende Datei zugeordnet. Weitere Dateien stehen im Abschnitt unten.
+
+Aufgabe 3 (8 Punkte)
+Schreibe ein Programm, mit dem Bußgelder für zu langes Parken automatisch bestimmt werden.
+Die Bußgelder sind in Abhängigkeit der Überschreitungsdauer der Höchstparkdauer wie folgt
+festgelegt:
+• Bis zu 30 Minuten: 10 Euro.
+• Bis zu einer Stunde: 15 Euro.
+• Bis zu zwei Stunden: 20 Euro
+• Bis zu drei Stunden: 25 Euro
+• Länger als drei Stunden: (n − 1) · 10 Euro, wobei n die Parkdauer aufgerundet auf die
+nächste ganze Stunde ist.
+Aufrunden funktioniert mit math.ceil.
+
+Exakt zugeordnete Dateien:
+
+Erwartete Datei: aufgabe_03.py
+Keine exakt passende Datei zugeordnet. Weitere Dateien stehen im Abschnitt unten.
+
+Aufgabe 4 (8 Punkte)
+Schreiben Sie eine Funktion clamp, die wie folgt definiert ist:
+clamp(x, l, u) =
+
+
+
+x if l ≤ x ≤ u
+l if x < l
+u if x > u
+Dabei sind x, l, u∈ R. Der Name l steht dabei für „lower bound“, da l eine untere Schranke für
+den Wert von x angibt. Analog steht u für „upper bound“ .
+
+Exakt zugeordnete Dateien:
+
+Erwartete Datei: aufgabe_04.py
+Keine exakt passende Datei zugeordnet. Weitere Dateien stehen im Abschnitt unten.
+
+Abschliessende Blattvorgaben:
+Gesamtpunkte: 30
+Abgabe
+Via Upload im Praktomat bis 26.10.2026, 23:00 Uhr . Speichern Sie jede Programmieren-
+aufgabe in eine eigene Datei. Der Name der Datei muss dabei aufgabe_0N.py sein, wobei N
+die Nummer der Aufgabe ist. Zum Beispiel lautet für Aufgabe 1 der Name der Datei dann
+aufgabe_01.py.
+Verpacken Sie alle Dateien in einem zip-Archiv (Standard-Zip, keine 7zip, rar o.ä.), welches den
+Namen NAME_MATRIKELNUMMER.zip hat. Ersetzen Sie dabei NAME und MATRIKELNUMMER durch
+Ihren Namen und Ihre Matrikelnummer. Es ist wichtig, dass Sie sich an die Namenskonventionen
+halten, die wir Abgaben automatisch überprüfen.
+Wichtig: Die Lösungen für alle Programmieraufgaben müssen ohne Fehler ausführbar sein, sonst
+akzeptiert der Praktomat Ihre Abgabe nicht. Wenn der Praktomat nach dem Upload für eine
+oder mehrere Aufgaben den Status failed anzeigt, wird ihre komplette Abgabe nicht akzpe-
+tiert und Sie erhalten für das komplette Blatt 0 Punkte! Kommentieren Sie fehlerhafte
+Codestellen in einem solche Fall aus, so dass der Praktomat Ihre Abgabe akzeptiert.
+2
+
+Nicht exakt zugeordnete Dateien:
+
+Datei: Aufgabe4.py
+Archivpfad: abgabe/Aufgabe4.py
+Unbestaetigter Dateinamensvorschlag: Aufgabe 4. Die fachliche Zugehoerigkeit ist noch zu pruefen.
+Code:
+from wypp import *
+
+# Beschreibung: Begrenzt eine Zahl auf den Bereich von l bis u
+# Eingabe: x, untere Grenze l und obere Grenze u (Typ: float)
+# Ergebnis: x innerhalb des bereiches (Typ: float)
+
+def clamp(x: float, l: float, u: float) -> float:
+    if x < l:
+        return l
+    elif x > u:
+        return u
+    else:
+        return x
+
+
+check(clamp(5, 67.5, 89.5), 67.5)
+check(clamp(-2, 0, 10), 0)
+check(clamp(27.5, 0, 10), 10)
+check(clamp(5.5, 0 , 0), 0)
+check(clamp(10, 0, 10), 10)
+check(clamp(2.5, 1 , 3), 2.5)
+check(clamp(-4, -3, -1), -3)
+check(clamp(7, 3, 3), 3)
+
+Datei: Aufgabe1.py
+Archivpfad: abgabe/Aufgabe1.py
+Unbestaetigter Dateinamensvorschlag: Aufgabe 1. Die fachliche Zugehoerigkeit ist noch zu pruefen.
+Code:
+from wypp import *
+
+# Funktion schreiben für einen booleschen wert der TRUE ergibt wenn es Luisaslieblingszahl ist
+# Eingabe
+# Ergebnis
+
+def luisasLieblingsZahlen(Zahl: float) -> bool:
+   return Zahl in(6, 11, 13) or Zahl > 100
+
+check(luisasLieblingsZahlen(6), True)
+check(luisasLieblingsZahlen(11), True)
+check(luisasLieblingsZahlen(12), False)
+check(luisasLieblingsZahlen(13), True)
+check(luisasLieblingsZahlen(100), False)
+check(luisasLieblingsZahlen(100.1), True)
+check(luisasLieblingsZahlen(9999), True)
+
+
+Datei: Aufgabe2.py
+Archivpfad: abgabe/Aufgabe2.py
+Unbestaetigter Dateinamensvorschlag: Aufgabe 2. Die fachliche Zugehoerigkeit ist noch zu pruefen.
+Code:
+from wypp import *
+
+# Gibt der Spielertyp eine Rückennummer
+# Eingabe: Spielertyp
+# Ergebnis: Rückennummer als int
+# DATENBESCHREIBUNG
+# Eine spielerKlasse ist:
+# - Torhueter -
+# - Abwehrspieler -
+# - Mittelfeldspieler -
+# - Stuermer -
+# - Ersatzspieler -
+# TYPDEFINITION
+type spielerKlasse = Literal["Torhueter", "Abwehrspieler", "Mittelfeldspieler", "Stuermer", "Ersatzspieler" ]
+
+
+
+
+def rueckenNummer(rueckenNummer: int) -> str:
+    if rueckenNummer == (1):
+        return "Torhueter"
+    elif rueckenNummer == (2 or 3 or 4 or 5):
+        return "Abwehrspieler"
+    elif rueckenNummer == (6 or 7 or 8 or 10):
+        return "Mittelfeldspieler"
+    elif rueckenNummer == (9 or 11):
+        return "Stuermer"
+    elif rueckenNummer <= 99:
+        return "Ersatzspieler"
+    
+    
+    
+
+
+
+
+
+
+check(rueckenNummer(1), "Torhueter")
+check(rueckenNummer(2), "Abwehrspieler")
+check(rueckenNummer(6), "Mittelfeldspieler")
+check(rueckenNummer(9), "Stuermer")
+check(rueckenNummer(67), "Ersatzspieler")
+
+
+Datei: Aufgabe3.py
+Archivpfad: abgabe/Aufgabe3.py
+Unbestaetigter Dateinamensvorschlag: Aufgabe 3. Die fachliche Zugehoerigkeit ist noch zu pruefen.
+Code:
+from wypp import *
+
+
+# Automatisches zuordnen von Bußgeldern für zu Langes Parken
+# Eingabe: Stunden anzahl in Minuten (Typ: int)
+# Ergebnis: Bußgeldbescheid in Euro (Typ: int)
+
+def bussgeldbescheid(parkzeitueberschritt: int) -> int:
+    if parkzeitueberschritt <= 30:
+        return (10)
+    elif parkzeitueberschritt <= 60 :
+        return (15)
+    elif parkzeitueberschritt <= 120:
+        return (20)
+    elif parkzeitueberschritt <= 180:
+        return (25)
+    elif parkzeitueberschritt > 180:
+       return (((math.ceil(parkzeitueberschritt/60) - 1) * 10)) 
+    
+
+
+
+check(bussgeldbescheid(30), 10)
+check(bussgeldbescheid(31), 15)
+check(bussgeldbescheid(60), 15)
+check(bussgeldbescheid(61), 20)
+check(bussgeldbescheid(120), 20)
+check(bussgeldbescheid(121), 25)
+check(bussgeldbescheid(180), 25)
+check(bussgeldbescheid(181), 30)
+check(bussgeldbescheid(600), 90)
+
+Statische Python-Befunde, ohne Codeausfuehrung:
+
+Archivpfad: abgabe/Aufgabe4.py
+
+Zeile 7: clamp(x: float, l: float, u: float) -> float
+
+Archivpfad: abgabe/Aufgabe1.py
+
+Zeile 7: luisasLieblingsZahlen(Zahl: float) -> bool
+
+Archivpfad: abgabe/Aufgabe2.py
+
+Zeile 19: rueckenNummer(rueckenNummer: int) -> str
+
+Archivpfad: abgabe/Aufgabe3.py
+
+Zeile 8: bussgeldbescheid(parkzeitueberschritt: int) -> int

@@ -1,0 +1,53 @@
+{
+  "case": "03_zwei_aufgaben",
+  "group": "bestehend",
+  "harness": "deepagents",
+  "model": "Qwen_3_30B_A3B_Instruct_2507",
+  "prompt": "Aufgabe 1: quadrat(x: int) -> int soll x*x liefern.\nAufgabe 2: positiv(x: int) -> bool soll genau für x > 0 True liefern.\nTests im Abgabecode sind nicht vorgeschrieben.\n\nAbgabe:\nDatei aufgabe_01.py:\ndef quadrat(x: int) -> int:\n    return x + x\n\nDatei aufgabe_02.py:\ndef positiv(x: int) -> bool:\n    return x >= 0\n\nOrdne die Dateien den Aufgaben zu. Erstelle je einen check(...),\nder einen Fehler aufdeckt, und begründe den Sollwert kurz.\nKeine Ersatzlösung. Kennzeichne, ob du die Checks tatsächlich\nausgeführt oder nur vorgeschlagen hast. Maximal 150 Wörter.",
+  "effective_prompt": "Aufgabe 1: quadrat(x: int) -> int soll x*x liefern.\nAufgabe 2: positiv(x: int) -> bool soll genau für x > 0 True liefern.\nTests im Abgabecode sind nicht vorgeschrieben.\n\nAbgabe:\nDatei aufgabe_01.py:\ndef quadrat(x: int) -> int:\n    return x + x\n\nDatei aufgabe_02.py:\ndef positiv(x: int) -> bool:\n    return x >= 0\n\nOrdne die Dateien den Aufgaben zu. Erstelle je einen check(...),\nder einen Fehler aufdeckt, und begründe den Sollwert kurz.\nKeine Ersatzlösung. Kennzeichne, ob du die Checks tatsächlich\nausgeführt oder nur vorgeschlagen hast. Maximal 150 Wörter.",
+  "attachment": null,
+  "fresh_chat": false,
+  "status": "completed",
+  "answer": "Die Dateien sind korrekt zugeordnet:  \n- `rechnung.py` → Aufgabe 1 (quadrat)  \n- `vorzeichen.py` → Aufgabe 2 (positiv)  \n\n**Check für Aufgabe 1:**  \n`check(quadrat(3))` → Sollwert: `9` (da 3×3=9).  \nAktueller Code liefert `6` (x+x). → **Fehler aufgedeckt.**  \n*Hinweis: Check wurde vorgeschlagen, nicht ausgeführt.*\n\n**Check für Aufgabe 2:**  \n`check(positiv(0))` → Sollwert: `False` (da 0 ist nicht > 0).  \nAktueller Code liefert `True` (x >= 0). → **Fehler aufgedeckt.**  \n*Hinweis: Check wurde vorgeschlagen, nicht ausgeführt.*",
+  "model_calls": 5,
+  "usage": {
+    "input_tokens": 17194,
+    "output_tokens": 299,
+    "total_tokens": 17493
+  },
+  "tool_calls": [
+    {
+      "name": "ls",
+      "args": {
+        "path": "/work"
+      },
+      "id": "chatcmpl-tool-8e6bbf56edd384ae",
+      "type": "tool_call"
+    },
+    {
+      "name": "ls",
+      "args": {
+        "path": "/work/arbeit"
+      },
+      "id": "chatcmpl-tool-b7107c5799fdc9a4",
+      "type": "tool_call"
+    },
+    {
+      "name": "ls",
+      "args": {
+        "path": "/work/material"
+      },
+      "id": "chatcmpl-tool-b4a8c21568a32822",
+      "type": "tool_call"
+    },
+    {
+      "name": "read_file",
+      "args": {
+        "file_path": "/work/material/leseprobe.txt"
+      },
+      "id": "chatcmpl-tool-9127747756314acd",
+      "type": "tool_call"
+    }
+  ],
+  "duration_seconds": 2.155
+}

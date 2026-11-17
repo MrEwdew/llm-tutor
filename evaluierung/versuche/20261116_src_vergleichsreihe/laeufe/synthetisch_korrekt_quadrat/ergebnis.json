@@ -1,0 +1,54 @@
+{
+  "feedback": "In den geprüften Fällen wurde kein Funktionsfehler festgestellt.",
+  "usage": {
+    "input_tokens": 1402,
+    "output_tokens": 38,
+    "total_tokens": 1440
+  },
+  "model_calls": 2,
+  "test_result": {
+    "status": "completed",
+    "tests": [
+      {
+        "function": "quadrat",
+        "args": [
+          0
+        ],
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "function": "quadrat",
+        "args": [
+          1
+        ],
+        "expected": 1,
+        "actual": 1,
+        "passed": true
+      },
+      {
+        "function": "quadrat",
+        "args": [
+          3
+        ],
+        "expected": 9,
+        "actual": 9,
+        "passed": true
+      },
+      {
+        "function": "quadrat",
+        "args": [
+          -2
+        ],
+        "expected": 4,
+        "actual": 4,
+        "passed": true
+      }
+    ],
+    "embedded_output": "",
+    "test_output": "",
+    "note": "Abgabeausgabe und Vergleichstestergebnisse sind getrennt."
+  },
+  "duration_seconds": 0.67
+}

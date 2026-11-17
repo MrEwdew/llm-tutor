@@ -1,0 +1,45 @@
+{
+  "feedback": "In den geprüften Fällen wurde kein Funktionsfehler festgestellt.",
+  "usage": {
+    "input_tokens": 1370,
+    "output_tokens": 38,
+    "total_tokens": 1408
+  },
+  "model_calls": 2,
+  "test_result": {
+    "status": "completed",
+    "tests": [
+      {
+        "function": "positiv",
+        "args": [
+          1
+        ],
+        "expected": true,
+        "actual": true,
+        "passed": true
+      },
+      {
+        "function": "positiv",
+        "args": [
+          0
+        ],
+        "expected": false,
+        "actual": false,
+        "passed": true
+      },
+      {
+        "function": "positiv",
+        "args": [
+          -1
+        ],
+        "expected": false,
+        "actual": false,
+        "passed": true
+      }
+    ],
+    "embedded_output": "",
+    "test_output": "",
+    "note": "Abgabeausgabe und Vergleichstestergebnisse sind getrennt."
+  },
+  "duration_seconds": 0.73
+}

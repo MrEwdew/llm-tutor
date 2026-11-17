@@ -1,0 +1,6 @@
+ÄNDERUNGSHISTORIE
+
+2026-10-29T17:14:33+01:00
+  Geänderte, hinzugefügte oder gelöschte Dateien:
+  * ./
+  * programmierkonventionen.pdf

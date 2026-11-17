@@ -1,0 +1,20 @@
+{
+  "model": "Qwen_3_30B_A3B_Instruct_2507",
+  "harness": "opencode",
+  "image": "sha256:57ae814b5ca5373586f504a0b7f584505dbfdc819693e304062f5ff58e0df67e",
+  "material": {
+    "blatt-02.pdf": "d0425a8d813107ca292178d03ab325e97c4af47ce5554313e4f5229fca144268",
+    "leseprobe.pdf": "82144a62340afbc3a28f75abc7a79c56b6b42750b293ac1a0c686d68328897c0",
+    "leseprobe.txt": "d0e8e04c8114a6f2297b8b88106a438eec6b437fefff75d9e9ea300bf39b9aad"
+  },
+  "steps_requested": 3,
+  "wall_limit": 900,
+  "differences_to_webchat": [
+    "Native Harness-Prompts und Werkzeuge",
+    "Dateipfade statt UI-Upload",
+    "DeepAgents temperature=0, max_tokens=1000, Graphlimit=24",
+    "OpenCode native Defaults",
+    "Kein Java vorinstalliert",
+    "ZIP-Versuch wie im Webchat ausgelassen"
+  ]
+}

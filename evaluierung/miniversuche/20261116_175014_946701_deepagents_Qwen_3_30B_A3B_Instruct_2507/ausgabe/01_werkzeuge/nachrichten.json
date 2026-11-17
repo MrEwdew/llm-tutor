@@ -1,0 +1,43 @@
+[
+  {
+    "content": "Welche Werkzeuge stehen dir in diesem Chat tatsächlich zur Verfügung?\nKannst du ZIP-Dateien entpacken, Python oder Java ausführen und eigene Tests starten?\nAntworte kurz je Fähigkeit: verfügbar, nicht verfügbar oder unbekannt.\nUnterscheide Code schreiben von Code ausführen.\n\nArbeite ausschließlich unter /work. Verändere keine Originalmaterialien.\nNutze für eigene Dateien /work/arbeit. Keine Paketinstallation oder Websuche.\nLies oder zeige keine Zugangsdaten oder Umgebungsvariablen.\nPython ist unter /usr/local/bin/python verfügbar. Java ist nicht vorinstalliert.\n",
+    "additional_kwargs": {},
+    "response_metadata": {},
+    "type": "human",
+    "name": null,
+    "id": "e896d82a-66fb-4188-9dd0-6ada090938cd"
+  },
+  {
+    "content": " verfügbar, nicht verfügbar, nicht verfügbar",
+    "additional_kwargs": {
+      "refusal": null
+    },
+    "response_metadata": {
+      "token_usage": {
+        "completion_tokens": 8,
+        "prompt_tokens": 3052,
+        "total_tokens": 3060,
+        "completion_tokens_details": null,
+        "prompt_tokens_details": null
+      },
+      "model_provider": "openai",
+      "model_name": "qwen3-30b-a3b-instruct-2507",
+      "system_fingerprint": "vllm-0.22.1-f1666f6d",
+      "id": "chatcmpl-9f611762f6dd4c98",
+      "finish_reason": "stop",
+      "logprobs": null
+    },
+    "type": "ai",
+    "name": null,
+    "id": "lc_run--01a1e57b-2a73-7747-a538-7a38dd3abe08-0",
+    "tool_calls": [],
+    "invalid_tool_calls": [],
+    "usage_metadata": {
+      "input_tokens": 3052,
+      "output_tokens": 8,
+      "total_tokens": 3060,
+      "input_token_details": {},
+      "output_token_details": {}
+    }
+  }
+]

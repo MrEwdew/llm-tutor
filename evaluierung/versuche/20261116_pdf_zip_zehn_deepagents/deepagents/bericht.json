@@ -1,0 +1,28 @@
+{
+  "model": "Qwen_3_30B_A3B_Instruct_2507",
+  "harness": "deepagents",
+  "image": "sha256:57ae814b5ca5373586f504a0b7f584505dbfdc819693e304062f5ff58e0df67e",
+  "status": "completed",
+  "model_steps_limit": 10,
+  "wall_limit_seconds": 120,
+  "prompt": "Untersuche /work/material/aufgaben.pdf und /work/material/abgabe.zip.\nLies den PDF-Text mit /usr/local/bin/python und pypdf, nicht mit dem direkten PDF-Lesewerkzeug.\nEntpacke die ZIP nach /work/arbeit. Lies den enthaltenen Abgabecode und ordne die Dateien den Aufgaben zu.\nEntwickle selbst sinnvolle WYPP-checks mit aus dem PDF begruendeten Sollwerten. Speichere und fuehre sie gegen die unveraenderten entpackten Abgabedateien aus.\nErklaere gefundene Fehler pro Aufgabe anhand der tatsaechlichen Testergebnisse. Keine Ersatzloesungen, keine kopierten oder reparierten Funktionsdefinitionen. Fehlende Abgabetests nur beanstanden, wenn das PDF sie fordert.\n\nImporthilfe fuer deine Testdatei:\nimport sys\nsys.path.insert(0, \"/work/arbeit/abgabe\")\nfrom aufgabe_01 import quadrat\nfrom aufgabe_02 import positiv\nfrom wypp import check\n\nDer Importpfad passt zur ZIP-Struktur nach dem Entpacken nach /work/arbeit. Lies die Dateien trotzdem selbst.\nWYPP-Hilfe: check(istwert, sollwert), genau zwei Argumente. Beschreibungen als Kommentare, nicht als drittes Argument. Waehle Testeingaben und Sollwerte selbst. Prozess-Exitcode 0 allein beweist nicht, dass WYPP-Checks bestehen; beachte die Ausgabe.\n\nPython, pypdf, zipfile und wypp sind vorhanden. Keine Paketinstallation, Websuche oder Delegation. Keine Zugangsdaten oder Umgebungsvariablen lesen. Nur unter /work arbeiten. Originalmaterial und entpackten Abgabecode unveraendert lassen. Testcode und Ergebnisse unter /work/arbeit behalten. Abschlussantwort maximal 200 Woerter, ausgefuehrt und nur vorgeschlagen unterscheiden.\nMaximal zehn Modellschritte, keine automatische Wiederholung.\n",
+  "material_sha256": {
+    "abgabe.zip": "7be709ce85c855d39d8044d84ed6c9b907ac75c7b4d97caa74b3d31ee2fb2e47",
+    "aufgaben.pdf": "6c5c6a5d9baef1d356abd28bd7647fc59dae313296ef066b76d0c1326eeeba27"
+  },
+  "script_sha256": "bd9fca8b088f4645ce36d25e9604c424653a2ba61fbff52fcc04ba2681420988",
+  "src_used": false,
+  "support": "pypdf-Hinweis, konkrete Importzeilen und WYPP-Schnittstelle; Budgetangabe auf zehn angepasst",
+  "permissions": "OpenCode: Subagent und Webtools nativ untersagt; DeepAgents: Auftrag untersagt Delegation, Callback begrenzt alle Modellstarts",
+  "exit_code": 0,
+  "duration_seconds": 9.089,
+  "material_unchanged": true,
+  "evaluation": {
+    "model_steps_observed": 7,
+    "reported_tokens": 29248,
+    "correction_completed": true,
+    "original_and_extracted_files_unchanged": true,
+    "tests_executed": true,
+    "reduction_assessment": "Seven observed calls sufficient in this single run; eight as provisional reserve, not validated."
+  }
+}

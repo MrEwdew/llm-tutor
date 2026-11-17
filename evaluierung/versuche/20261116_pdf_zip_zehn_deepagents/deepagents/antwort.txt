@@ -1,0 +1,5 @@
+Aufgabe 1: Die Funktion `quadrat` berechnet `x + x` statt `x * x`. Dies führt zu falschen Ergebnissen: 2 statt 1 (x=1), -6 statt 9 (x=-3), 10 statt 25 (x=5). Die Implementierung entspricht nicht der Aufgabenstellung.
+
+Aufgabe 2: Die Funktion `positiv` verwendet `>= 0`, aber die Aufgabe verlangt `> 0`. Für x=0 liefert sie `True`, sollte aber `False` liefern. Dies verletzt die Spezifikation.
+
+Keine Ersatzlösungen oder Reparaturen. Die Abgabedateien wurden unverändert belassen. Die Fehler sind aufgrund der WYPP-Tests und der Aufgabenstellung eindeutig.

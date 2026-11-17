@@ -1,0 +1,29 @@
+{
+  "model": "Qwen_3_30B_A3B_Instruct_2507",
+  "harness": "deepagents",
+  "image": "sha256:57ae814b5ca5373586f504a0b7f584505dbfdc819693e304062f5ff58e0df67e",
+  "status": "completed",
+  "model_steps_limit": 6,
+  "wall_limit_seconds": 120,
+  "prompt": "Aufgabe 1: quadrat(x: int) -> int soll x*x zurueckgeben.\nAufgabe 2: positiv(x: int) -> bool soll genau fuer x > 0 True liefern.\nTests im Abgabecode und bestimmte Dateinamen sind nicht vorgeschrieben.\n\nDie unveraenderten Abgabedateien liegen unter /work/material/.\nLies sie und ordne sie den Aufgaben zu. Entwickle selbst eigene WYPP-checks\nmit aus den Anforderungen begruendeten Sollwerten. Speichere die Tests unter\n/work/arbeit und fuehre sie gegen die Originaldateien unter /work/material aus.\nErklaere gefundene Fehler anhand der tatsaechlichen Testergebnisse.\nKeine Ersatzloesungen, keine kopierten oder reparierten Funktionsdefinitionen.\nKennzeichne, was wirklich ausgefuehrt wurde. Abschlussantwort maximal 150 Woerter.\n\n/usr/local/bin/python und wypp sind vorhanden. Keine Paketinstallation,\nWebsuche oder Delegation. Keine Zugangsdaten oder Umgebungsvariablen lesen.\nArbeite nur unter /work, Originaldateien nicht veraendern.\nMaximal sechs Modellschritte, keine automatische Wiederholung.\n\nTechnische Hilfestellung fuer die Einbindung: Setze an den Anfang deiner\nTestdatei die folgenden Zeilen. Sie laden die unveraenderten Originalfunktionen:\n\nimport sys\nsys.path.insert(0, \"/work/material\")\nfrom aufgabe_01 import quadrat\nfrom aufgabe_02 import positiv\nfrom wypp import check\n\nEntwickle die eigentlichen check-Aufrufe und ihre Sollwerte selbst.\nFuehre deine Testdatei mit /usr/local/bin/python aus. Werte die tatsaechlichen\nAusgaben aus; ein beendeter Prozess allein bedeutet nicht, dass alle Checks bestehen.\n\nWYPP-Hilfe: Verwende check(istwert, sollwert), genau zwei Argumente.\nBeschreibungen gehoeren in Kommentare, nicht in ein drittes Argument.\nWaehle Testeingaben und Sollwerte selbst aus den Anforderungen.\n",
+  "material_sha256": {
+    "aufgabe_01.py": "0d75499c75b18bde31b1d43acc4d061ffbc3f47d22a27cc6e6daf26809f5f523",
+    "aufgabe_02.py": "3bd75b1547ba1ab1a066355a75f91dc205d390795130046a534f0da4470e6e91"
+  },
+  "script_sha256": "c8c610e92c647494910628eb788a59f1ebb6a4a43a6aa08dfcf323cd99604b0b",
+  "src_used": false,
+  "support": "Konkrete Importzeilen, Suchpfad und WYPP-Schnittstelle vorgegeben; keine Testfaelle oder Sollwerte",
+  "permissions": "OpenCode: Subagent und Webtools nativ untersagt; DeepAgents: Auftrag untersagt Delegation, Callback begrenzt alle Modellstarts",
+  "exit_code": 0,
+  "duration_seconds": 17.894,
+  "material_unchanged": true,
+  "evaluation": {
+    "reported_tokens": 22074,
+    "model_responses": 6,
+    "generated_checks": 6,
+    "observed_failed_checks": 0,
+    "valid_comparison_completed": true,
+    "false_complaints_observed": false,
+    "scope": "Single supported synthetic correct-case run; not general reliability evidence."
+  }
+}

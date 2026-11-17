@@ -1,0 +1,29 @@
+{
+  "case": "06_txt",
+  "group": "txt",
+  "harness": "deepagents",
+  "model": "Qwen_3_30B_A3B_Instruct_2507",
+  "prompt": "Lies ausschließlich den Anhang. Nenne das Kennwort, die beiden\nAufgaben mit ihren zugehörigen Dateinamen und die allgemeine Vorgabe.\nWenn du den Anhang nicht lesen kannst, sage das ausdrücklich.\nMaximal 80 Wörter.",
+  "effective_prompt": "Lies ausschließlich den Anhang. Nenne das Kennwort, die beiden\nAufgaben mit ihren zugehörigen Dateinamen und die allgemeine Vorgabe.\nWenn du den Anhang nicht lesen kannst, sage das ausdrücklich.\nMaximal 80 Wörter.\n\nAnhang als Datei: /work/material/leseprobe.txt\n\nArbeite ausschließlich unter /work. Verändere keine Originalmaterialien.\nNutze für eigene Dateien /work/arbeit. Keine Paketinstallation oder Websuche.\nLies oder zeige keine Zugangsdaten oder Umgebungsvariablen.\nPython ist unter /usr/local/bin/python verfügbar. Java ist nicht vorinstalliert.\n",
+  "attachment": "leseprobe.txt",
+  "fresh_chat": true,
+  "status": "completed",
+  "answer": "Kennwort: BIRKE-7319  \nAufgabe 1: quadrat(x: int) -> int berechnet x*x. Datei: rechnung.py  \nAufgabe 2: positiv(x: int) -> bool liefert True für x > 0. Datei: vorzeichen.py  \nAllgemeine Vorgabe: Abgaben dürfen bei der Bewertung nicht verändert werden.",
+  "model_calls": 2,
+  "usage": {
+    "input_tokens": 6272,
+    "output_tokens": 117,
+    "total_tokens": 6389
+  },
+  "tool_calls": [
+    {
+      "name": "read_file",
+      "args": {
+        "file_path": "/work/material/leseprobe.txt"
+      },
+      "id": "chatcmpl-tool-bff9d684b4523031",
+      "type": "tool_call"
+    }
+  ],
+  "duration_seconds": 6.486
+}

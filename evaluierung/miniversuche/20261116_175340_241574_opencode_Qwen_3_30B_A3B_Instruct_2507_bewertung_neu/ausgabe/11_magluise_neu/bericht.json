@@ -1,0 +1,13 @@
+{
+  "case": "11_magluise_neu",
+  "group": "bewertung_neu",
+  "harness": "opencode",
+  "model": "Qwen_3_30B_A3B_Instruct_2507",
+  "prompt": "Bewerte diese Abgabe ausschließlich für Aufgabe 1 des angehängten\nAufgabenblatts:\n\nfrom wypp import *\n\n# Prüft, ob eine Zahl zu Luises Lieblingszahlen gehört.\n# Eingabe: ganze Zahl. Ergebnis: Wahrheitswert.\ndef magLuise(n: int) -> bool:\n    return n in (6, 11, 13) or n > 100\n\ncheck(magLuise(6), True)\ncheck(magLuise(11), True)\ncheck(magLuise(13), True)\ncheck(magLuise(12), False)\ncheck(magLuise(100), False)\ncheck(magLuise(101), True)\n\nIst der Funktionsname zulässig? Ist die Berechnung korrekt?\nBegründe anhand des Blatts. Behaupte keine Ausführung ohne\ntatsächlichen Werkzeugaufruf. Maximal 100 Wörter.",
+  "effective_prompt": "Bewerte diese Abgabe ausschließlich für Aufgabe 1 des angehängten\nAufgabenblatts:\n\nfrom wypp import *\n\n# Prüft, ob eine Zahl zu Luises Lieblingszahlen gehört.\n# Eingabe: ganze Zahl. Ergebnis: Wahrheitswert.\ndef magLuise(n: int) -> bool:\n    return n in (6, 11, 13) or n > 100\n\ncheck(magLuise(6), True)\ncheck(magLuise(11), True)\ncheck(magLuise(13), True)\ncheck(magLuise(12), False)\ncheck(magLuise(100), False)\ncheck(magLuise(101), True)\n\nIst der Funktionsname zulässig? Ist die Berechnung korrekt?\nBegründe anhand des Blatts. Behaupte keine Ausführung ohne\ntatsächlichen Werkzeugaufruf. Maximal 100 Wörter.\n\nAnhang als Datei: /work/material/blatt-02.pdf\n\nArbeite ausschließlich unter /work. Verändere keine Originalmaterialien.\nNutze für eigene Dateien /work/arbeit. Keine Paketinstallation oder Websuche.\nLies oder zeige keine Zugangsdaten oder Umgebungsvariablen.\nPython ist unter /usr/local/bin/python verfügbar. Java ist nicht vorinstalliert.\n",
+  "attachment": "blatt-02.pdf",
+  "fresh_chat": true,
+  "status": "process_error",
+  "exit_code": 1,
+  "duration_seconds": 4.279
+}

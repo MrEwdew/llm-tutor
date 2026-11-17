@@ -1,0 +1,6 @@
+ÄNDERUNGSHISTORIE
+
+2026-10-26T18:50:09+01:00
+  Geänderte, hinzugefügte oder gelöschte Dateien:
+  * ./
+  * 07-sequenzen.pdf

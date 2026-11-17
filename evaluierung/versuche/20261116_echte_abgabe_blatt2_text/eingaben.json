@@ -1,0 +1,12 @@
+{
+  "source_archive_sha256": "deb0621f21f0826ffad518898d7f7bef27305ff96b7010ca09b55f6aee56fe8a",
+  "selection": "first archive-order submission with four Python solution files",
+  "submission_index_zero_based": 0,
+  "anonymization": "Student directory removed; archive metadata rebuilt; only four reviewed code files retained; code and basenames unchanged. Course PDF contains public course staff attribution.",
+  "files": {
+    "Aufgabe4.py": "25fffd0bc3580aad9e6b121cf46e404eb941de226b2254953286aa1108e4693f",
+    "Aufgabe1.py": "3fe582e62e428b343a39034f64462580588ef8f49b73899160addc5db9d0d8a4",
+    "Aufgabe2.py": "2b6d289b03691f539e524cea5e828b9dc59a296c7c3885ded8b29617b92bd3f4",
+    "Aufgabe3.py": "7836f1fe49a0f7ac1e1dd723eca3cc18428d336da03619c0d774b77252e0c0c0"
+  }
+}

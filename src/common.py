@@ -139,27 +139,33 @@ def load_exercise_submission(pdf_path, zip_path, reference_paths=None):
     pdf_text = load_pdf(pdf_path)
     tasks, introduction, closing = split_exercises(pdf_text)
     expected_tasks = extract_expected_files(tasks, introduction, pdf_text)
+
+    if reference_paths is None:
+        reference_paths = {}
+
+    unknown_tasks = set(reference_paths) - set(tasks)
+
+    if unknown_tasks:
+        raise ValueError(
+            f"Referenzen fuer unbekannte Aufgaben: {sorted(unknown_tasks)}"
+        )
+
     files = extract_zip(zip_path)
     assignments = assign_task_to_exercise(files, expected_tasks)
+    unassigned_files = find_unassigned_files(files, assignments)
 
-    data = build_exercise_data(
+    references = load_references(reference_paths)
+
+    exercise_data = build_exercise_data(
         tasks, introduction, closing, assignments, files
     )
 
-    references = {}
-    if reference_paths is not None:
-        unknown_tasks = set(reference_paths) - set(tasks)
-        if unknown_tasks:
-            raise ValueError(
-                f"Referenzen fuer unbekannte Aufgaben: {sorted(unknown_tasks)}"
-            )
+    for task_number, task in exercise_data["tasks"].items():
+        task["reference"] = references.get(task_number)
 
-        references = load_references(reference_paths)
+    exercise_data["unassigned_files"] = unassigned_files
 
-    for number, task in data["tasks"].items():
-        task["reference"] = references.get(number)
-
-    return data
+    return exercise_data
 # neu ende
 
 
@@ -196,6 +202,83 @@ def assign_task_to_exercise(files, expected_tasks):
                 raise ValueError(f"Mehrere Dateien für {expected_name}: {matches}")
             assignments[task_number][expected_name] = (matches[0] if matches else None)
     return assignments
+#neu ende
+
+
+#neu 
+
+# Erfasst Code und statische Informationen, ohne ihn auszuführen.
+def prepare_code_file(filename, path, code):
+    functions = None
+    syntax_error = None
+
+    if code is not None and detect_language(filename) == "python":
+        try:
+            functions = extract_python_functions(code)
+        except SyntaxError as error:
+            syntax_error = {
+                "line": error.lineno,
+                "message": error.msg,
+            }
+
+    return {
+        "path": path,
+        "code": code,
+        "functions": functions,
+        "syntax_error": syntax_error,
+    }
+
+#neu ende
+
+#neu
+
+
+# Erfasst nicht zugeordnete Dateien und mögliche Aufgaben.
+# Erfasst nicht zugeordnete Dateien und mögliche Aufgaben.
+def find_unassigned_files(files, assignments):
+    assigned_paths = set()
+
+    for task_files in assignments.values():
+        for path in task_files.values():
+            if path is not None:
+                assigned_paths.add(path)
+
+    unassigned = {}
+
+    for path, code in files.items():
+        if path in assigned_paths:
+            continue
+
+        filename = Path(path).name
+        match = re.fullmatch(
+            r"aufgabe_?0*(\d+)\.(py|java)",
+            filename,
+            re.IGNORECASE,
+        )
+
+        suggested_task = None
+
+        if match is not None:
+            task_number = int(match.group(1))
+            extension = "." + match.group(2).lower()
+
+            if task_number in assignments:
+                expected_names = assignments[task_number]
+
+                if any(
+                    Path(name).suffix.lower() == extension
+                    for name in expected_names
+                ):
+                    suggested_task = task_number
+
+        file = prepare_code_file(filename, path, code)
+        file["filename"] = filename
+        file["suggested_task"] = suggested_task
+        unassigned[path] = file
+
+    return unassigned
+
+
 #neu ende
 
 # neu
@@ -276,24 +359,7 @@ def build_exercise_data(tasks, introduction, closing, assignments, files):
 
         for filename, path in assignments[number].items():
             code = files[path] if path is not None else None
-            functions = None
-            syntax_error = None
-
-            if code is not None and detect_language(filename) == "python":
-                try:
-                    functions = extract_python_functions(code)
-                except SyntaxError as error:
-                    syntax_error = {
-                        "line": error.lineno,
-                        "message": error.msg,
-                    }
-
-            task_files[filename] = {
-                "path": path,
-                "code": code,
-                "functions": functions,
-                "syntax_error": syntax_error,
-            }
+            task_files[filename] = prepare_code_file(filename, path, code)
 
         exercise_data["tasks"][number] = {
             "description": description,
@@ -390,6 +456,107 @@ def prepare_function_assignment_input(data: dict, task_number: int) -> str:
     return "\n\n".join(sections)
 
 # neu ende
+
+
+#neu
+
+# Bereitet ein vollständiges Blatt für den Harness vor.
+def prepare_sheet_evaluation_input(data):
+    sections = [
+        "Allgemeine Blattvorgaben:\n" + data["introduction"],
+        "Aufgaben:",
+    ]
+
+    for number, task in data["tasks"].items():
+        sections.append(task["description"])
+        sections.append("Exakt zugeordnete Dateien:")
+
+        for filename, file in task["files"].items():
+            if file["path"] is None:
+                sections.append(
+                    f"Erwartete Datei: {filename}\n"
+                    "Keine exakt passende Datei zugeordnet. "
+                    "Weitere Dateien stehen im Abschnitt unten."
+                )
+            else:
+                sections.append(
+                    f"Datei: {filename}\n"
+                    f"Archivpfad: {file['path']}\n"
+                    f"Code:\n{file['code']}"
+                )
+
+    sections.append(
+        "Abschliessende Blattvorgaben:\n" + data["closing"]
+    )
+    sections.append("Nicht exakt zugeordnete Dateien:")
+
+    unassigned = data["unassigned_files"]
+
+    if not unassigned:
+        sections.append("Keine.")
+
+    for path, file in unassigned.items():
+        suggestion = file["suggested_task"]
+
+        if suggestion is None:
+            assignment = "Kein Zuordnungsvorschlag."
+        else:
+            assignment = (
+                f"Unbestaetigter Dateinamensvorschlag: Aufgabe {suggestion}. "
+                "Die fachliche Zugehoerigkeit ist noch zu pruefen."
+            )
+
+        sections.append(
+            f"Datei: {file['filename']}\n"
+            f"Archivpfad: {path}\n"
+            f"{assignment}\n"
+            f"Code:\n{file['code']}"
+        )
+
+    sections.append("Statische Python-Befunde, ohne Codeausfuehrung:")
+
+    all_files = {}
+
+    for task in data["tasks"].values():
+        for file in task["files"].values():
+            if file["path"] is not None:
+                all_files[file["path"]] = file
+
+    all_files.update(unassigned)
+
+    for path, file in all_files.items():
+        sections.append(f"Archivpfad: {path}")
+
+        error = file["syntax_error"]
+        functions = file["functions"]
+
+        if error is not None:
+            sections.append(
+                f"Python-Syntaxbefund, Zeile {error['line']}: "
+                f"{error['message']}"
+            )
+        elif functions is None:
+            sections.append("Kein Python-Funktionsinventar verfuegbar.")
+        elif not functions:
+            sections.append("Keine normalen Funktionen auf Modulebene erkannt.")
+        else:
+            for function in functions:
+                return_type = function["return_type"]
+
+                if return_type is None:
+                    return_type = "nicht angegeben"
+
+                sections.append(
+                    f"Zeile {function['line']}: "
+                    f"{function['name']}({function['parameters']}) "
+                    f"-> {return_type}"
+                )
+
+    return "\n\n".join(sections)
+
+#neu ende
+
+
 
 
 def load_code(path):

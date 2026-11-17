@@ -1,0 +1,33 @@
+{
+  "model": "Qwen_3_30B_A3B_Instruct_2507",
+  "harness": "deepagents",
+  "image": "sha256:57ae814b5ca5373586f504a0b7f584505dbfdc819693e304062f5ff58e0df67e",
+  "status": "completed",
+  "model_steps_limit": 6,
+  "wall_limit_seconds": 120,
+  "prompt": "Aufgabe 1: quadrat(x: int) -> int soll x*x zurueckgeben.\nAufgabe 2: positiv(x: int) -> bool soll genau fuer x > 0 True liefern.\nTests im Abgabecode und bestimmte Dateinamen sind nicht vorgeschrieben.\n\nDie unveraenderten Abgabedateien liegen unter /work/material/.\nLies sie und ordne sie den Aufgaben zu. Entwickle selbst eigene WYPP-checks\nmit aus den Anforderungen begruendeten Sollwerten. Speichere die Tests unter\n/work/arbeit und fuehre sie gegen die Originaldateien unter /work/material aus.\nErklaere gefundene Fehler anhand der tatsaechlichen Testergebnisse.\nKeine Ersatzloesungen, keine kopierten oder reparierten Funktionsdefinitionen.\nKennzeichne, was wirklich ausgefuehrt wurde. Abschlussantwort maximal 150 Woerter.\n\n/usr/local/bin/python und wypp sind vorhanden. Keine Paketinstallation,\nWebsuche oder Delegation. Keine Zugangsdaten oder Umgebungsvariablen lesen.\nArbeite nur unter /work, Originaldateien nicht veraendern.\nMaximal sechs Modellschritte, keine automatische Wiederholung.\n",
+  "material_sha256": {
+    "aufgabe_01.py": "0d75499c75b18bde31b1d43acc4d061ffbc3f47d22a27cc6e6daf26809f5f523",
+    "aufgabe_02.py": "3bd75b1547ba1ab1a066355a75f91dc205d390795130046a534f0da4470e6e91"
+  },
+  "script_sha256": "f866c7f654f148a208d2175a269c1cad7b4eb6a51936433e7c0124767e772aae",
+  "src_used": false,
+  "support": "Expliziter Hinweis auf vorhandene Bibliotheken",
+  "permissions": "OpenCode: Subagent und Webtools nativ untersagt; DeepAgents: Auftrag untersagt Delegation, Callback begrenzt alle Modellstarts",
+  "exit_code": 0,
+  "duration_seconds": 8.887,
+  "material_unchanged": true,
+  "evaluation": {
+    "model_starts": 6,
+    "reported_usage": {
+      "input_tokens": 20253,
+      "output_tokens": 296,
+      "total_tokens": 20549
+    },
+    "usage_missing": false,
+    "functional_submission_test_completed": false,
+    "observed_failure": "NameError: quadrat is not defined in generated test",
+    "test_style": "assert instead of requested WYPP check",
+    "conclusion": "Testaufbau fehlgeschlagen; keine funktionale Bewertung der Originalabgabe erreicht."
+  }
+}

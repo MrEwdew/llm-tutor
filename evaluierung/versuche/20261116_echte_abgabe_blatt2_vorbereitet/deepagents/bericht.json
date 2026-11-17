@@ -1,0 +1,38 @@
+{
+  "model": "Qwen_3_30B_A3B_Instruct_2507",
+  "harness": "deepagents",
+  "image": "sha256:57ae814b5ca5373586f504a0b7f584505dbfdc819693e304062f5ff58e0df67e",
+  "status": "completed",
+  "model_steps_limit": 10,
+  "wall_limit_seconds": 120,
+  "prompt": "Pruefe eine vollstaendige studentische Abgabe zu einem Aufgabenblatt.\nDie vorbereitete Eingabe liegt unter /work/material/eingabe.txt. Lies sie vollstaendig. Sie enthaelt Aufgaben, allgemeine und abschliessende Blattvorgaben, unveraenderten Code, tatsaechliche Archivpfade und statische Python-Funktionsinventare. Die Vorbereitung stammt aus unserem Projektcode; sie enthaelt keine ausgefuehrten Tests. Dateinamensvorschlaege sind unbestaetigt: pruefe die fachliche Zuordnung selbst.\nDie unveraenderten Originaldateien liegen unter /work/material/ gefolgt vom jeweiligen Archivpfad, beispielsweise entspricht Archivpfad abgabe/DATEI.py dem Pfad /work/material/abgabe/DATEI.py. Keine ZIP oder PDF mehr erschliessen. Keine Dateien umbenennen oder reparieren.\nEntwickle eigene Tests mit aus den Aufgaben begruendeten Sollwerten. Erstelle Testdateien unter /work/arbeit und starte sie tatsaechlich gegen die Originaldateien. Funktionsnamen und benoetigte Imports selbst aus dem Inventar bzw. Code bestimmen. Keine Ersatzloesungen, keine kopierten oder reparierten Funktionsdefinitionen. Nur vorhandene check-Aufrufe zu lesen ist keine Ausfuehrung und kein eigener Test.\nWYPP-Hilfe: from wypp import check; check(istwert, sollwert), genau zwei Argumente. Beschreibungen als Kommentare. Exitcode 0 allein beweist nicht, dass Checks bestehen: Ausgabe beachten. Eingebettete Abgabetests von Zusatztests unterscheiden. Fehler des eigenen Testaufbaus nicht als Abgabefehler ausgeben.\nFunktionsnamen und Typen nur als vorgeschrieben behandeln, wenn die Aufgabenstellung sie vorgibt; Hinweise nicht als zwingende Operationsvorgaben erfinden. Kommentare, Datenbeschreibung, Typangaben und Abgabetests anhand Code und Blattvorgaben bewerten. Keine zeitliche Entwicklungsreihenfolge unterstellen. Keine automatische Note.\nPython 3.13, wypp und pytest sind vorhanden. Keine Paketinstallation, Websuche oder Delegation. Keine Zugangsdaten oder Umgebungsvariablen lesen. Nur unter /work arbeiten. Originale nicht veraendern.\nAbschluss maximal 400 Woerter: Zuordnung, je Aufgabe tatsaechlich gestarteter Testbefehl und beobachtete Ausgabe, belegte Fehler, formale Befunde und offene Punkte. Nicht getestete Teile ausdruecklich als Nicht ausgefuehrt kennzeichnen. Keine Ausfuehrung erfinden. Maximal zehn Modellstarts, keine automatische Wiederholung.\n",
+  "material_sha256": {
+    "eingabe.txt": "d3761b0fd85f10e0b4eec4ca6f77f0ada229e055e6dd1c8458dae35a0020c685",
+    "abgabe/Aufgabe1.py": "3fe582e62e428b343a39034f64462580588ef8f49b73899160addc5db9d0d8a4",
+    "abgabe/Aufgabe2.py": "2b6d289b03691f539e524cea5e828b9dc59a296c7c3885ded8b29617b92bd3f4",
+    "abgabe/Aufgabe3.py": "7836f1fe49a0f7ac1e1dd723eca3cc18428d336da03619c0d774b77252e0c0c0",
+    "abgabe/Aufgabe4.py": "25fffd0bc3580aad9e6b121cf46e404eb941de226b2254953286aa1108e4693f"
+  },
+  "script_sha256": "6120fa4ad6e69f0fa4058dc47572baa8009c1cd5ec6b5653bb13a104a993a98a",
+  "src_used": true,
+  "support": "common.py bereitet Aufgaben, Vorgaben, Originalcode, unbestaetigte Dateivorschlaege und Funktionsinventar vor; WYPP-Hilfe; keine konkreten Imports/Tests",
+  "permissions": "OpenCode: Subagent und Webtools nativ untersagt; DeepAgents: Auftrag untersagt Delegation, Callback begrenzt alle Modellstarts",
+  "exit_code": 0,
+  "duration_seconds": 14.483,
+  "material_unchanged": true,
+  "graph_recursion_limit": 100,
+  "evaluation": {
+    "reported_tokens": 21567,
+    "model_responses": 4,
+    "prepared_input_total_lines": 260,
+    "prepared_input_lines_delivered": 100,
+    "inventory_start_line": 244,
+    "prepared_input_fully_read": false,
+    "all_original_code_files_read": true,
+    "test_files_created": 0,
+    "tests_executed": false,
+    "final_finish_reason": "length",
+    "textual_tool_call_imitation": true,
+    "originals_unchanged": true
+  }
+}

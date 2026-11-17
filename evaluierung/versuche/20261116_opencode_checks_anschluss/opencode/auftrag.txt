@@ -1,0 +1,20 @@
+Aufgabe 1: quadrat(x: int) -> int soll x*x zurueckgeben.
+Aufgabe 2: positiv(x: int) -> bool soll genau fuer x > 0 True liefern.
+Tests im Abgabecode und bestimmte Dateinamen sind nicht vorgeschrieben.
+
+Dies ist ein unterstuetzter Anschlussversuch in einer neuen Sitzung.
+Die Originalfunktionen liegen in /work/material/aufgabe_01.py und
+/work/material/aufgabe_02.py. Die vom Agenten im vorherigen Lauf erzeugten,
+noch nicht ausgefuehrten Tests liegen in /work/arbeit/test_aufgabe_01.py
+und /work/arbeit/test_aufgabe_02.py.
+Vervollstaendige die Anbindung deiner Tests an die Originaldateien, verwende
+die angeforderten WYPP-checks und fuehre sie tatsaechlich aus. Repariere keine
+Abgabefunktion und erstelle keine Ersatz-Funktionsdefinitionen.
+Verwende deine vorhandene Testauswahl; zusaetzliche Testfaelle sind nicht noetig.
+Begruende dein Feedback anhand der beobachteten Werkzeugausgabe.
+Speichere Testcode und Ausgaben unter /work/arbeit. Abschluss maximal 150 Woerter.
+
+/usr/local/bin/python und wypp sind vorhanden. Keine Paketinstallation,
+Websuche oder Delegation. Keine Zugangsdaten oder Umgebungsvariablen lesen.
+Arbeite nur unter /work. Originaldateien nicht veraendern.
+Maximal vier Modellschritte, keine automatische Wiederholung.

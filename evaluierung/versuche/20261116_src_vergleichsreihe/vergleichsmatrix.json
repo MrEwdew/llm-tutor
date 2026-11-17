@@ -1,0 +1,225 @@
+{
+  "status": "preparation_only",
+  "new_model_calls": 0,
+  "entries": [
+    {
+      "baseline": "20261116_181101_unterstuetzter_kleinstfall",
+      "harness": "deepagents",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 6,
+      "comparison_status": "not_run",
+      "implementation_scope": "Vorbereitung möglich; positiv liefert bool, damit volle Runner-Auswertung nicht unterstützt"
+    },
+    {
+      "baseline": "20261116_181101_unterstuetzter_kleinstfall",
+      "harness": "opencode",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 6,
+      "comparison_status": "not_run",
+      "implementation_scope": "Vorbereitung möglich; positiv liefert bool, damit volle Runner-Auswertung nicht unterstützt"
+    },
+    {
+      "baseline": "20261116_deepagents_eigene_checks",
+      "harness": "deepagents",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 6,
+      "comparison_status": "not_run",
+      "implementation_scope": "AST/Dateivorbereitung möglich; Testgenerierung nicht im src-Korrektureinstieg implementiert"
+    },
+    {
+      "baseline": "20261116_deepagents_importhinweis",
+      "harness": "deepagents",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 6,
+      "comparison_status": "not_run",
+      "implementation_scope": "AST/Dateivorbereitung möglich; Testgenerierung nicht im src-Korrektureinstieg implementiert"
+    },
+    {
+      "baseline": "20261116_deepagents_importvorgabe",
+      "harness": "deepagents",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 6,
+      "comparison_status": "not_run",
+      "implementation_scope": "AST/Dateivorbereitung möglich; Testgenerierung nicht im src-Korrektureinstieg implementiert"
+    },
+    {
+      "baseline": "20261116_deepagents_korrekte_abgabe",
+      "harness": "deepagents",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 6,
+      "comparison_status": "not_run",
+      "implementation_scope": "AST/Dateivorbereitung möglich; Testgenerierung nicht im src-Korrektureinstieg implementiert"
+    },
+    {
+      "baseline": "20261116_deepagents_wypp_hilfe",
+      "harness": "deepagents",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 6,
+      "comparison_status": "not_run",
+      "implementation_scope": "AST/Dateivorbereitung möglich; Testgenerierung nicht im src-Korrektureinstieg implementiert"
+    },
+    {
+      "baseline": "20261116_deepagents_wypp_hilfe_korrekt",
+      "harness": "deepagents",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 6,
+      "comparison_status": "not_run",
+      "implementation_scope": "AST/Dateivorbereitung möglich; Testgenerierung nicht im src-Korrektureinstieg implementiert"
+    },
+    {
+      "baseline": "20261116_echte_abgabe_blatt2_ausfuehrung",
+      "harness": "deepagents",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 10,
+      "comparison_status": "not_run",
+      "implementation_scope": "PDF/ZIP/AST-Vorbereitung möglich; voller numerischer Runner deckt bool/str nicht ab"
+    },
+    {
+      "baseline": "20261116_echte_abgabe_blatt2_deepagents",
+      "harness": "deepagents",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 10,
+      "comparison_status": "not_run",
+      "implementation_scope": "PDF/ZIP/AST-Vorbereitung möglich; voller numerischer Runner deckt bool/str nicht ab"
+    },
+    {
+      "baseline": "20261116_echte_abgabe_blatt2_direkteingabe",
+      "harness": "deepagents",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 10,
+      "comparison_status": "not_run",
+      "implementation_scope": "Vorbereitung bereits verwendet; voller Runner nicht für Blatt2 geeignet"
+    },
+    {
+      "baseline": "20261116_echte_abgabe_blatt2_graphlimit",
+      "harness": "deepagents",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 10,
+      "comparison_status": "not_run",
+      "implementation_scope": "PDF/ZIP/AST-Vorbereitung möglich; voller numerischer Runner deckt bool/str nicht ab"
+    },
+    {
+      "baseline": "20261116_echte_abgabe_blatt2_output3000",
+      "harness": "deepagents",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 10,
+      "comparison_status": "not_run",
+      "implementation_scope": "Vorbereitung bereits verwendet; voller Runner nicht für Blatt2 geeignet"
+    },
+    {
+      "baseline": "20261116_echte_abgabe_blatt2_text",
+      "harness": "deepagents",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 10,
+      "comparison_status": "not_run",
+      "implementation_scope": "PDF/ZIP/AST-Vorbereitung möglich; voller numerischer Runner deckt bool/str nicht ab"
+    },
+    {
+      "baseline": "20261116_echte_abgabe_blatt2_text_opencode",
+      "harness": "opencode",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 10,
+      "comparison_status": "not_run",
+      "implementation_scope": "PDF/ZIP/AST-Vorbereitung möglich; voller numerischer Runner deckt bool/str nicht ab"
+    },
+    {
+      "baseline": "20261116_echte_abgabe_blatt2_vorbereitet",
+      "harness": "deepagents",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 10,
+      "comparison_status": "not_run",
+      "implementation_scope": "Vorbereitung bereits verwendet; voller Runner nicht für Blatt2 geeignet"
+    },
+    {
+      "baseline": "20261116_opencode_acht_schritte",
+      "harness": "opencode",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 8,
+      "comparison_status": "not_run",
+      "implementation_scope": "Vorbereitung möglich; positiv liefert bool, damit volle Runner-Auswertung nicht unterstützt"
+    },
+    {
+      "baseline": "20261116_opencode_checks_anschluss",
+      "harness": "opencode",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 4,
+      "comparison_status": "not_run",
+      "implementation_scope": "AST/Dateivorbereitung möglich; Testgenerierung nicht im src-Korrektureinstieg implementiert"
+    },
+    {
+      "baseline": "20261116_opencode_eigene_checks",
+      "harness": "opencode",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 6,
+      "comparison_status": "not_run",
+      "implementation_scope": "AST/Dateivorbereitung möglich; Testgenerierung nicht im src-Korrektureinstieg implementiert"
+    },
+    {
+      "baseline": "20261116_opencode_wypp_hilfe_fehlerhaft",
+      "harness": "opencode",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 6,
+      "comparison_status": "not_run",
+      "implementation_scope": "AST/Dateivorbereitung möglich; Testgenerierung nicht im src-Korrektureinstieg implementiert"
+    },
+    {
+      "baseline": "20261116_opencode_wypp_hilfe_korrekt",
+      "harness": "opencode",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 6,
+      "comparison_status": "not_run",
+      "implementation_scope": "AST/Dateivorbereitung möglich; Testgenerierung nicht im src-Korrektureinstieg implementiert"
+    },
+    {
+      "baseline": "20261116_pdf_pypdf_probe",
+      "harness": "deepagents",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 3,
+      "comparison_status": "not_run",
+      "implementation_scope": "Vorbereitung möglich; positiv liefert bool, damit volle Runner-Auswertung nicht unterstützt"
+    },
+    {
+      "baseline": "20261116_pdf_pypdf_probe",
+      "harness": "opencode",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 3,
+      "comparison_status": "not_run",
+      "implementation_scope": "Vorbereitung möglich; positiv liefert bool, damit volle Runner-Auswertung nicht unterstützt"
+    },
+    {
+      "baseline": "20261116_pdf_zip_hilfe_deepagents",
+      "harness": "deepagents",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 6,
+      "comparison_status": "not_run",
+      "implementation_scope": "Vorbereitung möglich; positiv liefert bool, damit volle Runner-Auswertung nicht unterstützt"
+    },
+    {
+      "baseline": "20261116_pdf_zip_hilfe_opencode",
+      "harness": "opencode",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 6,
+      "comparison_status": "not_run",
+      "implementation_scope": "Vorbereitung möglich; positiv liefert bool, damit volle Runner-Auswertung nicht unterstützt"
+    },
+    {
+      "baseline": "20261116_pdf_zip_zehn_deepagents",
+      "harness": "deepagents",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 10,
+      "comparison_status": "not_run",
+      "implementation_scope": "Vorbereitung möglich; positiv liefert bool, damit volle Runner-Auswertung nicht unterstützt"
+    },
+    {
+      "baseline": "20261116_pdf_zip_zehn_opencode",
+      "harness": "opencode",
+      "baseline_model": "Qwen_3_30B_A3B_Instruct_2507",
+      "baseline_steps_limit": 10,
+      "comparison_status": "not_run",
+      "implementation_scope": "Vorbereitung möglich; positiv liefert bool, damit volle Runner-Auswertung nicht unterstützt"
+    }
+  ],
+  "mini_series": "11 prompt types per harness/model; original grouped histories must be preserved; not rerun yet",
+  "demo": "New integrated three-variant run already stored separately in 20261116_demo_src_vergleich",
+  "decision_pending": "unchanged existing implementation versus extension of return-value runner"
+}

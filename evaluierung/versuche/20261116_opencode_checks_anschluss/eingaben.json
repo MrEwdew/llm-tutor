@@ -1,0 +1,10 @@
+{
+  "original_run": "evaluierung\\versuche\\20261116_opencode_eigene_checks",
+  "session": "new_session_with_unchanged_previous_test_files",
+  "files": {
+    "material\\aufgabe_01.py": "e424496f966a967fe3fa0b5a2a99dfae32b6877a8f8387a9be8d6fa4be4f59a4",
+    "material\\aufgabe_02.py": "f86e22058cd569860f2ac8611ed3024334ca3380b5dfad01894c56e0c5d15ade",
+    "arbeit_vorlage\\test_aufgabe_01.py": "d03d09216ce9df812b00a87f90b3bece3eb7b48d92c9bd852fc6c779e509b54c",
+    "arbeit_vorlage\\test_aufgabe_02.py": "26bc05209006a620a057633a10c872fcc93476b50cb212aee200eebd9b7c2d91"
+  }
+}

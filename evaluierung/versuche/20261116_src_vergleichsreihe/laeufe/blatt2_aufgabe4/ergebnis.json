@@ -1,0 +1,117 @@
+{
+  "feedback": "In den geprüften Fällen wurde kein Funktionsfehler festgestellt.",
+  "usage": {
+    "input_tokens": 3563,
+    "output_tokens": 38,
+    "total_tokens": 3601
+  },
+  "model_calls": 2,
+  "test_result": {
+    "status": "completed",
+    "tests": [
+      {
+        "function": "clamp",
+        "args": [
+          5,
+          0,
+          10
+        ],
+        "expected": 5,
+        "actual": 5,
+        "passed": true
+      },
+      {
+        "function": "clamp",
+        "args": [
+          -2,
+          0,
+          10
+        ],
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "function": "clamp",
+        "args": [
+          12,
+          0,
+          10
+        ],
+        "expected": 10,
+        "actual": 10,
+        "passed": true
+      },
+      {
+        "function": "clamp",
+        "args": [
+          0,
+          0,
+          10
+        ],
+        "expected": 0,
+        "actual": 0,
+        "passed": true
+      },
+      {
+        "function": "clamp",
+        "args": [
+          10,
+          0,
+          10
+        ],
+        "expected": 10,
+        "actual": 10,
+        "passed": true
+      },
+      {
+        "function": "clamp",
+        "args": [
+          -50,
+          -75,
+          -25
+        ],
+        "expected": -50,
+        "actual": -50,
+        "passed": true
+      },
+      {
+        "function": "clamp",
+        "args": [
+          -80,
+          -75,
+          -25
+        ],
+        "expected": -75,
+        "actual": -75,
+        "passed": true
+      },
+      {
+        "function": "clamp",
+        "args": [
+          -20,
+          -75,
+          -25
+        ],
+        "expected": -25,
+        "actual": -25,
+        "passed": true
+      },
+      {
+        "function": "clamp",
+        "args": [
+          3,
+          3,
+          3
+        ],
+        "expected": 3,
+        "actual": 3,
+        "passed": true
+      }
+    ],
+    "embedded_output": "",
+    "test_output": "",
+    "note": "Abgabeausgabe und Vergleichstestergebnisse sind getrennt."
+  },
+  "duration_seconds": 0.74
+}

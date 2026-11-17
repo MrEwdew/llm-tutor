@@ -1,0 +1,5 @@
+Das PDF-File `/work/material/aufgaben.pdf` kann nicht direkt gelesen werden, da das Modell keine PDF-Input-Funktion unterstützt. Die direkte Bearbeitung des PDFs ist daher nicht möglich. Die ZIP-Datei `/work/material/abgabe.zip` wurde erfolgreich entpackt nach `/work/arbeit`.
+
+Da keine PDF-Textextraktion möglich ist, können die Aufgabeninhalte nicht aus dem PDF abgeleitet werden. Die WYPP-Checks können daher nicht auf Basis der PDF-Anforderungen erstellt werden. Die entpackten Abgabedateien in `/work/arbeit` bleiben unverändert.
+
+Keine Testergebnisse, keine Fehleranalyse, keine WYPP-Checks können durchgeführt werden, da die Sollwerte aus dem PDF fehlen. Die Aufgabe kann nicht fortgesetzt werden, ohne die PDF-Inhalte.

@@ -1,0 +1,8 @@
+ÄNDERUNGSHISTORIE
+
+2026-10-26T18:48:05+01:00
+  Geänderte, hinzugefügte oder gelöschte Dateien:
+  * ./
+  * Konzepte_Programmierung.pdf
+  * Uebungen_Konzeptlernen_Programmierung.pdf
+  * konzepte-lernen.pdf

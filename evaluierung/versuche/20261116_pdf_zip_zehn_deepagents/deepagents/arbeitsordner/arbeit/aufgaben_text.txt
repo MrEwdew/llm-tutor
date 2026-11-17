@@ -1,0 +1,12 @@
+Zwei Programmieraufgaben
+Aufgabe 1
+Schreiben Sie quadrat(x: int) -> int.
+Die Funktion soll das Quadrat x*x zurueckgeben.
+Aufgabe 2
+Schreiben Sie positiv(x: int) -> bool.
+Die Funktion soll genau dann True liefern, wenn x > 0 ist.
+Allgemeine Vorgaben
+Speichern Sie jede Aufgabe in einer eigenen Python-Datei.
+Konkrete Dateinamen sind nicht vorgeschrieben.
+Tests innerhalb der Abgabe sind nicht vorgeschrieben.
+Die vorgelegte Abgabe darf bei der Korrektur nicht repariert werden.

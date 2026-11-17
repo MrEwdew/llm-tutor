@@ -1,0 +1,12 @@
+ÄNDERUNGSHISTORIE
+
+2026-09-24T15:19:19+02:00
+  Geänderte, hinzugefügte oder gelöschte Dateien:
+  * ./
+  * 04_zusammengesetzte-daten.pdf
+  * 04_zusammengesetzte-daten.py
+
+2026-09-29T09:13:26+02:00
+  Geänderte, hinzugefügte oder gelöschte Dateien:
+  * 04_zusammengesetzte-daten.pdf
+  * 04_zusammengesetzte-daten.py

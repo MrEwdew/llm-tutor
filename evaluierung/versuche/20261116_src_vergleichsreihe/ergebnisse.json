@@ -1,0 +1,83 @@
+[
+  {
+    "id": "synthetisch_fehlerhaft_quadrat",
+    "passed": 1,
+    "tests": 4,
+    "model_calls": 2,
+    "tokens": 1634,
+    "agent_seconds": 1.61,
+    "container_seconds": 8.621
+  },
+  {
+    "id": "synthetisch_fehlerhaft_positiv",
+    "passed": 2,
+    "tests": 3,
+    "model_calls": 2,
+    "tokens": 1555,
+    "agent_seconds": 1.44,
+    "container_seconds": 3.353
+  },
+  {
+    "id": "synthetisch_korrekt_quadrat",
+    "passed": 4,
+    "tests": 4,
+    "model_calls": 2,
+    "tokens": 1440,
+    "agent_seconds": 0.67,
+    "container_seconds": 2.685
+  },
+  {
+    "id": "synthetisch_korrekt_positiv",
+    "passed": 3,
+    "tests": 3,
+    "model_calls": 2,
+    "tokens": 1408,
+    "agent_seconds": 0.73,
+    "container_seconds": 3.249
+  },
+  {
+    "id": "blatt2_aufgabe1",
+    "passed": 8,
+    "tests": 8,
+    "model_calls": 2,
+    "tokens": 3455,
+    "agent_seconds": 0.81,
+    "container_seconds": 3.458
+  },
+  {
+    "id": "blatt2_aufgabe2",
+    "passed": 7,
+    "tests": 14,
+    "model_calls": 2,
+    "tokens": 4803,
+    "agent_seconds": 3.24,
+    "container_seconds": 5.499
+  },
+  {
+    "id": "blatt2_aufgabe3",
+    "passed": 12,
+    "tests": 12,
+    "model_calls": 2,
+    "tokens": 3994,
+    "agent_seconds": 1.24,
+    "container_seconds": 3.502
+  },
+  {
+    "id": "blatt2_aufgabe4",
+    "passed": 9,
+    "tests": 9,
+    "model_calls": 2,
+    "tokens": 3601,
+    "agent_seconds": 0.74,
+    "container_seconds": 2.89
+  },
+  {
+    "id": "magluise_korrekt",
+    "passed": 6,
+    "tests": 6,
+    "model_calls": 2,
+    "tokens": 2633,
+    "agent_seconds": 0.8,
+    "container_seconds": 2.715
+  }
+]

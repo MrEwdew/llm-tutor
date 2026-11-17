@@ -1,0 +1,18 @@
+ÄNDERUNGSHISTORIE
+
+2026-09-24T15:03:38+02:00
+  Geänderte, hinzugefügte oder gelöschte Dateien:
+  * ./
+  * 02_strukturierte-entwicklung.pdf
+  * 1.py
+  * 2.py
+  * 3.py
+  * 4.py
+
+2026-09-29T09:08:17+02:00
+  Geänderte, hinzugefügte oder gelöschte Dateien:
+  * 02_strukturierte-entwicklung.pdf
+  * 1.py
+  * 2.py
+  * 3.py
+  * 4.py

@@ -1,0 +1,8 @@
+ÄNDERUNGSHISTORIE
+
+2026-10-26T18:40:44+01:00
+  Geänderte, hinzugefügte oder gelöschte Dateien:
+  * ./
+  * 06-selbstbezuege.pdf
+  * 06-selbstbezuege.py
+  * types_only.py

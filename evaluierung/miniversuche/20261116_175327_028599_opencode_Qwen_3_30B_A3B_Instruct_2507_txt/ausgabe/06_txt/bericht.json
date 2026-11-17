@@ -1,0 +1,67 @@
+{
+  "case": "06_txt",
+  "group": "txt",
+  "harness": "opencode",
+  "model": "Qwen_3_30B_A3B_Instruct_2507",
+  "prompt": "Lies ausschließlich den Anhang. Nenne das Kennwort, die beiden\nAufgaben mit ihren zugehörigen Dateinamen und die allgemeine Vorgabe.\nWenn du den Anhang nicht lesen kannst, sage das ausdrücklich.\nMaximal 80 Wörter.",
+  "effective_prompt": "Lies ausschließlich den Anhang. Nenne das Kennwort, die beiden\nAufgaben mit ihren zugehörigen Dateinamen und die allgemeine Vorgabe.\nWenn du den Anhang nicht lesen kannst, sage das ausdrücklich.\nMaximal 80 Wörter.\n\nAnhang als Datei: /work/material/leseprobe.txt\n\nArbeite ausschließlich unter /work. Verändere keine Originalmaterialien.\nNutze für eigene Dateien /work/arbeit. Keine Paketinstallation oder Websuche.\nLies oder zeige keine Zugangsdaten oder Umgebungsvariablen.\nPython ist unter /usr/local/bin/python verfügbar. Java ist nicht vorinstalliert.\n",
+  "attachment": "leseprobe.txt",
+  "fresh_chat": true,
+  "status": "completed",
+  "exit_code": 0,
+  "event_types": [
+    "step_finish",
+    "step_start",
+    "text",
+    "tool_use"
+  ],
+  "answer": "Kennwort: BIRKE-7319  \nAufgabe 1: Berechnet x*x, Datei: rechnung.py  \nAufgabe 2: Prüft x > 0, Datei: vorzeichen.py  \nAllgemeine Vorgabe: Abgaben dürfen nicht verändert werden.",
+  "usage": {
+    "input_tokens": 11026,
+    "output_tokens": 94,
+    "total_tokens": 11120
+  },
+  "usage_note": "Summe nativer step_finish input/output; Cache und Reasoning separat im Rohverlauf.",
+  "model_calls": 2,
+  "tool_calls": [
+    {
+      "partID": "prt_1e57e1688001nINxZuPKA0rC0x",
+      "sessionID": "ses_e1a81eb35ffeq5hwu7veO45s9R",
+      "messageID": "msg_1e57e159b001aliBroaI6oYvdJ",
+      "type": "tool",
+      "id": "chatcmpl-tool-9511be1c7f35e302",
+      "tool": "read",
+      "state": {
+        "status": "completed",
+        "input": {
+          "path": "/work/material/leseprobe.txt"
+        },
+        "output": "Read file /work/material/leseprobe.txt, lines 1-9\n1: Kennwort: BIRKE-7319\r\n2: \r\n3: Aufgabe 1: quadrat(x: int) -> int berechnet x*x.\r\n4: Zugehörige Datei: rechnung.py\r\n5: \r\n6: Aufgabe 2: positiv(x: int) -> bool liefert genau für x > 0 True.\r\n7: Zugehörige Datei: vorzeichen.py\r\n8: \r\n9: Allgemeine Vorgabe: Die Abgaben dürfen bei der Bewertung nicht verändert werden.\r",
+        "title": "read",
+        "metadata": {
+          "metadata": {
+            "truncated": false
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "Read file /work/material/leseprobe.txt, lines 1-9\n1: Kennwort: BIRKE-7319\r\n2: \r\n3: Aufgabe 1: quadrat(x: int) -> int berechnet x*x.\r\n4: Zugehörige Datei: rechnung.py\r\n5: \r\n6: Aufgabe 2: positiv(x: int) -> bool liefert genau für x > 0 True.\r\n7: Zugehörige Datei: vorzeichen.py\r\n8: \r\n9: Allgemeine Vorgabe: Die Abgaben dürfen bei der Bewertung nicht verändert werden.\r"
+            }
+          ],
+          "providerCall": {
+            "executed": false
+          },
+          "providerResult": {
+            "executed": false
+          },
+          "rawInput": "{\"path\": \"/work/material/leseprobe.txt\"}"
+        },
+        "time": {
+          "start": 1794851608200,
+          "end": 1794851608339
+        }
+      }
+    }
+  ],
+  "duration_seconds": 1.728
+}

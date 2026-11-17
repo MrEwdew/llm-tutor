@@ -1,0 +1,34 @@
+**Zuordnung und Prüfung der studentischen Abgabe**
+
+- **Aufgabe 1 (6 Punkte)**:  
+  **Testbefehl**: `python3 /work/arbeit/test_aufgabe_01.py`  
+  **Ausgabe**: Keine Fehler. Alle Tests bestanden.  
+  **Belegte Fehler**: Keine.  
+  **Formaler Befund**: Funktion `luisasLieblingsZahlen` korrekt implementiert. Die Logik `in(6, 11, 13) or > 100` entspricht der Aufgabenstellung. Kommentare fehlen, aber die Funktion ist korrekt.  
+  **Offener Punkt**: Fehlende Kurzbeschreibung und Datenanalyse im Code – **nicht erfüllt**.
+
+- **Aufgabe 2 (8 Punkte)**:  
+  **Testbefehl**: `python3 /work/arbeit/test_aufgabe_02.py`  
+  **Ausgabe**: Mehrere Fehler: `2`, `3`, `4`, `5`, `6`, `7`, `8`, `10`, `9`, `11` werden fälschlich als `Ersatzspieler` klassifiziert. `100` ergibt `None`.  
+  **Belegte Fehler**:  
+  - `elif rueckenNummer == (2 or 3 or 4 or 5)`: Der Ausdruck `2 or 3 or 4 or 5` ergibt `2`, nicht eine Liste.  
+  - `elif rueckenNummer <= 99`: Falsche Reihenfolge – wird vor den spezifischen Fällen ausgeführt.  
+  **Formaler Befund**: Logik fehlerhaft. Keine korrekte Positionserkennung.  
+  **Offener Punkt**: Fehlende Datenbeschreibung und Typdefinition im Code – **nicht erfüllt**.
+
+- **Aufgabe 3 (8 Punkte)**:  
+  **Testbefehl**: `python3 /work/arbeit/test_aufgabe_03.py`  
+  **Ausgabe**: Keine Fehler. Alle Tests bestanden.  
+  **Belegte Fehler**: Keine.  
+  **Formaler Befund**: Funktion `bussgeldbescheid` korrekt. Die Berechnung mit `math.ceil` ist korrekt.  
+  **Offener Punkt**: Fehlende Kurzbeschreibung und Datenanalyse – **nicht erfüllt**.
+
+- **Aufgabe 4 (8 Punkte)**:  
+  **Testbefehl**: `python3 /work/arbeit/test_aufgabe_04.py`  
+  **Ausgabe**: Fehler bei `clamp(-50, -75, -25)` – erwartet `-25`, liefert `-50`.  
+  **Belegte Fehler**: `x > u` wird nicht korrekt behandelt, wenn `u` negativ ist.  
+  **Formaler Befund**: Logik fehlerhaft bei negativen Werten.  
+  **Offener Punkt**: Fehlende Kurzbeschreibung und Datenanalyse – **nicht erfüllt**.
+
+**Zusammenfassung**:  
+Nur Aufgabe 1 und 3 sind funktional korrekt. Aufgabe 2 und 4 enthalten gravierende logische Fehler. Alle Aufgaben verletzen das Schema (fehlende Beschreibung, Datenanalyse). **Keine Ausführung erzeugt keine Punkte.**

@@ -1,0 +1,6 @@
+Die Tests wurden erfolgreich ausgeführt. Keine WYPP-Checks sind fehlgeschlagen. Die Funktionen `quadrat` und `positiv` erfüllen die Anforderungen korrekt:
+
+- `quadrat(x)` gibt `x*x` zurück (Testfälle: 0, 3, -2 → 0, 9, 4).
+- `positiv(x)` gibt `True` nur für `x > 0` zurück (Testfälle: 5 → True, 0 → False, -3 → False).
+
+Die Originaldateien wurden nicht verändert. Die Tests wurden unter `/work/arbeit/test_aufgaben.py` erstellt und mit `python` ausgeführt. Alle Sollwerte entsprechen den Anforderungen. Keine Fehler gefunden.

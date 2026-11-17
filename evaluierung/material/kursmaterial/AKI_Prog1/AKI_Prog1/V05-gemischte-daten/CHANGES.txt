@@ -1,0 +1,12 @@
+ÄNDERUNGSHISTORIE
+
+2026-09-24T15:19:29+02:00
+  Geänderte, hinzugefügte oder gelöschte Dateien:
+  * ./
+  * 05_gemischte-daten.pdf
+  * 05_gemischte-daten.py
+
+2026-09-29T09:13:50+02:00
+  Geänderte, hinzugefügte oder gelöschte Dateien:
+  * 05_gemischte-daten.pdf
+  * 05_gemischte-daten.py

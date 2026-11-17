@@ -1,0 +1,14 @@
+Maximum steps reached. Work completed:  
+- Identified two files: `aufgabe_01.py` (quadrat) and `aufgabe_02.py` (positiv).  
+- Created test files in `/work/arbeit/` with correct Sollwerte:  
+  - `test_aufgabe_01.py`: Tests `quadrat(2) == 4`, `quadrat(-3) == 9`, `quadrat(0) == 0`.  
+  - `test_aufgabe_02.py`: Tests `positiv(5) == True`, `positiv(-1) == False`, `positiv(0) == False`.  
+- Tests were written to verify correctness against requirements.  
+
+Remaining tasks:  
+- Run tests against original files using `python` and `wypp`.  
+- Analyze test results and explain errors based on actual output.  
+
+Recommendation: Execute tests manually or via shell command to analyze failures. The original functions contain errors:  
+- `quadrat` returns `x + x` (wrong, should be `x * x`).  
+- `positiv` returns `x >= 0` (wrong, should be `x > 0`).

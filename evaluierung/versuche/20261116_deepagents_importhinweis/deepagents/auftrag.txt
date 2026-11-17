@@ -1,0 +1,18 @@
+Aufgabe 1: quadrat(x: int) -> int soll x*x zurueckgeben.
+Aufgabe 2: positiv(x: int) -> bool soll genau fuer x > 0 True liefern.
+Tests im Abgabecode und bestimmte Dateinamen sind nicht vorgeschrieben.
+
+Die unveraenderten Abgabedateien liegen unter /work/material/.
+Lies sie und ordne sie den Aufgaben zu. Entwickle selbst eigene WYPP-checks
+mit aus den Anforderungen begruendeten Sollwerten. Speichere die Tests unter
+/work/arbeit und fuehre sie gegen die Originaldateien unter /work/material aus.
+Erklaere gefundene Fehler anhand der tatsaechlichen Testergebnisse.
+Keine Ersatzloesungen, keine kopierten oder reparierten Funktionsdefinitionen.
+Kennzeichne, was wirklich ausgefuehrt wurde. Abschlussantwort maximal 150 Woerter.
+
+/usr/local/bin/python und wypp sind vorhanden. Keine Paketinstallation,
+Websuche oder Delegation. Keine Zugangsdaten oder Umgebungsvariablen lesen.
+Arbeite nur unter /work, Originaldateien nicht veraendern.
+Maximal sechs Modellschritte, keine automatische Wiederholung.
+
+Importiere die Funktionen aus den Originaldateien unter /work/material. Sorge dafuer, dass Python diesen Ordner beim Import findet. Veraendere die Originaldateien nicht.

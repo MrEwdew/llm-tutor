@@ -1,0 +1,8 @@
+Lies /work/material/aufgaben.pdf. Extrahiere den Text mit
+/usr/local/bin/python und der bereits installierten Bibliothek pypdf.
+Verwende nicht das direkte PDF-Lesewerkzeug, sondern Python fuer die Textextraktion.
+Gib danach beide Funktionsanforderungen und die allgemeinen Vorgaben wieder.
+Maximal 100 Woerter. Behaupte keine Extraktion ohne tatsaechliche Ausfuehrung.
+Keine Paketinstallation, Websuche oder Delegation. Keine Zugangsdaten oder
+Umgebungsvariablen lesen. Arbeite nur unter /work und veraendere das PDF nicht.
+Du hast hoechstens drei Modellaufrufe. Keine Abgabe pruefen und keine Tests erstellen.

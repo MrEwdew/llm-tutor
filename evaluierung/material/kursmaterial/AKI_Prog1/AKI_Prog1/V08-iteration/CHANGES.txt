@@ -1,0 +1,7 @@
+ÄNDERUNGSHISTORIE
+
+2026-10-26T18:48:20+01:00
+  Geänderte, hinzugefügte oder gelöschte Dateien:
+  * ./
+  * 08-iteration.pdf
+  * 08-iteration.py

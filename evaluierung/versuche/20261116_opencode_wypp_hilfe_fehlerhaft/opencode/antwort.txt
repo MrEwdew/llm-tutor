@@ -1,0 +1,8 @@
+Ausgefuehrt wurde: Test der Originalfunktionen aus /work/material mit selbst entwickelten WYPP-Tests.
+
+Fehleranalyse:
+- `quadrat(3)` liefert 6 statt 9: Funktion addiert statt multipliziert (x + x statt x * x).
+- `quadrat(-2)` liefert -4 statt 4: Falsche Multiplikation von negativen Zahlen (x + x statt x * x).
+- `positiv(0)` liefert True statt False: Bedingung ist zu lax (>= statt >).
+
+Die Tests bestaetigen, dass beide Funktionen nicht den Anforderungen entsprechen. Die Sollwerte wurden aus den Aufgabenbeschreibungen abgeleitet.

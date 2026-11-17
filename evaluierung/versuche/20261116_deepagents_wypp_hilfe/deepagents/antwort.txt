@@ -1,0 +1,8 @@
+**Ausführung:** Testdatei `/work/arbeit/test.py` wurde erstellt und ausgeführt.  
+**Fehleranalyse:**  
+- `quadrat(3)` liefert 6 statt 9 → Funktion addiert statt multipliziert.  
+- `quadrat(-2)` liefert -4 statt 4 → Falsche Multiplikation von negativen Zahlen.  
+- `positiv(0)` liefert `True` statt `False` → Bedingung ist zu inklusiv (`>=` statt `>`).  
+
+**Ergebnis:** Beide Funktionen erfüllen nicht die Anforderungen. Die Tests bestehen nicht.  
+**Hinweis:** Keine Änderungen an Originaldateien. Nur Prüfungen durchgeführt.

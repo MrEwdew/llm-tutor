@@ -1,0 +1,12 @@
+{
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportWildcardImportFromLibrary": "none"
+    },
+    "python.analysis.extraPaths": [
+        "bar",
+        "/Users/swehr/devel/libPyshell/src",
+        "/Users/swehr/.vscode/extensions/stefanwehr.write-your-python-program-2.5.1/python/code"
+    ],
+    "python.analysis.typeCheckingMode": "off",
+    "chat.disableAIFeatures": true
+}

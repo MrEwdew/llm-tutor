@@ -1,0 +1,126 @@
+{
+  "feedback": "In den geprüften Fällen wurde kein Funktionsfehler festgestellt.",
+  "usage": {
+    "input_tokens": 3956,
+    "output_tokens": 38,
+    "total_tokens": 3994
+  },
+  "model_calls": 2,
+  "test_result": {
+    "status": "completed",
+    "tests": [
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          0
+        ],
+        "expected": 10,
+        "actual": 10,
+        "passed": true
+      },
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          30
+        ],
+        "expected": 10,
+        "actual": 10,
+        "passed": true
+      },
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          31
+        ],
+        "expected": 15,
+        "actual": 15,
+        "passed": true
+      },
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          60
+        ],
+        "expected": 15,
+        "actual": 15,
+        "passed": true
+      },
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          61
+        ],
+        "expected": 20,
+        "actual": 20,
+        "passed": true
+      },
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          120
+        ],
+        "expected": 20,
+        "actual": 20,
+        "passed": true
+      },
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          121
+        ],
+        "expected": 25,
+        "actual": 25,
+        "passed": true
+      },
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          180
+        ],
+        "expected": 25,
+        "actual": 25,
+        "passed": true
+      },
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          181
+        ],
+        "expected": 30,
+        "actual": 30,
+        "passed": true
+      },
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          240
+        ],
+        "expected": 30,
+        "actual": 30,
+        "passed": true
+      },
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          241
+        ],
+        "expected": 40,
+        "actual": 40,
+        "passed": true
+      },
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          600
+        ],
+        "expected": 90,
+        "actual": 90,
+        "passed": true
+      }
+    ],
+    "embedded_output": "",
+    "test_output": "",
+    "note": "Abgabeausgabe und Vergleichstestergebnisse sind getrennt."
+  },
+  "duration_seconds": 1.24
+}

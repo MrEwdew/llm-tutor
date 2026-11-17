@@ -1,0 +1,23 @@
+{
+  "src_sha256": {
+    "common.py": "97e3b7a84ae8d956206b605d373a7f6532252b2acffb36a08c4bbb6f557b00c7",
+    "correction_agent.py": "e5d4977cbb9b5dca7a6afa662765be6e220ddf959542e2228eba5d29e0c54dcb",
+    "llm.py": "134ceb55f765a23718614830a3fc1175f17fb87d167b2dd55fff76d4a964b618",
+    "python_tests.py": "9bdbf67bec7272f29d7f1cdf1cadd6983b07ac46311450d08c5af0bdd9fbaaf6",
+    "python_test_runner.py": "00ef5915ab0d61cdfea9715373b0c916f9007debe1549b27113112c1f20934d9",
+    "config\\meta_config\\meta.py": "6ef6bad71868eeee17843b4c42cefb0aa4b0311c1b872897934a21a2e243a34e",
+    "config\\meta_config\\__init__.py": "79b448aac6cf6cc7723fdf12185eb8ee7ad5ddf4ddb250627055ee6f21b003e4"
+  },
+  "jobs": 9,
+  "repeated_baseline_material_sets": 27,
+  "deduplication": "Gleiche fachliche Eingabe nicht fuer jeden historischen Budget-/Harnessversuch erneut bezahlt; Zuordnung ueber job ids. Dies ist kein 1:1 Replay aller damaligen Prompts.",
+  "unsupported": [
+    "Java-Ausfuehrung",
+    "freie Testgenerierung",
+    "beliebige Shell-Aufgaben wie secrets",
+    "Webchat-Bedienung",
+    "Session-/Quellenrueckfragen als Modellfaehigkeitstest",
+    "formale Modellbewertung: Demo-Prompt schliesst sie aus"
+  ],
+  "frozen": true
+}

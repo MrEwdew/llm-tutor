@@ -1,0 +1,24 @@
+from .meta import (
+    API_KEY, 
+    MODELL, 
+    TASK, 
+    TASK_NUMBER, 
+    STUDENT_SOLUTION, 
+    MUSTER_SOLUTION,
+    KICONNECT_BASE_URL,
+    LLM_TEMPERATURE,
+    LLM_TIMEOUT_SECONDS,
+
+)
+
+__all__ = [
+    "API_KEY", 
+    "MODELL", 
+    "KICONNECT_BASE_URL",
+    "LLM_TEMPERATURE",
+    "LLM_TIMEOUT_SECONDS",
+    "TASK", 
+    "TASK_NUMBER", 
+    "STUDENT_SOLUTION", 
+    "MUSTER_SOLUTION",
+]

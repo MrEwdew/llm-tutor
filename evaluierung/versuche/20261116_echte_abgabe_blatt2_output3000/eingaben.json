@@ -1,0 +1,9 @@
+{
+  "preparation": "common.load_exercise_submission and prepare_sheet_evaluation_input; no manual assignment confirmation",
+  "common_sha256": "97e3b7a84ae8d956206b605d373a7f6532252b2acffb36a08c4bbb6f557b00c7",
+  "source_archive_sha256": "875f8b6a3092a4df3c519e43f4e16bf396638fb8ab67ae29bdf3502c50ba6595",
+  "preparation_text_characters": 8722,
+  "src_used": true,
+  "provided_tests": false,
+  "provided_imports": false
+}

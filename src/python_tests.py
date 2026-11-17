@@ -5,7 +5,7 @@ import tempfile
 from pathlib import Path
 
 
-# Prüft numerische Rückgabewerte in einem eigenen Python-Prozess.
+# Prüft Zahlen, boolesche Werte und Texte in einem eigenen Python-Prozess.
 def run_python_tests(code: str, tests: list, timeout: float = 10) -> dict:
     runner = Path(__file__).with_name("python_test_runner.py")
     payload = {"code": code, "tests": tests}

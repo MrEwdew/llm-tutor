@@ -1,0 +1,7 @@
+ÄNDERUNGSHISTORIE
+
+2026-11-06T14:52:31+01:00
+  Geänderte, hinzugefügte oder gelöschte Dateien:
+  * ./
+  * 09-polynome.pdf
+  * 09-polynome.py

@@ -1,0 +1,44 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "kiconnect/Qwen_3_30B_A3B_Instruct_2507",
+  "providers": {
+    "kiconnect": {
+      "name": "KI:CONNECT",
+      "env": [
+        "KICONNECT_API_KEY"
+      ],
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": {
+        "baseURL": "https://chat.kiconnect.nrw/api/v1",
+        "apiKey": "{env:KICONNECT_API_KEY}"
+      },
+      "models": {
+        "Qwen_3_30B_A3B_Instruct_2507": {
+          "name": "Qwen_3_30B_A3B_Instruct_2507"
+        }
+      }
+    }
+  },
+  "agents": {
+    "build": {
+      "steps": 3,
+      "permissions": [
+        {
+          "action": "subagent",
+          "resource": "*",
+          "effect": "deny"
+        },
+        {
+          "action": "websearch",
+          "resource": "*",
+          "effect": "deny"
+        },
+        {
+          "action": "webfetch",
+          "resource": "*",
+          "effect": "deny"
+        }
+      ]
+    }
+  }
+}

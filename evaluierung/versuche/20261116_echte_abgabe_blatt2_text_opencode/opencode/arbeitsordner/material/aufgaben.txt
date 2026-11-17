@@ -1,0 +1,77 @@
+Prof. Dr. Stefan Wehr, Simon Rösch
+Übungsblatt 2
+AKI Programmierung 1, Wintersemester 2026/2027
+Deadline: 26.10.2026, 23:00 Uhr
+20.10.2026
+Gehen Sie beim Lösen aller Programmieraufgaben strikt nach unserem Schema vor:
+1. Schreiben Sie zuerst eine Kurzbeschreibung als Kommentar.
+2. Führen Sie dann eine Datenanalyse durch. Schreiben Sie das Ergebnis Ihrer Datenanalyse
+ebenfalls als Kommentar in die Zeile nach der Kurzbeschreibung.
+3. Schreiben Sie dann den Funktionskopf inkl. der Typen für Argumente und Ergebnis hin.
+4. Schreiben Sie dann Tests mittels check.
+5. Setzen Sie die passenden Schablonen in den Rumpf der Funktion ein.
+6. Schreiben Sie erst dann den Funktionsrumpf hin.
+Eine Lösung, in der nicht ersichtlich ist, dass Sie gemäß des Schemas aggiert haben, erhält keine
+Punkte. Insbesondere erhält eine Lösung, bei der nur der Funktionsrumpf da steht, keine Punkte,
+auch wenn die Funktion korrekt ist.
+Dahingegen erhalten Sie Teilpunkte wenn Sie dem Schema folgen, aber an einem gewissen Punkt
+nicht weiterkommen.
+Aufgabe 1 (6 Punkte)
+Georg fragt die kleine Luise nach ihrer Lieblingszahl. Luise sagt: „Also, ich habe vielen Lieb-
+lingszahlen. Ich mag die 6, weil ich 6 Jahre alt. Außerdem mag ich die 11 und die 13. Die 12
+mag ich aber nicht. Dafür mag ich alle Zahlen größer als 100. “
+Georg ist leicht überfordert. Helfen Sie ihm, indem Sie eine Funktion schreiben, welche den
+booleschen Wert für „wahr“ liefert falls die Eingabezahl eine von Luises Lieblingszahlen ist.
+Aufgabe 2 (8 Punkte)
+Beim Fußball lässt die Rückennummer einer Spielerin häufig Rückschlüsse auf ihre Position zu.
+Wir machen dabei folgende Annahmen:
+• Ein Torhüterin hat die Rückennummer 1.
+• Ein Abwehrspielerin hat die Rückennummer 2, 3, 4 oder 5.
+• Ein Mittelfeldspielerin hat die Rückennummer 6, 7, 8 oder 10.
+• Ein Stürmerin hat die Rückennummer 9 oder 11.
+• Ein Ersatzspielerin hat eine Rückennummer zwischen 12 und 99
+1
+
+Übungsblatt 2 AKI Programmierung 1
+• Alle anderen Rückennummern sind ungültig.
+Schreiben Sie zunächst eine Datenbeschreibung für Positionen und dann eine passende Typde-
+finition. Schreiben Sie dann eine Funktion, die für eine Rückennummer die passende Position
+bestimmt. Dabei dürfen Sie eine ungültige Eingabe ignorieren.
+Aufgabe 3 (8 Punkte)
+Schreibe ein Programm, mit dem Bußgelder für zu langes Parken automatisch bestimmt werden.
+Die Bußgelder sind in Abhängigkeit der Überschreitungsdauer der Höchstparkdauer wie folgt
+festgelegt:
+• Bis zu 30 Minuten: 10 Euro.
+• Bis zu einer Stunde: 15 Euro.
+• Bis zu zwei Stunden: 20 Euro
+• Bis zu drei Stunden: 25 Euro
+• Länger als drei Stunden: (n − 1) · 10 Euro, wobei n die Parkdauer aufgerundet auf die
+nächste ganze Stunde ist.
+Aufrunden funktioniert mit math.ceil.
+Aufgabe 4 (8 Punkte)
+Schreiben Sie eine Funktion clamp, die wie folgt definiert ist:
+clamp(x, l, u) =
+
+
+
+x if l ≤ x ≤ u
+l if x < l
+u if x > u
+Dabei sind x, l, u∈ R. Der Name l steht dabei für „lower bound“, da l eine untere Schranke für
+den Wert von x angibt. Analog steht u für „upper bound“ .
+Gesamtpunkte: 30
+Abgabe
+Via Upload im Praktomat bis 26.10.2026, 23:00 Uhr . Speichern Sie jede Programmieren-
+aufgabe in eine eigene Datei. Der Name der Datei muss dabei aufgabe_0N.py sein, wobei N
+die Nummer der Aufgabe ist. Zum Beispiel lautet für Aufgabe 1 der Name der Datei dann
+aufgabe_01.py.
+Verpacken Sie alle Dateien in einem zip-Archiv (Standard-Zip, keine 7zip, rar o.ä.), welches den
+Namen NAME_MATRIKELNUMMER.zip hat. Ersetzen Sie dabei NAME und MATRIKELNUMMER durch
+Ihren Namen und Ihre Matrikelnummer. Es ist wichtig, dass Sie sich an die Namenskonventionen
+halten, die wir Abgaben automatisch überprüfen.
+Wichtig: Die Lösungen für alle Programmieraufgaben müssen ohne Fehler ausführbar sein, sonst
+akzeptiert der Praktomat Ihre Abgabe nicht. Wenn der Praktomat nach dem Upload für eine
+oder mehrere Aufgaben den Status failed anzeigt, wird ihre komplette Abgabe nicht akzpe-
+tiert und Sie erhalten für das komplette Blatt 0 Punkte! Kommentieren Sie fehlerhafte
+Codestellen in einem solche Fall aus, so dass der Praktomat Ihre Abgabe akzeptiert.
+2

@@ -1,0 +1,9 @@
+Kennwort: BIRKE-7319
+
+Aufgabe 1: quadrat(x: int) -> int berechnet x*x.
+Zugehörige Datei: rechnung.py
+
+Aufgabe 2: positiv(x: int) -> bool liefert genau für x > 0 True.
+Zugehörige Datei: vorzeichen.py
+
+Allgemeine Vorgabe: Die Abgaben dürfen bei der Bewertung nicht verändert werden.

@@ -1,0 +1,73 @@
+{
+  "case": "07_pdf",
+  "group": "pdf",
+  "harness": "opencode",
+  "model": "Qwen_3_30B_A3B_Instruct_2507",
+  "prompt": "Lies ausschließlich den Anhang. Nenne das Kennwort, die beiden\nAufgaben mit ihren zugehörigen Dateinamen und die allgemeine Vorgabe.\nWenn du den Anhang nicht lesen kannst, sage das ausdrücklich.\nMaximal 80 Wörter.",
+  "effective_prompt": "Lies ausschließlich den Anhang. Nenne das Kennwort, die beiden\nAufgaben mit ihren zugehörigen Dateinamen und die allgemeine Vorgabe.\nWenn du den Anhang nicht lesen kannst, sage das ausdrücklich.\nMaximal 80 Wörter.\n\nAnhang als Datei: /work/material/leseprobe.pdf\n\nArbeite ausschließlich unter /work. Verändere keine Originalmaterialien.\nNutze für eigene Dateien /work/arbeit. Keine Paketinstallation oder Websuche.\nLies oder zeige keine Zugangsdaten oder Umgebungsvariablen.\nPython ist unter /usr/local/bin/python verfügbar. Java ist nicht vorinstalliert.\n",
+  "attachment": "leseprobe.pdf",
+  "fresh_chat": true,
+  "status": "completed",
+  "exit_code": 0,
+  "event_types": [
+    "step_finish",
+    "step_start",
+    "text",
+    "tool_use"
+  ],
+  "answer": "Der Anhang kann nicht gelesen werden, da das aktuelle Modell keine PDF-Dateien verarbeiten kann. Bitte übermitteln Sie den Inhalt des Anhangs als Text oder verwenden Sie ein anderes Format, das von diesem System unterstützt wird.",
+  "usage": {
+    "input_tokens": 11389,
+    "output_tokens": 80,
+    "total_tokens": 11469
+  },
+  "usage_note": "Summe nativer step_finish input/output; Cache und Reasoning separat im Rohverlauf.",
+  "model_calls": 2,
+  "tool_calls": [
+    {
+      "partID": "prt_1e57e2425001wyZ7zXOETZNj9d",
+      "sessionID": "ses_e1a81e09cffeYCzyGzC1sXrktW",
+      "messageID": "msg_1e57e20fa0015uTK0uNCO9A3pN",
+      "type": "tool",
+      "id": "chatcmpl-tool-8851b9bc7f49a58b",
+      "tool": "read",
+      "state": {
+        "status": "completed",
+        "input": {
+          "path": "/work/material/leseprobe.pdf"
+        },
+        "output": "PDF read successfully",
+        "title": "read",
+        "metadata": {
+          "metadata": {
+            "truncated": false
+          },
+          "content": [
+            {
+              "type": "text",
+              "text": "PDF read successfully"
+            },
+            {
+              "type": "file",
+              "uri": "data:application/pdf;base64,JVBERi0xLjQKMSAwIG9iago8PCAvVHlwZSAvQ2F0YWxvZyAvUGFnZXMgMiAwIFIgPj4KZW5kb2JqCjIgMCBvYmoKPDwgL1R5cGUgL1BhZ2VzIC9LaWRzIFszIDAgUl0gL0NvdW50IDEgPj4KZW5kb2JqCjMgMCBvYmoKPDwgL1R5cGUgL1BhZ2UgL1BhcmVudCAyIDAgUiAvTWVkaWFCb3ggWzAgMCA1OTUgODQyXSAvUmVzb3VyY2VzIDw8IC9Gb250IDw8IC9GMSA0IDAgUiA+PiA+PiAvQ29udGVudHMgNSAwIFIgPj4KZW5kb2JqCjQgMCBvYmoKPDwgL1R5cGUgL0ZvbnQgL1N1YnR5cGUgL1R5cGUxIC9CYXNlRm9udCAvSGVsdmV0aWNhIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nID4+CmVuZG9iago1IDAgb2JqCjw8IC9MZW5ndGggMzg4ID4+CnN0cmVhbQpCVCAvRjEgMTEgVGYgNDAgODAwIFRkIDE1IFRMIChLZW5ud29ydDogQklSS0UtNzMxOSkgVGogVCogKCkgVGogVCogKEF1ZmdhYmUgMTogcXVhZHJhdFwoeDogaW50XCkgLT4gaW50IGJlcmVjaG5ldCB4KnguKSBUaiBUKiAoWnVnZWj2cmlnZSBEYXRlaTogcmVjaG51bmcucHkpIFRqIFQqICgpIFRqIFQqIChBdWZnYWJlIDI6IHBvc2l0aXZcKHg6IGludFwpIC0+IGJvb2wgbGllZmVydCBnZW5hdSBm/HIgeCA+IDAgVHJ1ZS4pIFRqIFQqIChadWdlaPZyaWdlIERhdGVpOiB2b3J6ZWljaGVuLnB5KSBUaiBUKiAoKSBUaiBUKiAoQWxsZ2VtZWluZSBWb3JnYWJlOiBEaWUgQWJnYWJlbiBk/HJmZW4gYmVpIGRlciBCZXdlcnR1bmcgbmljaHQgdmVy5G5kZXJ0IHdlcmRlbi4pIFRqIFQqIEVUCmVuZHN0cmVhbQplbmRvYmoKeHJlZgowIDYKMDAwMDAwMDAwMCA2NTUzNSBmIAowMDAwMDAwMDA5IDAwMDAwIG4gCjAwMDAwMDAwNTggMDAwMDAgbiAKMDAwMDAwMDExNSAwMDAwMCBuIAowMDAwMDAwMjQxIDAwMDAwIG4gCjAwMDAwMDAzMzggMDAwMDAgbiAKdHJhaWxlciA8PCAvU2l6ZSA2IC9Sb290IDEgMCBSID4+CnN0YXJ0eHJlZgo3NzcKJSVFT0YK",
+              "mime": "application/pdf",
+              "name": "/work/material/leseprobe.pdf"
+            }
+          ],
+          "providerCall": {
+            "executed": false
+          },
+          "providerResult": {
+            "executed": false
+          },
+          "rawInput": "{\"path\": \"/work/material/leseprobe.pdf\"}"
+        },
+        "time": {
+          "start": 1794851611685,
+          "end": 1794851611700
+        }
+      }
+    }
+  ],
+  "duration_seconds": 2.238
+}

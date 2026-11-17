@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "WYPP Debugger",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONPATH": "/Users/swehr/.vscode/extensions/stefanwehr.write-your-python-program-2.4.0/python/code:/Users/swehr/.vscode/extensions/stefanwehr.write-your-python-program-2.4.0/python/code/wypp:${env:PYTHONPATH}"
+      }
+    }
+  ]
+}

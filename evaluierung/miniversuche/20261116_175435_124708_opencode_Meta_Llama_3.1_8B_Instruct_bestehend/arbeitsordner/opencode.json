@@ -1,0 +1,22 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "kiconnect/Meta_Llama_3.1_8B_Instruct",
+  "providers": {
+    "kiconnect": {
+      "name": "KI:CONNECT",
+      "env": [
+        "KICONNECT_API_KEY"
+      ],
+      "package": "@opencode/ai/providers/openai-compatible",
+      "settings": {
+        "baseURL": "https://chat.kiconnect.nrw/api/v1",
+        "apiKey": "{env:KICONNECT_API_KEY}"
+      },
+      "models": {
+        "Meta_Llama_3.1_8B_Instruct": {
+          "name": "Meta_Llama_3.1_8B_Instruct"
+        }
+      }
+    }
+  }
+}

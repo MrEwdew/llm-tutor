@@ -1,0 +1,13 @@
+{
+  "case": "07_pdf",
+  "group": "pdf",
+  "harness": "deepagents",
+  "model": "Meta_Llama_3.1_8B_Instruct",
+  "prompt": "Lies ausschließlich den Anhang. Nenne das Kennwort, die beiden\nAufgaben mit ihren zugehörigen Dateinamen und die allgemeine Vorgabe.\nWenn du den Anhang nicht lesen kannst, sage das ausdrücklich.\nMaximal 80 Wörter.",
+  "effective_prompt": "Lies ausschließlich den Anhang. Nenne das Kennwort, die beiden\nAufgaben mit ihren zugehörigen Dateinamen und die allgemeine Vorgabe.\nWenn du den Anhang nicht lesen kannst, sage das ausdrücklich.\nMaximal 80 Wörter.\n\nAnhang als Datei: /work/material/leseprobe.pdf\n\nArbeite ausschließlich unter /work. Verändere keine Originalmaterialien.\nNutze für eigene Dateien /work/arbeit. Keine Paketinstallation oder Websuche.\nLies oder zeige keine Zugangsdaten oder Umgebungsvariablen.\nPython ist unter /usr/local/bin/python verfügbar. Java ist nicht vorinstalliert.\n",
+  "attachment": "leseprobe.pdf",
+  "fresh_chat": true,
+  "status": "error",
+  "error": "OpenAIInvalidRequestError: Error code: 400 - This model only supports single tool-calls at once!",
+  "duration_seconds": 1.609
+}

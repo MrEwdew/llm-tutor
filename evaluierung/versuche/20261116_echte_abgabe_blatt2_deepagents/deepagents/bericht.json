@@ -1,0 +1,34 @@
+{
+  "model": "Qwen_3_30B_A3B_Instruct_2507",
+  "harness": "deepagents",
+  "image": "sha256:57ae814b5ca5373586f504a0b7f584505dbfdc819693e304062f5ff58e0df67e",
+  "status": "completed",
+  "model_steps_limit": 10,
+  "wall_limit_seconds": 120,
+  "prompt": "Pruefe eine vollstaendige studentische Abgabe zu einem Aufgabenblatt.\nMaterial: /work/material/aufgaben.pdf und /work/material/abgabe.zip.\nLies den PDF-Text mit /usr/local/bin/python und pypdf, nicht mit dem direkten PDF-Lesewerkzeug. Entpacke die ZIP nach /work/arbeit. Lies alle Abgabedateien. Ordne sie den Aufgaben zu und beruecksichtige allgemeine Blattvorgaben. Funktionsnamen oder Typen nur als vorgeschrieben behandeln, wenn das PDF sie tatsaechlich vorgibt; Hinweise nicht als zwingende Operationsvorgaben erfinden.\nEntwickle eigene Tests mit aus der Aufgabenstellung begruendeten Sollwerten. Fuehre sie gegen die unveraenderten entpackten Originaldateien aus. Entdecke Funktionsnamen und benoetigte Imports selbst. Keine Ersatzloesungen, keine kopierten oder reparierten Funktionsdefinitionen. Kommentare, Datenbeschreibung, Typangaben und Abgabetests anhand des vorhandenen Codes und der Blattvorgaben beurteilen, keine zeitliche Entwicklungsreihenfolge unterstellen. Keine automatische Note vergeben.\nWYPP-Hilfe: from wypp import check; check(istwert, sollwert), genau zwei Argumente. Beschreibungen als Kommentare. Prozess-Exitcode 0 allein beweist nicht, dass Checks bestehen: beachte die Ausgabe. Eingebettete Abgabetests von deinen Zusatztests unterscheiden. Bei Fehlern im Testaufbau diese nicht als Abgabefehler ausgeben.\nPython 3.13, pypdf, zipfile, wypp und pytest sind vorhanden. Keine Paketinstallation, Websuche oder Delegation. Keine Zugangsdaten oder Umgebungsvariablen lesen. Nur unter /work arbeiten. Ausgangsmaterialien und entpackten Abgabecode nicht veraendern. Eigene Testdateien unter /work/arbeit anlegen.\nAbschluss maximal 400 Woerter: Zuordnung, tatsaechlich ausgefuehrte Tests, belegte Fehler mit Beispielen, formale Befunde und offene Punkte. Nicht getestete Teile klar kennzeichnen. Maximal zehn Modellschritte, keine automatische Wiederholung.\n",
+  "material_sha256": {
+    "abgabe.zip": "875f8b6a3092a4df3c519e43f4e16bf396638fb8ab67ae29bdf3502c50ba6595",
+    "aufgaben.pdf": "d0425a8d813107ca292178d03ab325e97c4af47ce5554313e4f5229fca144268"
+  },
+  "script_sha256": "f263b848d935d427c94fa22e1873b9a1c445c80b903a01bcfab0b5f7c3631767",
+  "src_used": false,
+  "support": "pypdf-Hinweis und WYPP-Schnittstelle; keine aufgabenspezifischen Imports oder Tests",
+  "permissions": "OpenCode: Subagent und Webtools nativ untersagt; DeepAgents: Auftrag untersagt Delegation, Callback begrenzt alle Modellstarts",
+  "exit_code": 0,
+  "duration_seconds": 12.936,
+  "material_unchanged": true,
+  "evaluation": {
+    "model_starts": 7,
+    "successful_model_responses": 6,
+    "reported_tokens": 28732,
+    "failed_request_usage": "unknown",
+    "pdf_text_extracted": true,
+    "zip_extracted": true,
+    "all_four_code_files_read": true,
+    "own_tests_generated": false,
+    "submission_code_executed": false,
+    "false_execution_claim": true,
+    "original_and_extracted_files_unchanged": true,
+    "conclusion": "Reading and static mapping succeeded; requested execution-based correction not completed; false feedback claims."
+  }
+}

@@ -1,0 +1,623 @@
+[
+  {
+    "id": "synthetisch_fehlerhaft_quadrat",
+    "task": "quadrat(x: int) -> int soll x*x liefern.",
+    "filename": "aufgabe_01.py",
+    "code": "def quadrat(x: int) -> int:\n    return x + x\n",
+    "functions": [
+      {
+        "name": "quadrat",
+        "line": 1,
+        "parameters": "x: int",
+        "return_type": "int"
+      }
+    ],
+    "tests": [
+      {
+        "function": "quadrat",
+        "args": [
+          0
+        ],
+        "expected": 0
+      },
+      {
+        "function": "quadrat",
+        "args": [
+          1
+        ],
+        "expected": 1
+      },
+      {
+        "function": "quadrat",
+        "args": [
+          3
+        ],
+        "expected": 9
+      },
+      {
+        "function": "quadrat",
+        "args": [
+          -2
+        ],
+        "expected": 4
+      }
+    ],
+    "origin": "20261116_deepagents_eigene_checks",
+    "test_origin": "Fuer Vergleich extern festgelegt; keine Modell-Testgenerierung"
+  },
+  {
+    "id": "synthetisch_fehlerhaft_positiv",
+    "task": "positiv(x: int) -> bool soll genau fuer x>0 True liefern.",
+    "filename": "aufgabe_02.py",
+    "code": "def positiv(x: int) -> bool:\n    return x >= 0\n",
+    "functions": [
+      {
+        "name": "positiv",
+        "line": 1,
+        "parameters": "x: int",
+        "return_type": "bool"
+      }
+    ],
+    "tests": [
+      {
+        "function": "positiv",
+        "args": [
+          1
+        ],
+        "expected": true
+      },
+      {
+        "function": "positiv",
+        "args": [
+          0
+        ],
+        "expected": false
+      },
+      {
+        "function": "positiv",
+        "args": [
+          -1
+        ],
+        "expected": false
+      }
+    ],
+    "origin": "20261116_deepagents_eigene_checks",
+    "test_origin": "Fuer Vergleich extern festgelegt; keine Modell-Testgenerierung"
+  },
+  {
+    "id": "synthetisch_korrekt_quadrat",
+    "task": "quadrat(x: int) -> int soll x*x liefern.",
+    "filename": "aufgabe_01.py",
+    "code": "def quadrat(x: int) -> int:\n    return x * x\n",
+    "functions": [
+      {
+        "name": "quadrat",
+        "line": 1,
+        "parameters": "x: int",
+        "return_type": "int"
+      }
+    ],
+    "tests": [
+      {
+        "function": "quadrat",
+        "args": [
+          0
+        ],
+        "expected": 0
+      },
+      {
+        "function": "quadrat",
+        "args": [
+          1
+        ],
+        "expected": 1
+      },
+      {
+        "function": "quadrat",
+        "args": [
+          3
+        ],
+        "expected": 9
+      },
+      {
+        "function": "quadrat",
+        "args": [
+          -2
+        ],
+        "expected": 4
+      }
+    ],
+    "origin": "20261116_deepagents_korrekte_abgabe",
+    "test_origin": "Fuer Vergleich extern festgelegt; keine Modell-Testgenerierung"
+  },
+  {
+    "id": "synthetisch_korrekt_positiv",
+    "task": "positiv(x: int) -> bool soll genau fuer x>0 True liefern.",
+    "filename": "aufgabe_02.py",
+    "code": "def positiv(x: int) -> bool:\n    return x > 0\n",
+    "functions": [
+      {
+        "name": "positiv",
+        "line": 1,
+        "parameters": "x: int",
+        "return_type": "bool"
+      }
+    ],
+    "tests": [
+      {
+        "function": "positiv",
+        "args": [
+          1
+        ],
+        "expected": true
+      },
+      {
+        "function": "positiv",
+        "args": [
+          0
+        ],
+        "expected": false
+      },
+      {
+        "function": "positiv",
+        "args": [
+          -1
+        ],
+        "expected": false
+      }
+    ],
+    "origin": "20261116_deepagents_korrekte_abgabe",
+    "test_origin": "Fuer Vergleich extern festgelegt; keine Modell-Testgenerierung"
+  },
+  {
+    "id": "blatt2_aufgabe1",
+    "task": "Prof. Dr. Stefan Wehr, Simon Rösch\nÜbungsblatt 2\nAKI Programmierung 1, Wintersemester 2026/2027\nDeadline: 26.10.2026, 23:00 Uhr\n20.10.2026\nGehen Sie beim Lösen aller Programmieraufgaben strikt nach unserem Schema vor:\n1. Schreiben Sie zuerst eine Kurzbeschreibung als Kommentar.\n2. Führen Sie dann eine Datenanalyse durch. Schreiben Sie das Ergebnis Ihrer Datenanalyse\nebenfalls als Kommentar in die Zeile nach der Kurzbeschreibung.\n3. Schreiben Sie dann den Funktionskopf inkl. der Typen für Argumente und Ergebnis hin.\n4. Schreiben Sie dann Tests mittels check.\n5. Setzen Sie die passenden Schablonen in den Rumpf der Funktion ein.\n6. Schreiben Sie erst dann den Funktionsrumpf hin.\nEine Lösung, in der nicht ersichtlich ist, dass Sie gemäß des Schemas aggiert haben, erhält keine\nPunkte. Insbesondere erhält eine Lösung, bei der nur der Funktionsrumpf da steht, keine Punkte,\nauch wenn die Funktion korrekt ist.\nDahingegen erhalten Sie Teilpunkte wenn Sie dem Schema folgen, aber an einem gewissen Punkt\nnicht weiterkommen.\nAufgabe 1 (6 Punkte)\nGeorg fragt die kleine Luise nach ihrer Lieblingszahl. Luise sagt: „Also, ich habe vielen Lieb-\nlingszahlen. Ich mag die 6, weil ich 6 Jahre alt. Außerdem mag ich die 11 und die 13. Die 12\nmag ich aber nicht. Dafür mag ich alle Zahlen größer als 100. “\nGeorg ist leicht überfordert. Helfen Sie ihm, indem Sie eine Funktion schreiben, welche den\nbooleschen Wert für „wahr“ liefert falls die Eingabezahl eine von Luises Lieblingszahlen ist.\nGesamtpunkte: 30\nAbgabe\nVia Upload im Praktomat bis 26.10.2026, 23:00 Uhr . Speichern Sie jede Programmieren-\naufgabe in eine eigene Datei. Der Name der Datei muss dabei aufgabe_0N.py sein, wobei N\ndie Nummer der Aufgabe ist. Zum Beispiel lautet für Aufgabe 1 der Name der Datei dann\naufgabe_01.py.\nVerpacken Sie alle Dateien in einem zip-Archiv (Standard-Zip, keine 7zip, rar o.ä.), welches den\nNamen NAME_MATRIKELNUMMER.zip hat. Ersetzen Sie dabei NAME und MATRIKELNUMMER durch\nIhren Namen und Ihre Matrikelnummer. Es ist wichtig, dass Sie sich an die Namenskonventionen\nhalten, die wir Abgaben automatisch überprüfen.\nWichtig: Die Lösungen für alle Programmieraufgaben müssen ohne Fehler ausführbar sein, sonst\nakzeptiert der Praktomat Ihre Abgabe nicht. Wenn der Praktomat nach dem Upload für eine\noder mehrere Aufgaben den Status failed anzeigt, wird ihre komplette Abgabe nicht akzpe-\ntiert und Sie erhalten für das komplette Blatt 0 Punkte! Kommentieren Sie fehlerhafte\nCodestellen in einem solche Fall aus, so dass der Praktomat Ihre Abgabe akzeptiert.\n2",
+    "filename": "Aufgabe1.py",
+    "code": "from wypp import *\n\n# Funktion schreiben für einen booleschen wert der TRUE ergibt wenn es Luisaslieblingszahl ist\n# Eingabe\n# Ergebnis\n\ndef luisasLieblingsZahlen(Zahl: float) -> bool:\n   return Zahl in(6, 11, 13) or Zahl > 100\n\ncheck(luisasLieblingsZahlen(6), True)\ncheck(luisasLieblingsZahlen(11), True)\ncheck(luisasLieblingsZahlen(12), False)\ncheck(luisasLieblingsZahlen(13), True)\ncheck(luisasLieblingsZahlen(100), False)\ncheck(luisasLieblingsZahlen(100.1), True)\ncheck(luisasLieblingsZahlen(9999), True)\n",
+    "functions": [
+      {
+        "name": "luisasLieblingsZahlen",
+        "line": 7,
+        "parameters": "Zahl: float",
+        "return_type": "bool"
+      }
+    ],
+    "tests": [
+      {
+        "function": "luisasLieblingsZahlen",
+        "args": [
+          6
+        ],
+        "expected": true
+      },
+      {
+        "function": "luisasLieblingsZahlen",
+        "args": [
+          11
+        ],
+        "expected": true
+      },
+      {
+        "function": "luisasLieblingsZahlen",
+        "args": [
+          13
+        ],
+        "expected": true
+      },
+      {
+        "function": "luisasLieblingsZahlen",
+        "args": [
+          12
+        ],
+        "expected": false
+      },
+      {
+        "function": "luisasLieblingsZahlen",
+        "args": [
+          100
+        ],
+        "expected": false
+      },
+      {
+        "function": "luisasLieblingsZahlen",
+        "args": [
+          101
+        ],
+        "expected": true
+      },
+      {
+        "function": "luisasLieblingsZahlen",
+        "args": [
+          0
+        ],
+        "expected": false
+      },
+      {
+        "function": "luisasLieblingsZahlen",
+        "args": [
+          -1
+        ],
+        "expected": false
+      }
+    ],
+    "origin": "20261116_echte_abgabe_blatt2_deepagents",
+    "test_origin": "Extern fachlich aus Blatt abgeleitet; nur gueltige Rueckennummern; clamp-Sollwerte unabhaengig geprueft"
+  },
+  {
+    "id": "blatt2_aufgabe2",
+    "task": "Prof. Dr. Stefan Wehr, Simon Rösch\nÜbungsblatt 2\nAKI Programmierung 1, Wintersemester 2026/2027\nDeadline: 26.10.2026, 23:00 Uhr\n20.10.2026\nGehen Sie beim Lösen aller Programmieraufgaben strikt nach unserem Schema vor:\n1. Schreiben Sie zuerst eine Kurzbeschreibung als Kommentar.\n2. Führen Sie dann eine Datenanalyse durch. Schreiben Sie das Ergebnis Ihrer Datenanalyse\nebenfalls als Kommentar in die Zeile nach der Kurzbeschreibung.\n3. Schreiben Sie dann den Funktionskopf inkl. der Typen für Argumente und Ergebnis hin.\n4. Schreiben Sie dann Tests mittels check.\n5. Setzen Sie die passenden Schablonen in den Rumpf der Funktion ein.\n6. Schreiben Sie erst dann den Funktionsrumpf hin.\nEine Lösung, in der nicht ersichtlich ist, dass Sie gemäß des Schemas aggiert haben, erhält keine\nPunkte. Insbesondere erhält eine Lösung, bei der nur der Funktionsrumpf da steht, keine Punkte,\nauch wenn die Funktion korrekt ist.\nDahingegen erhalten Sie Teilpunkte wenn Sie dem Schema folgen, aber an einem gewissen Punkt\nnicht weiterkommen.\nAufgabe 2 (8 Punkte)\nBeim Fußball lässt die Rückennummer einer Spielerin häufig Rückschlüsse auf ihre Position zu.\nWir machen dabei folgende Annahmen:\n• Ein Torhüterin hat die Rückennummer 1.\n• Ein Abwehrspielerin hat die Rückennummer 2, 3, 4 oder 5.\n• Ein Mittelfeldspielerin hat die Rückennummer 6, 7, 8 oder 10.\n• Ein Stürmerin hat die Rückennummer 9 oder 11.\n• Ein Ersatzspielerin hat eine Rückennummer zwischen 12 und 99\n1\nÜbungsblatt 2 AKI Programmierung 1\n• Alle anderen Rückennummern sind ungültig.\nSchreiben Sie zunächst eine Datenbeschreibung für Positionen und dann eine passende Typde-\nfinition. Schreiben Sie dann eine Funktion, die für eine Rückennummer die passende Position\nbestimmt. Dabei dürfen Sie eine ungültige Eingabe ignorieren.\nGesamtpunkte: 30\nAbgabe\nVia Upload im Praktomat bis 26.10.2026, 23:00 Uhr . Speichern Sie jede Programmieren-\naufgabe in eine eigene Datei. Der Name der Datei muss dabei aufgabe_0N.py sein, wobei N\ndie Nummer der Aufgabe ist. Zum Beispiel lautet für Aufgabe 1 der Name der Datei dann\naufgabe_01.py.\nVerpacken Sie alle Dateien in einem zip-Archiv (Standard-Zip, keine 7zip, rar o.ä.), welches den\nNamen NAME_MATRIKELNUMMER.zip hat. Ersetzen Sie dabei NAME und MATRIKELNUMMER durch\nIhren Namen und Ihre Matrikelnummer. Es ist wichtig, dass Sie sich an die Namenskonventionen\nhalten, die wir Abgaben automatisch überprüfen.\nWichtig: Die Lösungen für alle Programmieraufgaben müssen ohne Fehler ausführbar sein, sonst\nakzeptiert der Praktomat Ihre Abgabe nicht. Wenn der Praktomat nach dem Upload für eine\noder mehrere Aufgaben den Status failed anzeigt, wird ihre komplette Abgabe nicht akzpe-\ntiert und Sie erhalten für das komplette Blatt 0 Punkte! Kommentieren Sie fehlerhafte\nCodestellen in einem solche Fall aus, so dass der Praktomat Ihre Abgabe akzeptiert.\n2",
+    "filename": "Aufgabe2.py",
+    "code": "from wypp import *\n\n# Gibt der Spielertyp eine Rückennummer\n# Eingabe: Spielertyp\n# Ergebnis: Rückennummer als int\n# DATENBESCHREIBUNG\n# Eine spielerKlasse ist:\n# - Torhueter -\n# - Abwehrspieler -\n# - Mittelfeldspieler -\n# - Stuermer -\n# - Ersatzspieler -\n# TYPDEFINITION\ntype spielerKlasse = Literal[\"Torhueter\", \"Abwehrspieler\", \"Mittelfeldspieler\", \"Stuermer\", \"Ersatzspieler\" ]\n\n\n\n\ndef rueckenNummer(rueckenNummer: int) -> str:\n    if rueckenNummer == (1):\n        return \"Torhueter\"\n    elif rueckenNummer == (2 or 3 or 4 or 5):\n        return \"Abwehrspieler\"\n    elif rueckenNummer == (6 or 7 or 8 or 10):\n        return \"Mittelfeldspieler\"\n    elif rueckenNummer == (9 or 11):\n        return \"Stuermer\"\n    elif rueckenNummer <= 99:\n        return \"Ersatzspieler\"\n    \n    \n    \n\n\n\n\n\n\ncheck(rueckenNummer(1), \"Torhueter\")\ncheck(rueckenNummer(2), \"Abwehrspieler\")\ncheck(rueckenNummer(6), \"Mittelfeldspieler\")\ncheck(rueckenNummer(9), \"Stuermer\")\ncheck(rueckenNummer(67), \"Ersatzspieler\")\n",
+    "functions": [
+      {
+        "name": "rueckenNummer",
+        "line": 19,
+        "parameters": "rueckenNummer: int",
+        "return_type": "str"
+      }
+    ],
+    "tests": [
+      {
+        "function": "rueckenNummer",
+        "args": [
+          1
+        ],
+        "expected": "Torhueter"
+      },
+      {
+        "function": "rueckenNummer",
+        "args": [
+          2
+        ],
+        "expected": "Abwehrspieler"
+      },
+      {
+        "function": "rueckenNummer",
+        "args": [
+          3
+        ],
+        "expected": "Abwehrspieler"
+      },
+      {
+        "function": "rueckenNummer",
+        "args": [
+          4
+        ],
+        "expected": "Abwehrspieler"
+      },
+      {
+        "function": "rueckenNummer",
+        "args": [
+          5
+        ],
+        "expected": "Abwehrspieler"
+      },
+      {
+        "function": "rueckenNummer",
+        "args": [
+          6
+        ],
+        "expected": "Mittelfeldspieler"
+      },
+      {
+        "function": "rueckenNummer",
+        "args": [
+          7
+        ],
+        "expected": "Mittelfeldspieler"
+      },
+      {
+        "function": "rueckenNummer",
+        "args": [
+          8
+        ],
+        "expected": "Mittelfeldspieler"
+      },
+      {
+        "function": "rueckenNummer",
+        "args": [
+          9
+        ],
+        "expected": "Stuermer"
+      },
+      {
+        "function": "rueckenNummer",
+        "args": [
+          10
+        ],
+        "expected": "Mittelfeldspieler"
+      },
+      {
+        "function": "rueckenNummer",
+        "args": [
+          11
+        ],
+        "expected": "Stuermer"
+      },
+      {
+        "function": "rueckenNummer",
+        "args": [
+          12
+        ],
+        "expected": "Ersatzspieler"
+      },
+      {
+        "function": "rueckenNummer",
+        "args": [
+          13
+        ],
+        "expected": "Ersatzspieler"
+      },
+      {
+        "function": "rueckenNummer",
+        "args": [
+          99
+        ],
+        "expected": "Ersatzspieler"
+      }
+    ],
+    "origin": "20261116_echte_abgabe_blatt2_deepagents",
+    "test_origin": "Extern fachlich aus Blatt abgeleitet; nur gueltige Rueckennummern; clamp-Sollwerte unabhaengig geprueft"
+  },
+  {
+    "id": "blatt2_aufgabe3",
+    "task": "Prof. Dr. Stefan Wehr, Simon Rösch\nÜbungsblatt 2\nAKI Programmierung 1, Wintersemester 2026/2027\nDeadline: 26.10.2026, 23:00 Uhr\n20.10.2026\nGehen Sie beim Lösen aller Programmieraufgaben strikt nach unserem Schema vor:\n1. Schreiben Sie zuerst eine Kurzbeschreibung als Kommentar.\n2. Führen Sie dann eine Datenanalyse durch. Schreiben Sie das Ergebnis Ihrer Datenanalyse\nebenfalls als Kommentar in die Zeile nach der Kurzbeschreibung.\n3. Schreiben Sie dann den Funktionskopf inkl. der Typen für Argumente und Ergebnis hin.\n4. Schreiben Sie dann Tests mittels check.\n5. Setzen Sie die passenden Schablonen in den Rumpf der Funktion ein.\n6. Schreiben Sie erst dann den Funktionsrumpf hin.\nEine Lösung, in der nicht ersichtlich ist, dass Sie gemäß des Schemas aggiert haben, erhält keine\nPunkte. Insbesondere erhält eine Lösung, bei der nur der Funktionsrumpf da steht, keine Punkte,\nauch wenn die Funktion korrekt ist.\nDahingegen erhalten Sie Teilpunkte wenn Sie dem Schema folgen, aber an einem gewissen Punkt\nnicht weiterkommen.\nAufgabe 3 (8 Punkte)\nSchreibe ein Programm, mit dem Bußgelder für zu langes Parken automatisch bestimmt werden.\nDie Bußgelder sind in Abhängigkeit der Überschreitungsdauer der Höchstparkdauer wie folgt\nfestgelegt:\n• Bis zu 30 Minuten: 10 Euro.\n• Bis zu einer Stunde: 15 Euro.\n• Bis zu zwei Stunden: 20 Euro\n• Bis zu drei Stunden: 25 Euro\n• Länger als drei Stunden: (n − 1) · 10 Euro, wobei n die Parkdauer aufgerundet auf die\nnächste ganze Stunde ist.\nAufrunden funktioniert mit math.ceil.\nGesamtpunkte: 30\nAbgabe\nVia Upload im Praktomat bis 26.10.2026, 23:00 Uhr . Speichern Sie jede Programmieren-\naufgabe in eine eigene Datei. Der Name der Datei muss dabei aufgabe_0N.py sein, wobei N\ndie Nummer der Aufgabe ist. Zum Beispiel lautet für Aufgabe 1 der Name der Datei dann\naufgabe_01.py.\nVerpacken Sie alle Dateien in einem zip-Archiv (Standard-Zip, keine 7zip, rar o.ä.), welches den\nNamen NAME_MATRIKELNUMMER.zip hat. Ersetzen Sie dabei NAME und MATRIKELNUMMER durch\nIhren Namen und Ihre Matrikelnummer. Es ist wichtig, dass Sie sich an die Namenskonventionen\nhalten, die wir Abgaben automatisch überprüfen.\nWichtig: Die Lösungen für alle Programmieraufgaben müssen ohne Fehler ausführbar sein, sonst\nakzeptiert der Praktomat Ihre Abgabe nicht. Wenn der Praktomat nach dem Upload für eine\noder mehrere Aufgaben den Status failed anzeigt, wird ihre komplette Abgabe nicht akzpe-\ntiert und Sie erhalten für das komplette Blatt 0 Punkte! Kommentieren Sie fehlerhafte\nCodestellen in einem solche Fall aus, so dass der Praktomat Ihre Abgabe akzeptiert.\n2",
+    "filename": "Aufgabe3.py",
+    "code": "from wypp import *\n\n\n# Automatisches zuordnen von Bußgeldern für zu Langes Parken\n# Eingabe: Stunden anzahl in Minuten (Typ: int)\n# Ergebnis: Bußgeldbescheid in Euro (Typ: int)\n\ndef bussgeldbescheid(parkzeitueberschritt: int) -> int:\n    if parkzeitueberschritt <= 30:\n        return (10)\n    elif parkzeitueberschritt <= 60 :\n        return (15)\n    elif parkzeitueberschritt <= 120:\n        return (20)\n    elif parkzeitueberschritt <= 180:\n        return (25)\n    elif parkzeitueberschritt > 180:\n       return (((math.ceil(parkzeitueberschritt/60) - 1) * 10)) \n    \n\n\n\ncheck(bussgeldbescheid(30), 10)\ncheck(bussgeldbescheid(31), 15)\ncheck(bussgeldbescheid(60), 15)\ncheck(bussgeldbescheid(61), 20)\ncheck(bussgeldbescheid(120), 20)\ncheck(bussgeldbescheid(121), 25)\ncheck(bussgeldbescheid(180), 25)\ncheck(bussgeldbescheid(181), 30)\ncheck(bussgeldbescheid(600), 90)",
+    "functions": [
+      {
+        "name": "bussgeldbescheid",
+        "line": 8,
+        "parameters": "parkzeitueberschritt: int",
+        "return_type": "int"
+      }
+    ],
+    "tests": [
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          0
+        ],
+        "expected": 10
+      },
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          30
+        ],
+        "expected": 10
+      },
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          31
+        ],
+        "expected": 15
+      },
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          60
+        ],
+        "expected": 15
+      },
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          61
+        ],
+        "expected": 20
+      },
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          120
+        ],
+        "expected": 20
+      },
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          121
+        ],
+        "expected": 25
+      },
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          180
+        ],
+        "expected": 25
+      },
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          181
+        ],
+        "expected": 30
+      },
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          240
+        ],
+        "expected": 30
+      },
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          241
+        ],
+        "expected": 40
+      },
+      {
+        "function": "bussgeldbescheid",
+        "args": [
+          600
+        ],
+        "expected": 90
+      }
+    ],
+    "origin": "20261116_echte_abgabe_blatt2_deepagents",
+    "test_origin": "Extern fachlich aus Blatt abgeleitet; nur gueltige Rueckennummern; clamp-Sollwerte unabhaengig geprueft"
+  },
+  {
+    "id": "blatt2_aufgabe4",
+    "task": "Prof. Dr. Stefan Wehr, Simon Rösch\nÜbungsblatt 2\nAKI Programmierung 1, Wintersemester 2026/2027\nDeadline: 26.10.2026, 23:00 Uhr\n20.10.2026\nGehen Sie beim Lösen aller Programmieraufgaben strikt nach unserem Schema vor:\n1. Schreiben Sie zuerst eine Kurzbeschreibung als Kommentar.\n2. Führen Sie dann eine Datenanalyse durch. Schreiben Sie das Ergebnis Ihrer Datenanalyse\nebenfalls als Kommentar in die Zeile nach der Kurzbeschreibung.\n3. Schreiben Sie dann den Funktionskopf inkl. der Typen für Argumente und Ergebnis hin.\n4. Schreiben Sie dann Tests mittels check.\n5. Setzen Sie die passenden Schablonen in den Rumpf der Funktion ein.\n6. Schreiben Sie erst dann den Funktionsrumpf hin.\nEine Lösung, in der nicht ersichtlich ist, dass Sie gemäß des Schemas aggiert haben, erhält keine\nPunkte. Insbesondere erhält eine Lösung, bei der nur der Funktionsrumpf da steht, keine Punkte,\nauch wenn die Funktion korrekt ist.\nDahingegen erhalten Sie Teilpunkte wenn Sie dem Schema folgen, aber an einem gewissen Punkt\nnicht weiterkommen.\nAufgabe 4 (8 Punkte)\nSchreiben Sie eine Funktion clamp, die wie folgt definiert ist:\nclamp(x, l, u) =\n\n\n\nx if l ≤ x ≤ u\nl if x < l\nu if x > u\nDabei sind x, l, u∈ R. Der Name l steht dabei für „lower bound“, da l eine untere Schranke für\nden Wert von x angibt. Analog steht u für „upper bound“ .\nGesamtpunkte: 30\nAbgabe\nVia Upload im Praktomat bis 26.10.2026, 23:00 Uhr . Speichern Sie jede Programmieren-\naufgabe in eine eigene Datei. Der Name der Datei muss dabei aufgabe_0N.py sein, wobei N\ndie Nummer der Aufgabe ist. Zum Beispiel lautet für Aufgabe 1 der Name der Datei dann\naufgabe_01.py.\nVerpacken Sie alle Dateien in einem zip-Archiv (Standard-Zip, keine 7zip, rar o.ä.), welches den\nNamen NAME_MATRIKELNUMMER.zip hat. Ersetzen Sie dabei NAME und MATRIKELNUMMER durch\nIhren Namen und Ihre Matrikelnummer. Es ist wichtig, dass Sie sich an die Namenskonventionen\nhalten, die wir Abgaben automatisch überprüfen.\nWichtig: Die Lösungen für alle Programmieraufgaben müssen ohne Fehler ausführbar sein, sonst\nakzeptiert der Praktomat Ihre Abgabe nicht. Wenn der Praktomat nach dem Upload für eine\noder mehrere Aufgaben den Status failed anzeigt, wird ihre komplette Abgabe nicht akzpe-\ntiert und Sie erhalten für das komplette Blatt 0 Punkte! Kommentieren Sie fehlerhafte\nCodestellen in einem solche Fall aus, so dass der Praktomat Ihre Abgabe akzeptiert.\n2",
+    "filename": "Aufgabe4.py",
+    "code": "from wypp import *\n\n# Beschreibung: Begrenzt eine Zahl auf den Bereich von l bis u\n# Eingabe: x, untere Grenze l und obere Grenze u (Typ: float)\n# Ergebnis: x innerhalb des bereiches (Typ: float)\n\ndef clamp(x: float, l: float, u: float) -> float:\n    if x < l:\n        return l\n    elif x > u:\n        return u\n    else:\n        return x\n\n\ncheck(clamp(5, 67.5, 89.5), 67.5)\ncheck(clamp(-2, 0, 10), 0)\ncheck(clamp(27.5, 0, 10), 10)\ncheck(clamp(5.5, 0 , 0), 0)\ncheck(clamp(10, 0, 10), 10)\ncheck(clamp(2.5, 1 , 3), 2.5)\ncheck(clamp(-4, -3, -1), -3)\ncheck(clamp(7, 3, 3), 3)",
+    "functions": [
+      {
+        "name": "clamp",
+        "line": 7,
+        "parameters": "x: float, l: float, u: float",
+        "return_type": "float"
+      }
+    ],
+    "tests": [
+      {
+        "function": "clamp",
+        "args": [
+          5,
+          0,
+          10
+        ],
+        "expected": 5
+      },
+      {
+        "function": "clamp",
+        "args": [
+          -2,
+          0,
+          10
+        ],
+        "expected": 0
+      },
+      {
+        "function": "clamp",
+        "args": [
+          12,
+          0,
+          10
+        ],
+        "expected": 10
+      },
+      {
+        "function": "clamp",
+        "args": [
+          0,
+          0,
+          10
+        ],
+        "expected": 0
+      },
+      {
+        "function": "clamp",
+        "args": [
+          10,
+          0,
+          10
+        ],
+        "expected": 10
+      },
+      {
+        "function": "clamp",
+        "args": [
+          -50,
+          -75,
+          -25
+        ],
+        "expected": -50
+      },
+      {
+        "function": "clamp",
+        "args": [
+          -80,
+          -75,
+          -25
+        ],
+        "expected": -75
+      },
+      {
+        "function": "clamp",
+        "args": [
+          -20,
+          -75,
+          -25
+        ],
+        "expected": -25
+      },
+      {
+        "function": "clamp",
+        "args": [
+          3,
+          3,
+          3
+        ],
+        "expected": 3
+      }
+    ],
+    "origin": "20261116_echte_abgabe_blatt2_deepagents",
+    "test_origin": "Extern fachlich aus Blatt abgeleitet; nur gueltige Rueckennummern; clamp-Sollwerte unabhaengig geprueft"
+  },
+  {
+    "id": "magluise_korrekt",
+    "task": "Prof. Dr. Stefan Wehr, Simon Rösch\nÜbungsblatt 2\nAKI Programmierung 1, Wintersemester 2026/2027\nDeadline: 26.10.2026, 23:00 Uhr\n20.10.2026\nGehen Sie beim Lösen aller Programmieraufgaben strikt nach unserem Schema vor:\n1. Schreiben Sie zuerst eine Kurzbeschreibung als Kommentar.\n2. Führen Sie dann eine Datenanalyse durch. Schreiben Sie das Ergebnis Ihrer Datenanalyse\nebenfalls als Kommentar in die Zeile nach der Kurzbeschreibung.\n3. Schreiben Sie dann den Funktionskopf inkl. der Typen für Argumente und Ergebnis hin.\n4. Schreiben Sie dann Tests mittels check.\n5. Setzen Sie die passenden Schablonen in den Rumpf der Funktion ein.\n6. Schreiben Sie erst dann den Funktionsrumpf hin.\nEine Lösung, in der nicht ersichtlich ist, dass Sie gemäß des Schemas aggiert haben, erhält keine\nPunkte. Insbesondere erhält eine Lösung, bei der nur der Funktionsrumpf da steht, keine Punkte,\nauch wenn die Funktion korrekt ist.\nDahingegen erhalten Sie Teilpunkte wenn Sie dem Schema folgen, aber an einem gewissen Punkt\nnicht weiterkommen.\nAufgabe 1 (6 Punkte)\nGeorg fragt die kleine Luise nach ihrer Lieblingszahl. Luise sagt: „Also, ich habe vielen Lieb-\nlingszahlen. Ich mag die 6, weil ich 6 Jahre alt. Außerdem mag ich die 11 und die 13. Die 12\nmag ich aber nicht. Dafür mag ich alle Zahlen größer als 100. “\nGeorg ist leicht überfordert. Helfen Sie ihm, indem Sie eine Funktion schreiben, welche den\nbooleschen Wert für „wahr“ liefert falls die Eingabezahl eine von Luises Lieblingszahlen ist.",
+    "filename": "magLuise.py",
+    "code": "from wypp import *\n\n# Prüft, ob eine Zahl zu Luises Lieblingszahlen gehört.\n# Eingabe: ganze Zahl. Ergebnis: Wahrheitswert.\ndef magLuise(n: int) -> bool:\n    return n in (6, 11, 13) or n > 100\n\ncheck(magLuise(6), True)\ncheck(magLuise(11), True)\ncheck(magLuise(13), True)\ncheck(magLuise(12), False)\ncheck(magLuise(100), False)\ncheck(magLuise(101), True)\n",
+    "functions": [
+      {
+        "name": "magLuise",
+        "line": 5,
+        "parameters": "n: int",
+        "return_type": "bool"
+      }
+    ],
+    "tests": [
+      {
+        "function": "magLuise",
+        "args": [
+          6
+        ],
+        "expected": true
+      },
+      {
+        "function": "magLuise",
+        "args": [
+          11
+        ],
+        "expected": true
+      },
+      {
+        "function": "magLuise",
+        "args": [
+          13
+        ],
+        "expected": true
+      },
+      {
+        "function": "magLuise",
+        "args": [
+          12
+        ],
+        "expected": false
+      },
+      {
+        "function": "magLuise",
+        "args": [
+          100
+        ],
+        "expected": false
+      },
+      {
+        "function": "magLuise",
+        "args": [
+          101
+        ],
+        "expected": true
+      }
+    ],
+    "origin": "miniversuche/10_magluise und11_magluise_neu",
+    "test_origin": "Vorhandene sechs Checks als feste Testbasis; keine eigenen Modelltests"
+  }
+]
